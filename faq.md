@@ -12,3 +12,38 @@ Seafile client can be configured to run as a daemon using tools like Firedaemon.
 Parameters for ccnet: -c C:/Users/Administrator/ccnet
 Parameters for seaf-daemon: -c C:/Users/Administrator/ccnet -d S:/seafile-data -w S:/Seafile
 ```
+
+### How to configure Seafile client in factory mode
+
+### How to configure ServerAddress
+
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
+- Key: `PreconfigureServerAddr`
+- Type: `REG_SZ`
+- Value: <url to the seafile server address>
+
+Effect: If you have this value set before starting seafile, seafile will
+pick this configure and put it into the server address list used in login dialog
+automatically. This configure can be used with or without the below configure.
+
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
+- Key: `PreconfigureServerAddrOnly`
+- Type: `REG_SZ`
+- Value: `1` (stands for enable) or `0` (stands for disable)
+
+Effect: If you have this value set before starting seafile, seafile will
+pick this configure and lock the server address list used in login dialog
+allowing only the preconfigured server address set in the above configure.
+automatically. This configure can be only used with the above configure.
+
+### How to configure Seafile Data Folder
+
+PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
+Key: `PreconfigureDirectory`
+Type: `REG_SZ`
+Value: <absolute path to the seafile data folder>
+
+Effect: If you run seafile first time and have this configure set before
+starting, seafile will pick this configure and create seafile data directory
+automatically and start. But if seafile fails to create this data directory,
+seafile will refuse to start.
