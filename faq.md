@@ -5,7 +5,7 @@
 - PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
 - Key: `PreconfigureServerAddr`
 - Type: `REG_SZ`
-- Value: <url to the seafile server address>
+- Value: `<url to the seafile server address>`
 
 Effect: If you have this value set before starting seafile, seafile will
 pick this configure and put it into the server address list used in login dialog
@@ -24,7 +24,7 @@ automatically. This configure can be only used with the above configure.
 - PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
 - Key: `PreconfigureDirectory`
 - Type: `REG_SZ`
-- Value: <absolute path to the seafile data folder>
+- Value: `<absolute path to the seafile data folder>`
 
 Effect: If you run seafile first time and have this configure set before
 starting, seafile will pick this configure and create seafile data directory
