@@ -31,6 +31,8 @@ starting, seafile will pick this configure and create seafile data directory
 automatically and start. But if seafile fails to create this data directory,
 seafile will refuse to start.
 
+> Value can contains environment variables such as `%USERPROFILE%`
+
 ### How to use run Seafile client as a service in Windows
 
 Seafile client can be configured to run as a daemon using tools like Firedaemon. First configure Seafile as the user it should run - in this example "Administator"：
