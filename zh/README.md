@@ -1,18 +1,18 @@
-# Introduction
+# 介绍
 
-Seafile is an open source cloud storage system with file encryption and group sharing, and emphasis on reliability and high performance.
+Seafile是一个开源的支持文件加密和群组分享，提供可靠性和高性能的云存储系统。
 
-This repository contains documents for Seafile client.
+本资料库包含了Seafile客户端的文档
 
-## LICENSE
+## 许可证
 
-This manual is licensed under Apache License v2.0.
+本手册使用的是Apache License v2.0.
 
-## About this manual
+## 关于手册
 
-The "source code" of this manual is hosted on Github https://github.com/haiwen/seafile-client-manual
+本手册源码托管在Github上 https://github.com/haiwen/seafile-client-manual
 
-## Contact information
+## 联系信息
 
 * Twitter: @seafile https://twitter.com/seafile
-* Forum: https://forum.seafile-server.org
+* 论坛: https://forum.seafile-server.org
