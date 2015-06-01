@@ -1,10 +1,10 @@
-# Encrypting a file library
+# 加密一个文件资料库
 
-Seafile supports encryption of file libraries to strengthen your data security. To encrypt a file library, you need to set a password when you create a library.
+Seafile支持文件资料库加密从而增强数据安全性。为了给一个文件资料库加密，你需要在创建它的时候给它设定一个密码。
 
-**The password won't be stored on the cloud server**. So even the adminastrator of the servers cannot view your encrypted data without the password.
+**密码不会被存储在云端服务器中**。因此即便是服务器管理员，如果没有密码也不能查看你加密的数据。
 
-To download and sync an encrypted library to your computer, you need to provide the password.
-Seafile client programe will download the encrypted data and decrypt it on your computer.
+为了下载和同步一个加密资料库到你的电脑，需要提供该资料库的密码。
+Seafile客户端程序会下载这些加密的数据并解密到你的电脑上。
 
-To share an encrypted library with your friends, you also need to tell them the password.
+当和你的朋友共享一个加密资料库时，你也需要告诉他们这个资料库的密码。
