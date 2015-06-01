@@ -1,7 +1,5 @@
-# Viewing an encrypted library
+# 查看加密资料库
 
-Seafile servers don't store the password for an encrypted library. To view an encrypted library online,
-you need to temporarily provide the password to the server.
+Seafile服务器不会存储加密资料库的密码，因此你需要隔一段时间提供一次密码才能在线访问加密资料库。
 
-Your password is only recorded in the server's encrypted memory. It would be cleared from the memory in an hour.
-After that, if you want to view the library, you'll have to enter password again.
+资料库密码只会记录在服务器的加密内存区，并且一小时后就会被清除掉，如果此后再次访问资料库需要再次提供密码。
