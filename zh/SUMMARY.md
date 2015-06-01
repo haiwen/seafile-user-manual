@@ -1,5 +1,11 @@
 # Summary
-
-* [介绍](README.md)
-* [问答](faq.md)
+* [桌面端](README.md)
+  * [文件冲突](desktop/conflict.md)
+  * [资料库加密](desktop/encryption.md)
+  * [不同步列表](desktop/ignore.md)
+  * [安装Seafile桌面客户端](desktop/install.md)
+  * [取消同步和删除资料库](desktop/unsync.md)
+* [网页端](faq.md)
+  * [共享资料库到群组](web/group_share.md)
+  * [查看加密资料库](web/view_encrypted.md)
 
