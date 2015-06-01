@@ -1,7 +1,8 @@
-# File conflicts
+# 文件冲突
 
-Once you and your friends sync a shared file library onto your computers, you may add, delete or edit files in the library together.
-Every change you make to the library would be automatically synced to others' computers.
+一旦你和你的朋友把一个共享的资料库同步到你的电脑上，你就可以在这个资料库里添加，删除或者编辑文件。
+在同步资料里做的任何改动都会自动同步到其他人的电脑中。
 
-Sometimes you and your friends may edit the same file at the same time. Your changes may conflict with each other's. In this case, Seafile would keep the first version synced to the cloud unchanged, while rename the other version to a "conflict file". A conflict file's name ends with it's author's email address, plus the
-current time, e.g. test.txt (name@example.com 2015-03-07-11-30-28).
+有时你和你的朋友可能会同时编辑同一个文件，从而导致你和别人的改动产生产生冲突。
+在这种情况下，Seafile会保持第一个已同步的版本的不变，与此同时把另一个版本重命名为”conflict file“。 
+一个冲突的文件的名以它的作者的邮箱地址加上当前时间结束。例如，test.txt （name@example.com 2015-03-07-11-30-28）。
