@@ -4,7 +4,7 @@
   * [不同步列表](desktop/ignore.md)
   * [安装Seafile桌面客户端](desktop/install.md)
   * [取消同步和删除资料库](desktop/unsync.md)
-* [网页端](faq.md)
+* [网页端](README.md)
   * [共享资料库到群组](web/group_share.md)
   * [查看加密资料库](web/view_encrypted.md)
-
+* [问答](faq.md)
