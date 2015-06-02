@@ -4,20 +4,20 @@
 
 ## 1. 选择一个磁盘分区来存储Seafile数据
 
-![Selecting a folder to store Seafile data](../../images/zh/desktop/seafile-init-choose-folder.png)
+![Selecting a folder to store Seafile data](seafile-init-choose-folder.png)
 
 ## 2. 添加一个账户
 
 添加一个账户到你的私有Seafile服务器或者公共服务器。
 
-![Add account](../../images/zh/desktop/seafile-init-login.png)
+![Add account](seafile-init-login.png)
 
 ## 3. 选择一个需要同步的资料库
 
 * 点击"同步该资料库"按钮来和本地文件夹同步
 * 然后添加一些文件到该资料库中，从而自动地和服务器上的资料库同步。
 
-![Sync a library](../../images/zh/desktop/seafile-sync-library.png)
+![Sync a library](seafile-sync-library.png)
 
 ## 4. (可选) 创建一个资料库
 
@@ -30,4 +30,4 @@
 ## 5. 在云端浏览资料库
 在某些情况下，你可能想直接在云端修改某些文件而不同步他们。Seafile客户端提供了一个"云端文件浏览器"来满足这样的需求。点击一个未被同步的资料库就会打开该文件浏览器。
 
-![Cloud file browser](../../images/zh/desktop/seafile-unsynced-library.png)
+![Cloud file browser](seafile-unsynced-library.png)
