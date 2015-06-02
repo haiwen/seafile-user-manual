@@ -5,7 +5,7 @@
 	* [Client Installation Tutorial](desktop/install.md)
 	* [Unsyncing and Deleting a Library](desktop/unsync.md)
 * [web](web/README.md)
-	* [Sharing a library to a group](web/group_Sharing a library to a groupshare.md)
-	* [Viewing an encrypted library](Viewing an encrypted library/view_encrypted.md)
+	* [Sharing a library to a group](web/group_share.md)
+	* [Viewing an encrypted library](web/view_encrypted.md)
 * [FAQ](faq.md)
 
