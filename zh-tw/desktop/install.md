@@ -1,33 +1,33 @@
-# Installing Seafile Desktop Client
+# 安装Seafile桌面客户端
 
-After downloading Seafile client program, you have 3 steps left to get it up and running.
+下载完Seafile客户端程序后，你需要设置如下三步来让它运行。
 
-## 1. Select a disk partition to store local Seafile data
+## 1. 选择一个磁盘分区来存储Seafile数据
 
-![Selecting a folder to store Seafile data](../images/seafile-init-choose-folder.png)
+![Selecting a folder to store Seafile data](images/seafile-init-choose-folder.png)
 
-## 2. Add an account
+## 2. 添加一个账户
 
-Add an account on your private Seafile server or our public server.
+添加一个账户到你的私有Seafile服务器或者公共服务器。
 
-![Add account](../images/seafile-add-account.png)
+![Add account](images/seafile-init-login.png)
 
-## 3. Sync a library
+## 3. 选择一个需要同步的资料库
 
-* Click the "Sync this library" button to sync it with a local folder.
-* Then you add some files into the library. They will be automatically synced with cloud platform.
+* 点击"同步该资料库"按钮来和本地文件夹同步
+* 然后添加一些文件到该资料库中，从而自动地和服务器上的资料库同步。
 
-![Sync a library](../images/seafile-sync-library.png)
+![Sync a library](images/seafile-sync-library.png)
 
-## 4. (Optional) Create a library
+## 4. (可选) 创建一个资料库
 
-You can also create a library from a local folder.
+你也可以依靠本地文件夹来创建一个资料库
 
-![create library](../images/seafile-create-library.png)
+![create library](images/seafile-create-library.png)
 
-![create library](../images/seafile-create-library-02.png)
+![create library](images/seafile-create-library-02.png)
 
-## 5. Browse files on the cloud
-In some occasions, you want to modify files on the cloud directly without syncing them. Seafile client comes with a "cloud file browser" to meet this need. Click an unsynced library will open the cloud file browser.
+## 5. 在云端浏览资料库
+在某些情况下，你可能想直接在云端修改某些文件而不同步他们。Seafile客户端提供了一个"云端文件浏览器"来满足这样的需求。点击一个未被同步的资料库就会打开该文件浏览器。
 
-![Cloud file browser](../images/seafile-unsynced-library.png)
+![Cloud file browser](images/seafile-unsynced-library.png)

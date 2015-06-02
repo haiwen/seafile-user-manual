@@ -1,41 +1,33 @@
-# FAQ
+# 问答
 
-### How to pre-config Seafile directory and server address in Windows
+### 如何在Windows中预配置Seafile路径和服务器地址
 
 - PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
 - Key: `PreconfigureServerAddr`
 - Type: `REG_SZ`
 - Value: `<url to the seafile server address>`
 
-Effect: If you have this value set before starting seafile, seafile will
-pick this configure and put it into the server address list used in login dialog
-automatically. This configure can be used with or without the below configure.
+注意：如果在启动Seafile之前设置了它，Seafile会自动读取配置信息并显示在登录对话框中的账户列表里。该配置可以结合下面的配置使用，也可以忽略下面的配置。
 
 - PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
 - Key: `PreconfigureServerAddrOnly`
 - Type: `REG_SZ`
 - Value: `1` (stands for enable) or `0` (stands for disable)
 
-Effect: If you have this value set before starting seafile, seafile will
-pick this configure and lock the server address list used in login dialog
-allowing only the preconfigured server address set in the above configure.
-automatically. This configure can be only used with the above configure.
+注意：如果在启动Seafile之前设置了它，Seafile会自动读取配置信息并锁定显示在登录对话框中的服务器地址列表从而只显示预先配置的服务器地址。此配置只能结合上面的配置使用。
 
 - PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
 - Key: `PreconfigureDirectory`
 - Type: `REG_SZ`
 - Value: `<absolute path to the seafile data folder>`
 
-Effect: If you run seafile first time and have this configure set before
-starting, seafile will pick this configure and create seafile data directory
-automatically and start. But if seafile fails to create this data directory,
-seafile will refuse to start.
+注意：如果你是第一次运行Seafile并且在启动前完成了配置，Seafile会自动读取配置信息，创建Seafile目录并启动。如果创建目录失败，Seafile会停止启动。
 
 > Value can contains environment variables such as `%USERPROFILE%`
 
-### How to use run Seafile client as a service in Windows
+### 如何在Windows中使用run Seafile client的服务
 
-Seafile client can be configured to run as a daemon using tools like Firedaemon. First configure Seafile as the user it should run - in this example "Administator"：
+可以使用Firedaemon工具把Seafile客户端配置成以daemon的形式运行。首先把Seafile配置成它应该运行的账户-在这个例子中是“Administator”账户：
 
 
 ```

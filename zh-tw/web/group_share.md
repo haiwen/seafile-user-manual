@@ -1,6 +1,6 @@
-# Sharing a library to a group
+# 共享资料库到群组
 
-You have two ways to share a library to a group
+有两种共享资料库到群组的方式
 
-* Create a file library directly inside the group workspace.
-* On "My Home" page, click the "share" button besides a library, then enter the group's name.
+* 在群组工作区中直接创建一个资料库
+* 在"我的主页"页面，在资料库里点击"分享"按钮，然后输入群组的名称

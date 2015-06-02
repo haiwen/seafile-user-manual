@@ -1,8 +1,8 @@
-# Unsyncing and Deleting a Library
+# 取消同步和删除资料库
 
-If a library was deleted on the cloud, the desktop client automatically unsync the library. The local library is no longer synced with the cloud.
+如果一个资料库在网页上被删除，那么桌面客户端会自动停止同步，本地资料库不再和网页上的资料库同步。
 
-To maximize your data safety, deletion of file libraries on the website and on your computer are not "synced" automatically.
+为了数据安全的最大化，在网页上删掉的资料库，不会因为同步而把你电脑里的资料库删掉。
 
-* After a file library is deleted on the website, the library downloaded to your computer won't be deleted. But it won't be synced with the website any more.
-* After a file library is deleted on your computer, the library on the website won't be deleted. You may download and sync it again later.
+* 网页上的资料库被删掉之后，你电脑上已经下载的资料库不会被删除，但是也不再同步。
+* 你电脑上的资料库被删掉之后，网页上的资料库不会被删除，方便你以后下载并再次同步。
