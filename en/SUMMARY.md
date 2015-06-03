@@ -10,5 +10,6 @@
 * [web](web/README.md)
    * [Sharing a library to a group](web/group_share.md)
    * [Viewing an encrypted library](web/view_encrypted.md)
+   * [How to use folder permissions](web/folder_permission.md)
 * [FAQ](faq.md)
 
