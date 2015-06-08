@@ -25,7 +25,7 @@
 
 > Value can contains environment variables such as `%USERPROFILE%`
 
-### 如何在Windows中使用run Seafile client的服务
+### 如何在Windows中使 Seafile 以后台服务形式运行
 
 可以使用Firedaemon工具把Seafile客户端配置成以daemon的形式运行。首先把Seafile配置成它应该运行的账户-在这个例子中是“Administator”账户：
 
