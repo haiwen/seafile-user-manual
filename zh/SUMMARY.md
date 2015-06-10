@@ -8,4 +8,4 @@
 	* [共享资料库到群组](web/group_share.md)
 	* [查看加密资料库](web/view_encrypted.md)
 	* [目录权限设置和使用](web/folder_permission.md)
-* [问答](faq.md)
+* [常见问题](faq.md)
