@@ -43,4 +43,22 @@ Parameters for ccnet: -c C:/Users/Administrator/ccnet
 Parameters for seaf-daemon: -c C:/Users/Administrator/ccnet -d S:/seafile-data -w S:/Seafile
 ```
 
+### How to enable HiDPI support on Windows
 
+The client is built with Qt 5.4 and supports HiDPI if the correct environment
+variable is set.
+
+- Key: `QT_DEVICE_PIXEL_RATIO`
+- Value: `2` (force) or `auto`
+
+Effect: client will show correctly according to screen DPI.
+
+### How to enable HiDPI support on Linux
+
+You need to build client against Qt 5 (5.4 or later) and set the correct
+environment variable before starting client.
+
+- Key: `QT_DEVICE_PIXEL_RATIO`
+- Value: `2` (force) or `auto`
+
+Effect: client will show correctly according to screen DPI.
