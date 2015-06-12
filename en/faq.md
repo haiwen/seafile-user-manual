@@ -11,6 +11,8 @@ Effect: If you have this value set before starting seafile, seafile will
 pick this configure and put it into the server address list used in login dialog
 automatically. This configure can be used with or without the below configure.
 
+Supported Client: 4.2.2 or later
+
 - PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
 - Key: `PreconfigureServerAddrOnly`
 - Type: `REG_SZ`
@@ -20,6 +22,8 @@ Effect: If you have this value set before starting seafile, seafile will
 pick this configure and lock the server address list used in login dialog
 allowing only the preconfigured server address set in the above configure.
 automatically. This configure can be only used with the above configure.
+
+Supported Client: 4.2.2 or later
 
 - PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
 - Key: `PreconfigureDirectory`
@@ -31,7 +35,23 @@ starting, seafile will pick this configure and create seafile data directory
 automatically and start. But if seafile fails to create this data directory,
 seafile will refuse to start.
 
+Supported Client: 4.2.2 or later
+
 > Value can contains environment variables such as `%USERPROFILE%`
+
+### How to pre-config Seafile to avoid configuration wizard in Windows
+
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile`
+- Key: `HideConfigurationWizard`
+- Type: `REG_SZ`
+- Value: `0` (show configuration wizard) or `1` (hide configuration wizard)
+
+Effect: If you run seafile first time or without any account, seafile will look
+up this configure and hide configure wizard accordingly.
+
+Supported Client: 4.2.5 or later
+
+> It is better to use it with `PreconfigureServerAddr` configuration
 
 ### How to use run Seafile client as a service in Windows
 
@@ -53,6 +73,8 @@ variable is set.
 
 Effect: client will show correctly according to screen DPI.
 
+Supported Client: 4.1.0 or later
+
 ### How to enable HiDPI support on Linux
 
 You need to build client against Qt 5 (5.4 or later) and set the correct
@@ -62,3 +84,5 @@ environment variable before starting client.
 - Value: `2` (force) or `auto`
 
 Effect: client will show correctly according to screen DPI.
+
+Supported Client: (inofficial) 4.1.0 or later
