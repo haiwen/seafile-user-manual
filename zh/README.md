@@ -1,18 +1,5 @@
 # 介绍
 
-Seafile是一个开源的支持文件加密和群组分享，提供可靠性和高性能的云存储系统。
+海文云存储 (Seafile) 是一个开源的文件云存储系统，支持文件加密和群组分享，并以安全性、稳定性为特色。
 
-本资料库包含了Seafile客户端的文档
-
-## 许可证
-
-本手册使用的是Apache License v2.0.
-
-## 关于手册
-
-本手册源码托管在Github上 https://github.com/haiwen/seafile-client-manual
-
-## 联系信息
-
-* Twitter: @seafile https://twitter.com/seafile
-* 论坛: https://forum.seafile-server.org
+本手册详细介绍了 Seafile 的各项功能。
