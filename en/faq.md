@@ -38,7 +38,7 @@ configure. In additional, if you have username, access token, server address set
 up correctly according to the above note, seafile will trigger an automatic
 attempt to login to add the default account.
 
-Supported Client: 4.2.9 or later
+Supported Client: 4.3.0 or later
 
 > Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
 > and using HKLM instead of HKCU to deploy your seafile program. please note you need
@@ -94,7 +94,7 @@ starting, seafile will pick this configure and create seafile data directory
 automatically and start. But if seafile fails to create this data directory,
 seafile will refuse to start.
 
-Supported Client: 4.2.9 or later
+Supported Client: 4.3.0 or later
 
 > Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
 > and using HKLM instead of HKCU to deploy your seafile program. please note you need
@@ -123,7 +123,7 @@ Supported Client: 4.2.9 or later
 Effect: If you run seafile first time or without any account, seafile will look
 up this configure and hide configure wizard accordingly.
 
-Supported Client: 4.2.9 or later
+Supported Client: 4.3.0 or later
 
 > Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
 > and using HKLM instead of HKCU to deploy your seafile program. please note you need
