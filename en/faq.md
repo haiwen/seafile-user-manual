@@ -1,28 +1,75 @@
 # FAQ
 
-### How to pre-config Seafile default account
+### How to pre-config Seafile in Windows
 
-##### Using Registry (windows only):
+You can pre-config in Windows via Registry or via `%USERPROFILE%/seafile.ini`
 
+#### Using Registry
+
+To preset the default server address:
+
+```
 - PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
 - Key: `PreconfigureServerAddr`
 - Type: `REG_SZ`
 - Value: `<url to the seafile server address>`
+```
 
-##### Using Seafile Configure file
+To preset the account and login token:
 
-- Configure File: `%USERPROFILE%/seafile.ini` (windows) or `~/.seafilerc` (others)
-- Group: `preconfigure`
-- Key: `PreconfigureServerAddr`
-- Type: String
-- Value: `<url to the seafile server address>`
+```
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
+- Key: `PreconfigureUsername`
+- Type: `REG_SZ`
+- Value: `<The Username or Email>`
+```
 
-Beside the `PreconfigureServerAddr` (required), you will need to set up
-`PreconfigureUsername` (required), `PreconfigureUserToken` (required)
-and `PreconfigureComputerName` (optional) to activate the automatic login which
-happens when the seafile client runs first time.
+```
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
+- Key: `PreconfigureUserToken`
+- Type: `REG_SZ`
+- Value: `<the Seahub access token>` (Not the password)
+```
+
+To not allow the user to use any other Seafile server
+
+```
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
+- Key: `PreconfigureServerAddrOnly`
+- Type: `REG_SZ`
+- Value: `1` (stands for enable) or `0` (stands for disable)
+- Effect: The user can't use any other Seafile server.
+```
+
+To preset the location of Seafile folder:
+
+```
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
+- Key: `PreconfigureDirectory`
+- Type: `REG_SZ`
+- Value: `<absolute path to the Seafile folder>`
+```
+
+To avoid the configuration wizard:
+
+```
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
+- Key: `HideConfigurationWizard`
+- Type: `REG_SZ`
+- Value: `0` (show configuration wizard) or `1` (hide configuration wizard)
+- Effect: If you run seafile first time or without any account, seafile will look up this configure and hide configure wizard accordingly.
+```
+
+> Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
+> and using HKLM instead of HKCU to deploy your seafile program. please note you need
+> to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile`
+> instead of `HKEY_LOCAL_MACHINE\\SOFTWARE\\Seafile`.
+
+
+#### Using Seafile Configure file (Supported in client 4.3.0+)
 
 Below is a sample:
+
 ```
 [preconfigure]
 PreconfigureDirectory = ~/
@@ -31,106 +78,11 @@ PreconfigureUserToken = t0Ken
 PreconfigureServerAddr = https://cloud.seafile.de
 ```
 
-Effect: If you have this server address value set before starting seafile,
-seafile will pick this configure and put it into the server address list used in
-login dialog automatically. This configure can be used with or without the below
-configure. In additional, if you have username, access token, server address set
-up correctly according to the above note, seafile will trigger an automatic
-attempt to login to add the default account.
 
-Supported Client: 4.3.0 or later
+### How to pre-config Seafile in Mac/Linux
 
-> Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
-> and using HKLM instead of HKCU to deploy your seafile program. please note you need
-> to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile`
-> instead of `HKEY_LOCAL_MACHINE\\SOFTWARE\\Seafile`.
+You can use `~/.seafilerc` to pre-config Seafile in Mac/Linux. The options are the same as for Windows.
 
-### How to pre-config Seafile directory
-
-##### Using Registry (windows only):
-
-- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
-- Key: `PreconfigureServerAddrOnly`
-- Type: `REG_SZ`
-- Value: `1` (stands for enable) or `0` (stands for disable)
-
-##### Using Seafile Configure file
-
-- Configure File: `%USERPROFILE%/seafile.ini` (windows) or `~/.seafilerc` (others)
-- Group: `preconfigure`
-- Key: `PreconfigureServerAddrOnly`
-- Type: Integer
-- Value: `1` (stands for enable) or `0` (stands for disable)
-
-Effect: If you have this value set before starting seafile, seafile will
-pick this configure and lock the server address list used in login dialog
-allowing only the preconfigured server address set in the above configure.
-automatically. This configure can be only used with the above configure.
-
-Supported Client: 4.2.9 or later
-
-> Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
-> and using HKLM instead of HKCU to deploy your seafile program. please note you need
-> to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile`
-> instead of `HKEY_LOCAL_MACHINE\\SOFTWARE\\Seafile`.
-
-##### Using Registry (windows only):
-
-- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
-- Key: `PreconfigureDirectory`
-- Type: `REG_SZ`
-- Value: `<absolute path to the seafile data folder>`
-
-##### Using Seafile Configure file
-
-- Configure File: `%USERPROFILE%/seafile.ini` (windows) or `~/.seafilerc` (others)
-- Group: `preconfigure`
-- Key: `PreconfigureDirectory`
-- Type: String
-- Value: `<absolute path to the seafile data folder>`
-
-Effect: If you run seafile first time and have this configure set before
-starting, seafile will pick this configure and create seafile data directory
-automatically and start. But if seafile fails to create this data directory,
-seafile will refuse to start.
-
-Supported Client: 4.3.0 or later
-
-> Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
-> and using HKLM instead of HKCU to deploy your seafile program. please note you need
-> to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile`
-> instead of `HKEY_LOCAL_MACHINE\\SOFTWARE\\Seafile`.
-
-> Value can contains environment variables such as `%USERPROFILE%`
-
-### How to pre-config Seafile to avoid configuration wizard in Windows
-
-##### Using Registry (windows only):
-
-- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
-- Key: `HideConfigurationWizard`
-- Type: `REG_SZ`
-- Value: `0` (show configuration wizard) or `1` (hide configuration wizard)
-
-##### Using Seafile Configure file
-
-- Configure File: `%USERPROFILE%/seafile.ini` (windows) or `~/.seafilerc` (others)
-- Group: `preconfigure`
-- Key: `HideConfigurationWizard`
-- Type: Integer
-- Value: `0` (show configuration wizard) or `1` (hide configuration wizard)
-
-Effect: If you run seafile first time or without any account, seafile will look
-up this configure and hide configure wizard accordingly.
-
-Supported Client: 4.3.0 or later
-
-> Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
-> and using HKLM instead of HKCU to deploy your seafile program. please note you need
-> to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile`
-> instead of `HKEY_LOCAL_MACHINE\\SOFTWARE\\Seafile`.
-
-> It is better to use it with `PreconfigureServerAddr` configuration
 
 ### How to use run Seafile client as a service in Windows
 
