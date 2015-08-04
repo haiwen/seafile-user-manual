@@ -60,6 +60,15 @@ To avoid the configuration wizard:
 - Effect: If you run seafile first time or without any account, seafile will look up this configure and hide configure wizard accordingly.
 ```
 
+To disable the "Do you want to remove the account information" dialog when uninstalling seafile client on Windows
+
+```
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
+- Key: `PreconfigureKeepConfigWhenUninstall`
+- Type: `REG_SZ`
+- Value: `0` (show the confirm dialog) or `1` (hide the confirm dialog wizard)
+```
+
 > Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
 > and using HKLM instead of HKCU to deploy your seafile program. please note you need
 > to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile`
