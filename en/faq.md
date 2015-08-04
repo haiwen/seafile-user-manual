@@ -77,7 +77,7 @@ To disable the "Do you want to remove the account information" dialog when unins
 
 #### Using Seafile Configure file (Supported in client 4.3.0+)
 
-Below is a sample:
+Below is a sample to preset server address, user, token and Seafile folder:
 
 ```
 [preconfigure]
