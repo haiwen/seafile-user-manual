@@ -28,7 +28,7 @@ To preset the account and login token:
 - PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
 - Key: `PreconfigureUserToken`
 - Type: `REG_SZ`
-- Value: `<the Seahub access token>` (Not the password)
+- Value: `<the Seahub access token>` (You can get the token via Web API)
 ```
 
 To not allow the user to use any other Seafile server
