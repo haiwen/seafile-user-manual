@@ -6,6 +6,11 @@ You can pre-config in Windows via Registry or via `%USERPROFILE%/seafile.ini`
 
 #### Using Registry
 
+> Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
+> and using HKLM instead of HKCU to deploy your seafile program. please note you need
+> to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile`
+> instead of `HKEY_LOCAL_MACHINE\\SOFTWARE\\Seafile`.
+
 To preset the default server address:
 
 ```
@@ -69,10 +74,7 @@ To disable the "Do you want to remove the account information" dialog when unins
 - Value: `0` (show the confirm dialog) or `1` (hide the confirm dialog wizard)
 ```
 
-> Special Note for 64-bit Windows Deployment: if you are using 64-bit windows
-> and using HKLM instead of HKCU to deploy your seafile program. please note you need
-> to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile`
-> instead of `HKEY_LOCAL_MACHINE\\SOFTWARE\\Seafile`.
+
 
 
 #### Using Seafile Configure file (Supported in client 4.3.0+)
