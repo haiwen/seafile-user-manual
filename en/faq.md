@@ -95,6 +95,27 @@ PreconfigureServerAddr = https://cloud.seafile.de
 You can use `~/.seafilerc` to pre-config Seafile in Mac/Linux. The options are the same as for Windows.
 
 
+### How to disable the "Do you want to remove the account information" dialog when uninstalling seafile client on Windows
+
+##### Using Registry:
+
+- PrimaryKey: `HKEY_CURRENT_USER\\SOFTWARE\\Seafile` ( or `HKEY_LOCAL_MACHINE` )
+- Key: `PreconfigureKeepConfigWhenUninstall`
+- Type: `REG_SZ`
+- Value: `0` (show the confirm dialog) or `1` (hide the confirm dialog wizard)
+
+##### Using Seafile Configure file
+
+- Configure File: `%USERPROFILE%/seafile.ini`:
+- Group: `preconfigure`
+- Key: `PreconfigureKeepConfigWhenUninstall`
+- Type: Integer
+- Value: `0` (show configuration wizard) or `1` (hide configuration wizard)
+
+Effect: When the user uninstalls the seafile windows client, normally he would see a dialog asking "Do you want to remove the account information?". If this configuration is set to `1`, the dialog won't come out, and the account information would not be removed.
+
+Supported Client: 4.3.0 or later
+
 ### How to use run Seafile client as a service in Windows
 
 Seafile client can be configured to run as a daemon using tools like Firedaemon. First configure Seafile as the user it should run - in this example "Administator"：
