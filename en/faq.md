@@ -115,26 +115,4 @@ Parameters for seaf-daemon: -c C:/Users/Administrator/ccnet -d S:/seafile-data -
 
 Replace `S:` with the partition you actually use to store `seafile-data` and `Seafile` folder.
 
-### <a id="enable-windows-hidpi-support"></a>How to enable HiDPI support on Windows
 
-The client is built with Qt 5.4 and supports HiDPI if the correct environment
-variable is set.
-
-- Key: `QT_DEVICE_PIXEL_RATIO`
-- Value: `2` (force) or `auto`
-
-Effect: client will show correctly according to screen DPI.
-
-Supported Client: 4.1.0 or later
-
-### <a id="enable-linux-hidpi-support"></a>How to enable HiDPI support on Linux
-
-You need to build client against Qt 5 (5.4 or later) and set the correct
-environment variable before starting client.
-
-- Key: `QT_DEVICE_PIXEL_RATIO`
-- Value: `2` (force) or `auto`
-
-Effect: client will show correctly according to screen DPI.
-
-Supported Client: (inofficial) 4.1.0 or later
