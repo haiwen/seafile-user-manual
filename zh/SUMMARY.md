@@ -1,4 +1,5 @@
 * [桌面端](desktop/README.md)
+	* [安装 Linux 桌面客户端](desktop/install-on-linux.md)
 	* [安装Seafile桌面客户端](desktop/install.md)
 	* [文件冲突](desktop/conflict.md)
 	* [资料库加密](desktop/encryption.md)
