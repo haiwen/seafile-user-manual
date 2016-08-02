@@ -24,7 +24,7 @@ Now you can start seafile client from Unity's dash.
 
 ## <a id="wiki-debian"></a> Debian
 
-Debian users can install Seafile client from our [Official Bintray Repo](https://bintray.com/seafile-org/deb/seafile-client).
+Debian users can install Seafile client from our [Official Bintray Repo](https://bintray.com/seafile-org/deb).
 
 To install the client, first add bintray's signing key:
 

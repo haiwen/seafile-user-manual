@@ -24,7 +24,7 @@ sudo apt-get install seafile-gui
 
 ## <a id="wiki-debian"></a> Debian
 
-Debian 用户可以从 Seafile 的 [官方 Bintray 源](https://bintray.com/seafile-org/deb/seafile-client) 中安装:
+Debian 用户可以从 Seafile 的 [官方 Bintray 源](https://bintray.com/seafile-org/deb) 中安装:
 
 首先添加 bintray 的签名公钥:
 
