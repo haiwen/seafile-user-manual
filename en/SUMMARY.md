@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Desktop](desktop/README.md)
-   * [Install On Linux](desktop/install-on-linux.md)
+   * [Install on Linux](desktop/install-on-linux.md)
    * [File Conflicts](desktop/conflict.md)
    * [Library Encryption](desktop/encryption.md)
    * [Ignore Files or Folders](desktop/ignore.md)
