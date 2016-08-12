@@ -14,7 +14,7 @@
 Ubuntu users can install Seafile client from the [Official PPA](https://code.launchpad.net/~seafile/+archive/ubuntu/seafile-client):
 
 ```sh
-sudo apt-add-repository ppa:seafile/seafile-client
+sudo add-apt-repository ppa:seafile/seafile-client
 sudo apt-get update
 sudo apt-get install seafile-gui
 ```
