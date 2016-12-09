@@ -21,6 +21,12 @@ sudo apt-get install seafile-gui
 
 If you only want to install the command-line client, run `sudo apt-get install seafile-cli` instead.
 
+If you want to install the debug symbols (for example, when you want to report a bug), you can install the following packages:
+
+```sh
+sudo apt-get install libsearpc-dbg ccnet-dbg libccnet-dbg seafile-daemon-dbg libseafile-dbg seafile-gui-dbg
+```
+
 Now you can start seafile client from Unity's dash.
 
 ## <a id="wiki-debian"></a> Debian
