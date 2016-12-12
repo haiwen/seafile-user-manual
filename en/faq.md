@@ -5,8 +5,7 @@
     - [List of Available Preconfigure Options](#user-content-list-of-preconfigure-options)
   - [Using ~/seafile.ini (windows) or ~/.seafilerc (linux/mac)](#user-content-using-seafile-ini)
 - [How to use run Seafile client as a service in Windows](#user-content-run-seafile-client-as-windows-service)
-- [Enable HiDPI Support on Windows](#user-content-enable-linux-hidpi-support)
-- [Enable HiDPI Support on Linux](#user-content-enable-windows-hidpi-support)
+
 
 ## <a id="preconfigure-main"></a>Preconfigure Seafile Clients
 
