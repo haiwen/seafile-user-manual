@@ -39,6 +39,15 @@ To preset the default server address:
 - Value: <url to the seafile server address>
 ```
 
+To preset the default shibboleth login address:
+
+```
+- Key: PreconfigureShibbolethLoginUrl
+- Type: REG_SZ
+- Value: <the shibboleth login url>, e.g https://example.seafile.com/shib-login
+```
+
+
 To preset the account and login token:
 
 ```
@@ -113,5 +122,3 @@ Parameters for seaf-daemon: -c C:/Users/Administrator/ccnet -d S:/seafile-data -
 ```
 
 Replace `S:` with the partition you actually use to store `seafile-data` and `Seafile` folder.
-
-
