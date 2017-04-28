@@ -4,7 +4,8 @@
   - [Using Windows Registry](#user-content-using-windows-registry)
     - [List of Available Preconfigure Options](#user-content-list-of-preconfigure-options)
   - [Using ~/seafile.ini (windows) or ~/.seafilerc (linux/mac)](#user-content-using-seafile-ini)
-- [How to use run Seafile client as a service in Windows](#user-content-run-seafile-client-as-windows-service)
+- [How to use run Seafile client as a service on Windows](#user-content-run-seafile-client-as-windows-service)
+- [How to suppress the launch of Seafile client after install on Windows](#user-content-suppressr-launch-seafile-client-after-install-on-windows)
 
 
 ## <a id="preconfigure-main"></a>Preconfigure Seafile Clients
@@ -111,7 +112,7 @@ PreconfigureServerAddr = https://cloud.seafile.de
 ```
 
 
-### <a id="run-seafile-client-as-windows-service"></a>How to use run Seafile client as a service in Windows
+### <a id="run-seafile-client-as-windows-service"></a>How to use run Seafile client as a service on Windows
 
 Seafile client can be configured to run as a daemon using tools like Firedaemon. First configure Seafile as the user it should run - in this example "Administator"：
 
@@ -122,3 +123,17 @@ Parameters for seaf-daemon: -c C:/Users/Administrator/ccnet -d S:/seafile-data -
 ```
 
 Replace `S:` with the partition you actually use to store `seafile-data` and `Seafile` folder.
+
+### <a id="suppressr-launch-seafile-client-after-install-on-windows"></a>How to suppress the launch of Seafile client after install on Windows
+
+When the user installs seafile client on windows, the seafile client program would be started immediately after the installation is finished.
+
+While this is the expected action for most users, it may be necessary to disable it sometimes. For example, when the seafile client is installed with Windows Group Policy Object (GPO), the program would be launched with the ADMIN user (instead of the current login user), which would make the program work incorrectly. In such cases, it's desirable to disable the launch of seafile client after installtion.
+
+To disable this behavior:
+
+```
+- Key: PreconfigureSuppressLaunchAfterInstall
+- Type: REG_SZ
+- Value: 1
+```
