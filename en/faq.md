@@ -124,6 +124,8 @@ Parameters for seaf-daemon: -c C:/Users/Administrator/ccnet -d S:/seafile-data -
 
 Replace `S:` with the partition you actually use to store `seafile-data` and `Seafile` folder.
 
+You call also use tools like NSSM (the Non-Sucking Service Manager). For more information, please check https://valdasv.blogspot.jp/2016/06/seafile-client-service.html
+
 ### <a id="suppressr-launch-seafile-client-after-install-on-windows"></a>How to suppress the launch of Seafile client after install on Windows
 
 When the user installs seafile client on windows, the seafile client program would be started immediately after the installation is finished.
