@@ -7,6 +7,7 @@
 <li><a href="#wiki-fedora">Fedora</a></li>
 <li><a href="#wiki-centos">Centos/RHEL</a></li>
 <li><a href="#wiki-archlinux">Arch Linux</a></li>
+<li><a href="#wiki-cli">Linux CLI</a></li>
 </ul>
 </p>
 
@@ -67,3 +68,7 @@ There is a *community maintained* Seafile Client RPM package for CentOS/RHEL htt
 There is a *community maintained* Seafile Client package for Arch Linux:
 
 https://aur.archlinux.org/packages/seafile-client/
+
+## <a id="wiki-cli"></a> Linux CLI Usage
+
+Please refer to [this documentation](linux-cli.md) for how to use Linux client on a command line server.
