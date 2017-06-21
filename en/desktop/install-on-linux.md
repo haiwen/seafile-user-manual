@@ -3,8 +3,9 @@
 <p><div class="toc">
 <ul>
 <li><a href="#wiki-ubuntu">Ubuntu</a></li>
-<li><a href="#wiki-ubuntu">Debian</a></li>
-<li><a href="#wiki-ubuntu">Fedora</a></li>
+<li><a href="#wiki-debian">Debian</a></li>
+<li><a href="#wiki-fedora">Fedora</a></li>
+<li><a href="#wiki-centos">Centos/RHEL</a></li>
 <li><a href="#wiki-archlinux">Arch Linux</a></li>
 </ul>
 </p>
@@ -56,6 +57,10 @@ If you only want to install the command-line client, run `sudo apt-get install s
 ## <a id="wiki-fedora"></a> Fedora (Community Maintained)
 
 There is a *community maintained* Seafile Client RPM package in Fedora's [official repository](https://admin.fedoraproject.org/pkgdb/package/rpms/seafile/).
+
+## <a id="wiki-centos"></a> CentOS/RHEL (Community Maintained)
+
+There is a *community maintained* Seafile Client RPM package for CentOS/RHEL https://copr.fedorainfracloud.org/coprs/pkerling/seafile/.
 
 ## <a id="wiki-archlinux"></a> Arch Linux (Community Maintained)
 
