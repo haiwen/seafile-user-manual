@@ -6,6 +6,7 @@
   - [Using ~/seafile.ini (windows) or ~/.seafilerc (linux/mac)](#user-content-using-seafile-ini)
 - [How to use run Seafile client as a service on Windows](#user-content-run-seafile-client-as-windows-service)
 - [How to suppress the launch of Seafile client after install on Windows](#user-content-suppressr-launch-seafile-client-after-install-on-windows)
+- [How to solve the shell icon overlay not shown problem](#shell-icon-overlay)
 
 
 ## <a id="preconfigure-main"></a>Preconfigure Seafile Clients
@@ -139,3 +140,10 @@ To disable this behavior:
 - Type: REG_SZ
 - Value: 1
 ```
+
+
+### <a id="shell-icon-overlay"></a>How to solve the shell icon overlay not shown problem
+
+Windows uses only the first 15 of the entries in the registry 
+(HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers\). If there are other programs, like Dropbox and OneDrive, use up the overlay icons, Seafile shell icon overlay will not shown. To solve the problem, just delete the registration entries of other programs.
+ 
