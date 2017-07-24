@@ -24,9 +24,9 @@ sudo apt-get install seafile-gui
 
 ## <a id="wiki-debian"></a> Debian
 
-Debian 用户可以从 Seafile 的 [官方 Bintray 源](https://bintray.com/seafile-org/deb) 中安装:
+Debian 用户可以从 Seafile 的 官方源中安装:
 
-首先添加 bintray 的签名公钥:
+首先添加签名公钥:
 
 ```sh
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8756C4F765C9AC3CB6B85D62379CE192D401AB61
@@ -35,7 +35,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8756C4F76
 然后添加更新源, 这里我们以 Debian 8 (jessie) 为例，如果你使用 Debian 7, 请把相应的字段替换为 "wheezy".
 
 ```
-echo deb http://dl.bintray.com/seafile-org/deb jessie main | sudo tee /etc/apt/sources.list.d/seafile.list
+echo deb http://deb.seadrive.org jessie main | sudo tee /etc/apt/sources.list.d/seafile.list
 sudo apt-get update
 ```
 
