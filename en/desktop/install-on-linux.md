@@ -6,6 +6,7 @@
 <li><a href="#wiki-debian">Debian</a></li>
 <li><a href="#wiki-fedora">Fedora</a></li>
 <li><a href="#wiki-centos">Centos/RHEL</a></li>
+<li><a href="#wiki-opensuse">OpenSUSE</a></li>
 <li><a href="#wiki-archlinux">Arch Linux</a></li>
 <li><a href="#wiki-cli">Linux CLI</a></li>
 </ul>
@@ -40,23 +41,10 @@ To install the client, first add the signing key:
 ```sh
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8756C4F765C9AC3CB6B85D62379CE192D401AB61
 ```
-
-Then add the repo to your apt source list, using the line corresponding to your debian version :
+Then add the repo to your apt source list, here we use Debian 8 (jessie) as an example, so change it to "wheezy" if you're using Debian 7.
 
 ```
-# For Debian 7
-echo deb http://deb.seadrive.org wheezy main | sudo tee /etc/apt/sources.list.d/seafile.list
-
-# For Debian 8
 echo deb http://deb.seadrive.org jessie main | sudo tee /etc/apt/sources.list.d/seafile.list
-
-# For Debian 9
-echo deb http://deb.seadrive.org stretch main | sudo tee /etc/apt/sources.list.d/seafile.list
-```
-
-Update your local apt cache :
-
-```
 sudo apt-get update
 ```
 
@@ -75,6 +63,13 @@ There is a *community maintained* Seafile Client RPM package in Fedora's [offici
 ## <a id="wiki-centos"></a> CentOS/RHEL (Community Maintained)
 
 There is a *community maintained* Seafile Client RPM package for CentOS/RHEL https://copr.fedorainfracloud.org/coprs/pkerling/seafile/.
+
+## <a id="wiki-opensuse"></a> OpenSUSE (Cloud Repository)
+This is from the Cloud Repo from OpenSUSE 
+https://software.opensuse.org/download.html?project=Cloud%3ASeafile&package=seafile-client
+
+This is a *community maintained* version (newer release) 
+https://software.opensuse.org/download.html?project=home%3Ajaltekger&package=seafile-client
 
 ## <a id="wiki-archlinux"></a> Arch Linux (Community Maintained)
 
