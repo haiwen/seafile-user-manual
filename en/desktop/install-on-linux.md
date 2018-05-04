@@ -70,7 +70,7 @@ If you only want to install the command-line client, run `sudo apt-get install s
 
 ## <a id="wiki-fedora"></a> Fedora (Community Maintained)
 
-There is a *community maintained* Seafile Client RPM package in Fedora's [official repository](https://admin.fedoraproject.org/pkgdb/package/rpms/seafile/).
+There is a *community maintained* Seafile Client RPM package in Fedora's [official repository](https://src.fedoraproject.org/rpms/seafile).
 
 ## <a id="wiki-centos"></a> CentOS/RHEL (Community Maintained)
 
