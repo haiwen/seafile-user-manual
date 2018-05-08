@@ -13,6 +13,12 @@
 
 ## <a id="wiki-ubuntu"></a> Ubuntu
 
+## Ubuntu 17.10, 18.04 et plus récentes
+
+Seafile est disponible directement dans Ubuntu, en le cherchant dans Logiciels. [Installer Seafile](apt://seafile-gui).
+
+## Anciennes version d'Ubuntu (17.04 et plus anciennes)
+
 Les utilisatrices·teurs d'Ubuntu peuvent installer le client Seafile depuis le [PPA officiel](https://code.launchpad.net/~seafile/+archive/ubuntu/seafile-client) :
 
 ```sh
