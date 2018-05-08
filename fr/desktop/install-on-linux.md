@@ -49,31 +49,6 @@ Puis, pour installer Seafile :
 apt-get -t stretch-backports install seafile-gui
 ```
 
-### Debian 8 (Jessie)
-
-Les utilisatrices·teurs des anciennes version de Debian peuvent installer le client Seafile depuis notre [dépôt Bintray officiel](https://bintray.com/seafile-org/deb).
-
-Pour installer le client, ajoutez d'abord la clef de chiffrement de Bintray :
-
-```sh
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8756C4F765C9AC3CB6B85D62379CE192D401AB61
-```
-
-Ensuite ajoutez le dépôt à la liste de vos sources APT, ici nous utilisons Debian 8 (jessie) comme exemple, changez le pour "wheezy" si vous utilisez Debian 7. 
-
-```
-echo deb http://deb.seadrive.org jessie main | sudo tee /etc/apt/sources.list.d/seafile.list
-sudo apt-get update
-```
-
-Ensuite, installez le client :
-
-```sh
-sudo apt-get install seafile-gui
-```
-
-Si vous voulez n'installer que le client en ligne de commande, lancez `sudo apt-get install seafile-cli` à la place.
-
 ## <a id="wiki-fedora"></a> Fedora (Maintenu par la communauté)
 
 Il y a un paquet RPM du client Seafile maintenu par la communauté dans le [dépôt officiel de Fedora](https://admin.fedoraproject.org/pkgdb/package/rpms/seafile/).
