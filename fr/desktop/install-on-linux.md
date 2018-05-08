@@ -15,7 +15,7 @@
 
 ## Ubuntu 17.10, 18.04 et plus récentes
 
-Seafile est disponible directement dans Ubuntu, en le cherchant dans Logiciels. [Installer Seafile](apt://seafile-gui).
+Seafile est disponible directement dans Ubuntu, en le cherchant dans Logiciels. <a href="apt://seafile-gui">Installer Seafile</a>.
 
 ## Anciennes version d'Ubuntu (17.04 et plus anciennes)
 
