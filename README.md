@@ -10,7 +10,7 @@ This manual is licensed under Apache License v2.0.
 
 ## About this manual
 
-The "source code" of this manual is hosted on Github https://github.com/haiwen/seafile-client-manual
+The source of this manual is hosted on Github https://github.com/haiwen/seafile-user-manual
 
 ## Contact information
 
