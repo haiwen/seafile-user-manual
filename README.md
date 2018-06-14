@@ -15,4 +15,4 @@ The "source code" of this manual is hosted on Github https://github.com/haiwen/s
 ## Contact information
 
 * Twitter: @seafile https://twitter.com/seafile
-* Forum: https://forum.seafile-server.org
+* Forum: https://forum.seafile.com
