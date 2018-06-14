@@ -1,0 +1,10 @@
+sudo: false
+language: python
+install:
+- echo
+script:
+- "./scripts/deploy.sh"
+notifications:
+  slack:
+    rooms:
+      secure: WuvbqTp/YjoAMy1Ck7T52ZjYeBSk2CPd1rHbmCWYC+v2S4uWB/ItMQ29dgZp/1UUHqgvp7YOOcXJYdZdgQ/If920vjBJxz0OcQYK5GNsa86srNGAoUAdfufdWbMD1zChZeWNW3izw3gRIJjx748ieg6bo+IBMhjDKMbk6QAupLGZJ3NaPIsHKXTx3c9AGQLWZHD03o1mnq40PqC9yI8C/K9Gtt5hX3Fmk73681B2fNtfVNIn/qf7cxHY1YFwi/tmsFhOl5y3A/3i6qsfd1swubWVfPcfOS6SkqvItN0KarhrWp8M717+O4vmdawjZZWIkbGcJO2EhjAX+Ds1vPGhofFX/5qUT+EgU1FAaZvUivoUGdN7ivUFWwZA6medcJHkOqx0d43Q+H3JTEMZioNbMPxMZxYOeQAsdfURiqi+Pg0etn5vletPe9Q7yi45yP6xgSsXIRHMhlG1qvjmknIWJEwFWA3V8w5oWxmUkN5317BNJLpsR96BnhjRE+Jb4bPEmPqN8FkLATrFJ2etIFBS88HwocUTk+qVy7t35ZdMciWR/STJGLpD+zVdyCVbf8V5fPoxXiwjJNexsA0R2dRDlvrzbm1MFwDhUBVxYwXx3apPbX6qcQmkdVftyCo9VGAv7uR9OZKsIVGHYUfmdcxkph5wS26/R8wNQWwzydkZlOw=
