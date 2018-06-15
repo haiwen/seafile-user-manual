@@ -1,0 +1,7 @@
+# Using Proxy in Seafile Client
+
+Seafile client supports 3 types of proxy servers: HTTP proxy, SOCKS5 proxy and system proxy settings.
+
+HTTP proxy and SOCKS5 proxy requires you to enter the proxy server's address and port. If you use system proxy settings, Seafile client reads proxy settings from the operating system. The operating system has some mechanisms to auto-detect proxy server information. So you don't have to manually enter proxy server address.
+
+To change proxy settings, click the Seafile icon in the system notification area. Choose "Settings" in the menu. In the pop-up settings dialog, you can change proxy settings in the "Network" tab.
