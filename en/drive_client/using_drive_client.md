@@ -16,39 +16,23 @@ The virtual drive folder will be opened. You'll find it works just like an ordin
 
 ![Drive window](./imgs/drive.png)
 
+### Synced State
+
 Files and folders in the virtual drive are in either cloud-only, synced, or in partially synced state.
 
-### Cloud-only content
+|Cloud-only content|![cloud-only icon](./imgs/cloud.png)|Cloud-only content shows in the virtual drive, but doesn’t use the full amount of space that the file would. In your file explorer, you can see the file, but the content isn’t fully downloaded until you need it. Only information about the file, such as the file name, size and date the file was updated, is downloaded.|
+|---	|---	|---	|
+|Synced content|![synced icon](./imgs/synced.png)|Synced content is downloaded and saved on the hard drive of your computer. You can directly edit these files from applications on your computer.|
+|Partially synced content|![partial synced icon](./imgs/partial-synced.png)|Partially synced folders contain both synced and cloud-only files or folders.|
 
-|![cloud-only icon](./imgs/cloud.png)|Cloud-only content shows in the virtual drive, but doesn’t use the full amount of space that the file would. In your file explorer, you can see the file, but the content isn’t fully downloaded until you need it. Only information about the file, such as the file name, size and date the file was updated, is downloaded.|
-|---	|---	|
-
-### Synced content
-
-|![synced icon](./imgs/synced.png)|Synced content is downloaded and saved on the hard drive of your computer. You can directly edit these files from applications on your computer.|
-|---	|---	|
-
-### Partially synced content
-
-|![partial synced icon](./imgs/partial-synced.png)|Partially synced folders contain both synced and cloud-only files or folders.|
-|---	|---	|
+### Special States
 
 For files that are already synced to local computer, they may be in 3 other special states, besides the normal "synced" state.
 
-### Locked by other user
-
-|![locked icon](./imgs/locked.png)|The file is locked by other user on the server. You can only open the file in read-only mode. You cannot modify, delete or rename the file.|
-|---	|---	|
-
-### Locked by me
-
-|![locked by me icon](./imgs/locked-by-me.png)|The file is locked by you. This prevents others from modifying the file.|
-|---	|---	|
-
-### Read-only
-
-|![read only icon](./imgs/read-only.png)|The folder or library of this file is shared with read-only permission to you. You cannot modify, delete or rename the file.|
-|---	|---	|
+|Locked by other user|![locked icon](./imgs/locked.png)|The file is locked by other user on the server. You can only open the file in read-only mode. You cannot modify, delete or rename the file.|
+|---	|---	|---	|
+|Locked by me|![locked by me icon](./imgs/locked-by-me.png)|The file is locked by you. This prevents others from modifying the file.|
+|Read-only|![read only icon](./imgs/read-only.png)|The folder or library of this file is shared with read-only permission to you. You cannot modify, delete or rename the file.|
 
 The Drive client regularly cleans up unused cached files in the background. You can also limit the local cache space.
 
