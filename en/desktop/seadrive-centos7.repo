@@ -1,7 +1,0 @@
-[seadrive]
-name=seadrive
-baseurl=https://rpm.seadrive.org/centos7
-gpgcheck=0
-repo_gpgcheck=1
-gpgkey=https://bintray.com/user/downloadSubjectPublicKey?username=bintray
-enabled=1
