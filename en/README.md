@@ -1,18 +1,9 @@
 # Introduction
 
-Seafile is an open source cloud storage system with file encryption and group sharing, and emphasis on reliability and high performance.
+Seafile is an enterprise file hosting platform with high reliability and performance.
 
-This repository contains documents for Seafile client.
+Seafile contains a web interface for you to manage and share files. It has two kinds of desktop clients, [the file syncing client](syncing_client/install_sync.md) and [the drive client](drive_client/using_drive_client.md). It also has mobile clients for Android and iOS.
 
-## LICENSE
+You can download the clients in [Seafile web site](https://www.seafile.com/en/download/).
 
-This manual is licensed under Apache License v2.0.
-
-## About this manual
-
-The "source code" of this manual is hosted on Github https://github.com/haiwen/seafile-client-manual
-
-## Contact information
-
-* Twitter: @seafile https://twitter.com/seafile
-* Forum: https://forum.seafile-server.org
+If this manual does not contain the information you needed, you can seek help in our forum: https://forum.seafile.com .
