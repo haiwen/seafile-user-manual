@@ -26,6 +26,8 @@
    * [Proxy settings](syncing_client/proxy_settings.md)
    * [File conflicts](syncing_client/file_conflicts.md)
    * [Excluding files](syncing_client/excluding_files.md)
+   * [Install On Linux](syncing_client/install_linux_client.md)
+   * [Seafile Client for a Cli server](syncing_client/linux-cli.md)
 * Drive Client
    * [Using Seafile Drive Client](drive_client/using_drive_client.md)
    * [Drive Client for Linux](drive_client/drive_client_for_linux.md)
