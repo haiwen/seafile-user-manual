@@ -44,7 +44,7 @@ You can log into multiple accounts in the Drive client. However, only files on t
 
 ![Drive client accounts](./imgs/drive-accounts.png)
 
-### FQA
+### FAQ
 
 **1\. Why can't I create new files or delete folders in root folder?**
 
