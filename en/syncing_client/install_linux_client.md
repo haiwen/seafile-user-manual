@@ -7,7 +7,7 @@
 * [Arch Linux](#wiki-archlinux)
 * [Linux CLI](#wiki-cli)
 
-## <span id='wiki-ubuntu'>Ubuntu</span>
+## <h2 id='wiki-ubuntu'>Ubuntu</h2>
 
 Ubuntu users can install Seafile client from the [Official PPA](https://code.launchpad.net/~seafile/+archive/ubuntu/seafile-client):
 
@@ -27,7 +27,7 @@ sudo apt-get install libsearpc-dbg ccnet-dbg libccnet-dbg seafile-daemon-dbg lib
 
 Now you can start seafile client from Unity's dash.
 
-## <span id='wiki-debian'>Debian</span>
+## <h2 id='wiki-debian'>Debian</h2>
 
 Debian users can install Seafile client from our debian repo:
 
@@ -64,20 +64,20 @@ sudo apt-get install seafile-gui
 
 If you only want to install the command-line client, run `sudo apt-get install seafile-cli` instead.
 
-## <span id='wiki-fedora'>Fedora (Community Maintained)</span>
+## <h2 id='wiki-fedora'>Fedora (Community Maintained)</h2>
 
 There is a *community maintained* Seafile Client RPM package in Fedora's [official repository](https://src.fedoraproject.org/rpms/seafile).
 
-## <span id='wiki-centos'>Centos/RHEL (Community Maintained)</span>
+## <h2 id='wiki-centos'>Centos/RHEL (Community Maintained)</h2>
 
 There is a *community maintained* Seafile Client RPM package for CentOS/RHEL https://copr.fedorainfracloud.org/coprs/pkerling/seafile/.
 
-## <span id='wiki-archlinux'>Arch Linux (Community Maintained)</span>
+## <h2 id='wiki-archlinux'>Arch Linux (Community Maintained)</h2>
 
 There is a *community maintained* Seafile Client package for Arch Linux:
 
 https://aur.archlinux.org/packages/seafile-client/
 
-## <span id='wiki-cli'>Linux CLI Usage</span>
+## <h2 id='wiki-cli'>Linux CLI Usage</h2>
 
 Please refer to [this documentation](linux-cli.md) for how to use Linux client on a command line server.
