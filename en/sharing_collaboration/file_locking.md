@@ -41,5 +41,5 @@ After a library is synced to the desktop, when you open a Microsoft Office file 
 There are a few useful tips about how file locking works:
 
 * A locked file can only be unlocked by the user who locked it.
-* A locked file cannot be modified other than the lock owner. But it can be deleted, renamed or moved by other users. The purpose of file locking is only to prevent concurrent editing.
-* When a locked file is renamed or moved inside the same library, it remains locked after the operation.
+* A locked file cannot be modified, moved, renamed or deleted by other users. But other users can still move, delete or rename the parent folder of a locked file. The purpose of file locking is mainly to prevent concurrent editing.
+* When a locked file's parent folder is renamed or moved inside the same library, it remains locked after the operation.
