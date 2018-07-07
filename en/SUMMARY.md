@@ -16,6 +16,7 @@
    * [Managing groups](sharing_collaboration/groups_managing.md)
    * [Locking files](sharing_collaboration/file_locking.md)
    * [Folder permission](sharing_collaboration/folder_permission.md)
+   * [Departments Sharing](sharing_collaboration/departments.md)
 * Desktop Client and Syncing
    * [Install and sync Files](syncing_client/install_sync.md)
    * [Syncing existing folders](syncing_client/syncing_existing_folders.md)
