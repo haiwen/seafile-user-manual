@@ -15,7 +15,7 @@
 
 ## Ubuntu 17.10, 18.04 et plus récentes
 
-Seafile est disponible directement dans Ubuntu, en le cherchant dans Logiciels.
+Seafile est disponible directement dans Ubuntu, en le cherchant dans Logiciels (catégorie Internet).
 
 ## Anciennes version d'Ubuntu (17.04 et plus anciennes)
 
@@ -46,7 +46,7 @@ apt update
 Puis, pour installer Seafile :
 
 ```sh
-apt-get -t stretch-backports install seafile-gui
+apt -t stretch-backports install seafile-gui
 ```
 
 ## <a id="wiki-fedora"></a> Fedora (Maintenu par la communauté)
