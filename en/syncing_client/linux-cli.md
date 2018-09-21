@@ -152,7 +152,7 @@ seaf-cli config -k download_limit -v 1000000
 ## Two factor authentication
 
 Now, the seaf-cli has suported 'Two Factor Authentication'.
-If you want to use the feature, you should add the argument `--tfa <token>` to seaf-cli command.
+If you want to use the feature, you should add the argument `--tfa <token>` to any `seaf-cli` commands.
 
 For example:
 
