@@ -148,3 +148,15 @@ Set download speed limit to 1MB/s :
 ```sh
 seaf-cli config -k download_limit -v 1000000
 ```
+
+## Two factor authentication
+
+Now, the seaf-cli has suported 'Two Factor Authentication'.
+If you want to use the feature, you should add the argument `--tfa <token>` to any `seaf-cli` commands.
+The `<token>` is Google Authenticator's verification code.
+
+For example:
+
+```sh
+seaf-cli download -l "4b11d9d4-e3b1-4394-be85-9d4a80f626fa" -s "https://demo.seafile.top" -d "testst" -u "abc@abc.com" -p "abc" --tfa 002755
+```
