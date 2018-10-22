@@ -44,6 +44,20 @@ sudo yum install -y epel-release
 sudo yum install -y seadrive --enablerepo=cr
 ```
 
+## Installing on Fedora
+
+Add the repo
+
+```
+wget -O- https://git.io/seadrive-fedora-repo | sudo tee /etc/yum.repos.d/seadrive.repo
+```
+
+Install SeaDrive Client
+
+```
+sudo yum install -y seadrive
+```
+
 ## Running SeaDrive with GUI
 
 To use SeaDrive, just run "SeaDrive" from your desktop environment, or type "seadirve-gui" in command line. After logging into your server, the virtual drive will be mounted in `~/SeaDrive.`
