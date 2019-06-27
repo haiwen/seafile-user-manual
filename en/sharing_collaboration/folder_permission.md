@@ -1,6 +1,6 @@
 # Use Folder Permission for Fine-grained Access Control
 
-For shared libraries or folders, you can set permission ("read only" or "read write") to its sub-folders for a person or a group. Here are some use cases:
+For shared libraries or folders, you can set permission to its sub-folders for a person or a group. Available permissions are the same as the ones described in [sharing libraries](./sharing_files_and_folders.md). Here are some use cases:
 
 * You shared a library to a group with "read only" permission. You also want to allow a specific member of the group to modify files in one sub-folder. You can grant write permission of this sub-folder to this person.
 * You shared a library to 3 groups. There are 3 sub-folders under that library, one for each group to upload files. However you don't want users to change files not belong to his/her group. You can grant write permission of a sub-folder only to its group.

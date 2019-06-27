@@ -17,6 +17,8 @@
    * [Locking files](sharing_collaboration/file_locking.md)
    * [Folder permission](sharing_collaboration/folder_permission.md)
    * [Departments Sharing](sharing_collaboration/departments.md)
+* Wiki and Knowledge Management
+   * [Manage Library as Wiki](wiki/manage_library_as_wiki.md)
 * Desktop Client and Syncing
    * [Install and sync Files](syncing_client/install_sync.md)
    * [Syncing existing folders](syncing_client/syncing_existing_folders.md)

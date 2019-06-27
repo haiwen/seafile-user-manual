@@ -49,11 +49,13 @@ You can choose the member range of the share:
 * Share to group: You can share to a group of users. See how to manage groups in group sharing.
 * Share to organization: If you're using a private server, sometimes it's useful to share to all members on the server (the entire organization).
 
-You can also set read/write permission on the share:
+You can also set permission on the share:
 
 * Read-Write share: the share members can do any update operations on the folder, including update file, upload file, delete, rename.
 * Read-only share: the share members can only read the folder and files in it. They cannot do any update to the folder and files.
 * Admin: the share members can re-share the library to other users. This permission can only be set when sharing a library, but not a folder.
+* Online Read-Write: users can view and edit the file online via web browser. File cannot be downloaded. (New in 7.0)
+* Online Read-only: users can view the file online via web browser. File cannot be downloaded. (New in 7.0)
 
 To share a library or folder to a user or group:
 
