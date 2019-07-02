@@ -9,7 +9,6 @@
    * [Setting history retention period](file_folder_managing/setting_library_history.md)
    * [Deleting a library](file_folder_managing/deleting_a_library.md)
    * [Viewing files within Web App](file_folder_managing/viewing_files_within_web_app.md)
-   * [Editing markdown files](file_folder_managing/editing_markdown_files.md)
    * [Full text file search](file_folder_managing/full-text_file_search.md)
 * Sharing and Collaboration
    * [Sharing files and folders](sharing_collaboration/sharing_files_and_folders.md)
