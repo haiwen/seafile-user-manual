@@ -14,4 +14,8 @@
 	* [使用挂载盘](seadrive_client/usage_seadrive_client.md)
 	* [设置挂载盘](seadrive_client/seadrive_setup.md)
 	* [挂载盘常见问题](seadrive_client/faq_seadrive.md)
+* 维基与知识管理
+    * [维基功能](wiki/wiki_function.md)
+    * [Markdown 编辑器](wiki/markdown_editor.md)
+    * [文件标签](wiki/file_tags.md)
 * [常见问题](faq.md)
