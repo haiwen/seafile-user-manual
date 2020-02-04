@@ -17,7 +17,9 @@
 
 Seafile est disponible directement dans Ubuntu, en le cherchant dans Logiciels (catégorie Internet).
 
-## Anciennes version d'Ubuntu (17.04 et plus anciennes)
+Dans certains cas, la version disponible dans Ubuntu 18.04 ne fonctionne pas, voir ci-dessous pour une méthode d'installation alternative.
+
+## Anciennes version d'Ubuntu (17.04 et plus anciennes - ou si problème avec la version d'Ubuntu)
 
 Les utilisatrices·teurs d'Ubuntu peuvent installer le client Seafile depuis le [PPA officiel](https://code.launchpad.net/~seafile/+archive/ubuntu/seafile-client) :
 
