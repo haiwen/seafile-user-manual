@@ -33,6 +33,14 @@ Vous pouvez désormais lancer le client Seafile depuis le dash d'Unity.
 
 ## <a id="wiki-debian"></a> Debian
 
+### Debian 10 (Buster)
+
+Si vous utilisez Debian 10 (Buster), Seafile est disponible dans les dépôts standards. Vous pouvez l'installer avec votre logiciel habituel, ou via la ligne de commande (en étant connecté en *root*) :
+
+```sh
+apt install seafile-gui
+```
+
 ### Debian 9 (Stretch)
 Si vous utilisez Debian 9 (Stretch), Seafile est disponible dans les [dépôts Backports](https://backports.debian.org/Instructions/).
 
