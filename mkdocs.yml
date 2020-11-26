@@ -1,7 +1,7 @@
 site_name: Seafile User Manual
 site_author: seafile
 docs_dir: ./en
-site_url: https://seafile.github.io/seafile-user-manual/
+site_url: https://haiwen.github.io/seafile-user-manual/
 
 
 repo_name: haiwen/seafile-user-manual
