@@ -12,13 +12,8 @@ copyright: Copyright &copy; 2020 seafile
 theme:
   name: material
   # icon:
-<<<<<<< HEAD
-  logo: seafile-1024.jpg
-  favicon: assets/seatable-favicon.ico
-=======
   logo: seafile-transparent-1024.png
   favicon: favicon.ico
->>>>>>> 110be695375537e2b92209b6d172abf9a2dcabbe
   # features:
     # - tabs
   palette:
@@ -51,11 +46,6 @@ markdown_extensions:
 
 # Page tree
 nav:
-<<<<<<< HEAD
-  - Home: README.md
-  - Summary: SUMMARY.md
-  - Faq: faq.md
-=======
   - Introduction: README.md
   - Managing Files and Folders:
      - Managing files with libraries: file_folder_managing/libraries_managing.md
@@ -92,4 +82,3 @@ nav:
   - Security and Encryption:
      - How to use encrypted libraries: security_and_encryption/use_encrypted_libraries.md
   - FAQ: faq.md
->>>>>>> 110be695375537e2b92209b6d172abf9a2dcabbe
