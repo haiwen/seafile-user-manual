@@ -3,9 +3,9 @@ site_author: seafile
 docs_dir: ./en
 site_url: https://haiwen.github.io/seafile-user-manual/
 
-
 repo_name: haiwen/seafile-user-manual
 repo_url: https://github.com/haiwen/seafile-user-manual/
+edit_uri: blob/master/en
 
 copyright: Copyright &copy; 2020 seafile
 
@@ -45,7 +45,6 @@ markdown_extensions:
   - markdown.extensions.toc:
       permalink: true
       toc_depth: "1-4"
-
 
 # Page tree
 nav:
