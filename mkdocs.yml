@@ -17,7 +17,7 @@ theme:
   # features:
     # - tabs
   palette:
-    primary: deep orange
+    primary: white
     accent:
 
 plugins:
@@ -29,6 +29,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/haiwen/seafile-user-manua/
+
+extra_css:
+  - stylesheets/extra.css
 
 # Extensions
 markdown_extensions:
