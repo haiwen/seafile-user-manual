@@ -14,24 +14,14 @@ The source of this manual is hosted on Github https://github.com/haiwen/seafile-
 
 ## How to compile
 
-You can compile the code in this repository into HTML format by the [GitBook](https://www.gitbook.com/) and deploy it to your own web container.
+You can compile the code in this repository into HTML format by the [mkdocs](https://www.mkdocs.org/) and deploy it to your own web container.
 
-### Install gitbook
+### Install mkdocs
 
-The best way to install GitBook is via NPM. At the terminal prompt, simply run the following command to install GitBook:
-
-- For Ubuntu
+Install the mkdocs package using pip:
 
 ```bash
-apt-get install npm -y
-npm install gitbook-cli -g
-```
-
-- For CentOS
-
-```bash
-yum install npm -y
-npm install gitbook-cli -g
+pip install mkdocs
 ```
 
 ### Get the Code
@@ -40,24 +30,29 @@ npm install gitbook-cli -g
 git clone https://github.com/haiwen/seafile-user-manual.git
 ```
 
-### Build the static website
+### Start the server
+
+Make sure you're in the same directory as the mkdocs.yml configuration file, and then start the server by running the mkdocs serve command:
 
 ```bash
 cd seafile-user-manual
-gitbook init
-gitbook build # Will generate a '_book' directory in the current directory
+mkdocs serve
+
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+[I 160402 15:50:43 server:271] Serving on http://127.0.0.1:8000
 ```
 
-Then you can deploy the '`_book`' as a static website.
+Open up http://127.0.0.1:8000/ in your browser, and you'll see the seafile manual page being displayed.
 
-Eg: Nginx
+### Build the static website
+
 
 ```bash
-cp -r ./_book /var/www/gitbook
-# Modified the nginx configuration file: "root /var/www/gitbook;"
-# And than
-nginx -s reload
+mkdocs build
 ```
+
+This will create a new directory, named site. Then you can deploy the '`site`' as a static website.
 
 ## Contact information
 
