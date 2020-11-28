@@ -1,20 +1,54 @@
 # Install Seafile Client on Linux
 
-* [Ubuntu](#wiki-ubuntu)
-* [Debian](#wiki-debian)
-* [Fedora](#wiki-fedora)
-* [Centos/RHEL](#wiki-centos)
-* [Arch Linux](#wiki-archlinux)
-* [Linux CLI](#wiki-cli)
+You can find supported OS versions on <https://cloud.seatable.io/dtable/external-links/a85d4221e41344c19566/?tid=YzYy&vid=pO5i>
 
-## <h2 id='wiki-ubuntu'>Ubuntu</h2>
+## Debian/Ubuntu
 
-Ubuntu users can install Seafile client from the [Official PPA](https://code.launchpad.net/~seafile/+archive/ubuntu/seafile-client):
+To install the client, first add the signing key:
 
-```sh
-sudo add-apt-repository ppa:seafile/seafile-client
-sudo apt-get update
-sudo apt-get install seafile-gui
+```
+sudo wget https://linux-clients.seafile.com/seafile.asc -O /usr/share/keyrings/seafile-keyring.asc
+
+```
+
+Then add the repo to your apt source list, using the line corresponding to your Debian/Ubuntu version :
+
+```
+For Debian 9
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seafile-deb/stretch/ stable main' > /etc/apt/sources.list.d/seafile.list"
+
+```
+
+```
+For Debian 10
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seafile-deb/buster/ stable main' > /etc/apt/sources.list.d/seafile.list"
+
+```
+
+```
+For Ubuntu 18.04
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seafile-deb/bionic/ stable main' > /etc/apt/sources.list.d/seafile.list"
+
+```
+
+```
+For Ubuntu 20.04
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seafile-deb/focal/ stable main' > /etc/apt/sources.list.d/seafile.list"
+
+```
+
+Update your local apt cache :
+
+```
+sudo apt update
+
+```
+
+Now install the client:
+
+```
+sudo apt install -y seafile-gui
+
 ```
 
 If you only want to install the command-line client, run `sudo apt-get install seafile-cli` instead.
@@ -23,61 +57,69 @@ If you want to install the debug symbols (for example, when you want to report a
 
 ```sh
 sudo apt-get install libsearpc-dbg ccnet-dbg libccnet-dbg seafile-daemon-dbg libseafile-dbg seafile-gui-dbg
-```
-
-Now you can start seafile client from Unity's dash.
-
-## <h2 id='wiki-debian'>Debian</h2>
-
-Debian users can install Seafile client from our debian repo:
-
-To install the client, first add the signing key:
-
-```sh
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 8756C4F765C9AC3CB6B85D62379CE192D401AB61
-```
-
-Then add the repo to your apt source list, using the line corresponding to your debian version :
 
 ```
-# For Debian 7
-echo deb http://deb.seadrive.org wheezy main | sudo tee /etc/apt/sources.list.d/seafile.list
 
-# For Debian 8
-echo deb http://deb.seadrive.org jessie main | sudo tee /etc/apt/sources.list.d/seafile.list
+**note:** from seafile version 7.0.8, seaf-cli only support python3.5 or above on Debian/Ubuntu.
 
-# For Debian 9
-echo deb http://deb.seadrive.org stretch main | sudo tee /etc/apt/sources.list.d/seafile.list
-```
+## Centos 7
 
-Update your local apt cache :
+Since 7.0.3 version, we provide official repo for CentOS or RHEL. Currently only CentOS/RHEL 7 is supported.
+
+Add the repo
 
 ```
-sudo apt-get update
+sudo cat > /etc/yum.repos.d/seafile.repo <<EOF
+[seafile]
+name=seafile
+baseurl=https://linux-clients.seafile.com/seafile-rpm/centos7
+gpgcheck=0
+enabled=1
+EOF
+
 ```
 
-Now install the client:
+Install Seafile Client
 
-```sh
-sudo apt-get install seafile-gui
+```
+sudo yum install -y epel-release
+
+sudo yum install -y seafile --enablerepo=cr
+
 ```
 
-If you only want to install the command-line client, run `sudo apt-get install seafile-cli` instead.
+## Fedora
 
-## <h2 id='wiki-fedora'>Fedora (Community Maintained)</h2>
+Since 7.0.9 version, we provide official repo for Fedora. Currently Fedora 31 and Fedora 32 is supported.
 
-There is a *community maintained* Seafile Client RPM package in Fedora's [official repository](https://src.fedoraproject.org/rpms/seafile).
+Add the repo
 
-## <h2 id='wiki-centos'>Centos/RHEL (Community Maintained)</h2>
+```
+sudo cat > /etc/yum.repos.d/seafile.repo <<EOF
+[seafile]
+name=seafile
+baseurl=https://linux-clients.seafile.com/seafile-rpm/fedora32
+gpgcheck=0
+enabled=1
+EOF
 
-There is a *community maintained* Seafile Client RPM package for CentOS/RHEL https://copr.fedorainfracloud.org/coprs/pkerling/seafile/.
+```
 
-## <h2 id='wiki-archlinux'>Arch Linux (Community Maintained)</h2>
+For fedora 31, The `baseurl` above should be replaced with `https://linux-clients.seafile.com/seafile-rpm/fedora31`
 
-There is a *community maintained* Seafile Client package for Arch Linux:
+Install Seafile Client
 
-https://aur.archlinux.org/packages/seafile-client/
+```
+sudo yum install -y seafile
 
-## <h2 id='wiki-cli'>Linux CLI Usage</h2>
+```
+
+## Arch Linux (Community Maintained)
+
+There is a _community maintained_ Seafile Client package for Arch Linux:
+
+<https://aur.archlinux.org/packages/seafile-client/>
+
+## Linux CLI Usage
 
 Please refer to [this documentation](linux-cli.md) for how to use Linux client on a command line server.

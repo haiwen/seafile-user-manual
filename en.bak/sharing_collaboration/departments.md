@@ -2,24 +2,24 @@
 
 Some organizations consist of complex department hierarchy. There are usually two common use cases for file management in these organizations:
 
-* There should be a common file sharing space for the organization. The folder hierarchy should map the department hierarchy. There will be separate folder or space assigned to each department.
-* The sharing space should be owned and managed by the organization, but not individual employees. So that the ownership of files doesn't have to be changed when an employee leaves the organization.
+- There should be a common file sharing space for the organization. The folder hierarchy should map the department hierarchy. There will be separate folder or space assigned to each department.
+- The sharing space should be owned and managed by the organization, but not individual employees. So that the ownership of files doesn't have to be changed when an employee leaves the organization.
 
 Before version 6.3.0, files in Seafile can only be owned by individual users and shared to other users or groups. In 6.3.0, we introduce the "Departments" feature to meet the above two use cases. This new feature works side by side with the existing sharing features.
 
 We'll introduce this feature from 3 different perspectives:
 
-* [System admin](#wiki-sys-admin)
-* [Department admin](#wiki-dept-admin)
-* [Department members](#wiki-user)
+- [System admin](#wiki-sys-admin)
+- [Department admin](#wiki-dept-admin)
+- [Department members](#wiki-user)
 
-## System Admin
+## <h2 id='wiki-sys-admin'>System Admin</h2>
 
 The system admin can:
 
-* Manage department hierarchy and members
-* Assign storage quota for departments
-* Create and manage shared libraries in departments
+- Manage department hierarchy and members
+- Assign storage quota for departments
+- Create and manage shared libraries in departments
 
 ### Manage department hierarchy and members
 
@@ -43,15 +43,13 @@ All the above operations can be done in the system admin interface. See the belo
 
 ![](./imgs/sys_admin_departments.png)
 
-
-
-## Department Admin
+## <h2 id='wiki-dept-admin'>Department Admin</h2>
 
 As noted above, department admin is a special role assigned by the system admin to some members of a department. Department admins can perform the following operations in a department after login to his/her own account.
 
-* Access to the libraries of the department
-* Manage members in his/her department
-* Manage libraries in his/her department
+- Access to the libraries of the department
+- Manage members in his/her department
+- Manage libraries in his/her department
 
 For the end users, a department can be accessed as a special type of group. Each department is presented to its members as a group. A user can not only access to the libraries in the department he/she belongs to, but also the libraries in the parent departments of his/her department. For example, if John is in the "EMEA" sub-department under the "Sales" department, and "Sales" is a sub-department under the company "ACME", John can then access to the groups "EMEA", "Sales" and "ACME". The groups for departments are marked with a "building" icon next to its name. See the screenshot below for details.
 
@@ -59,20 +57,18 @@ For the end users, a department can be accessed as a special type of group. Each
 
 If a user is the admin of a department, he/she can add or delete members in the department. Any users registered in the system can be added as member of the department. But if the departments are imported from AD, the changes to membership will be overwritten on the next sync with AD.
 
-![](<https://download.seafile.com/lib/a1d455d4-fbdb-4066-adb4-f8bbeee3743b/file/images/auto-upload/dept_admin_manage_members (1).png?raw=1>)
-
-
+![](./imgs/dept_admin_manage_members.png)
 
 Department admin can manage the libraries in the department. The supported operations are:
 
-* Create or delete library
-* Change library name
-* Share a library to users or groups outside of this department. This is very useful for cross-department collaboration.
-* Set fine-grained permission to folders in the libraries for users or sub-departments in this department. This works like the [folder permission feature](./folder_permission.md).
+- Create or delete library
+- Change library name
+- Share a library to users or groups outside of this department. This is very useful for cross-department collaboration.
+- Set fine-grained permission to folders in the libraries for users or sub-departments in this department. This works like the [folder permission feature](./folder_permission.md).
 
-![](https://download.seafile.com/lib/a1d455d4-fbdb-4066-adb4-f8bbeee3743b/file/images/auto-upload/dept_admin_manage_libs.png?raw=1)
+![](./imgs/dept_admin_manage_libs.png)
 
-## Department Members
+## <h2 id='wiki-user'>Department Members</h2>
 
 A normal member of the department can use the department just like a group. Each department is presented to its members as a group. A user can not only access to the libraries in the department he/she belongs to, but also the libraries in the parent departments of his/her department. For example, if John is in the "EMEA" sub-department under the "Sales" department, and "Sales" is a sub-department under the company "ACME", John can then access to the groups "EMEA", "Sales" and "ACME". The groups for departments are marked with a "building" icon next to its name.
 
