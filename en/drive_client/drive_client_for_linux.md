@@ -85,7 +85,14 @@ sudo yum install -y seadrive --enablerepo=cr
 
 ## Fedora
 
-Since 7.0.9 version, we provide official repo for Fedora. Currently Fedora 31 and Fedora 32 is supported.
+**Note:** For fedora33 or above, you can install directly from the official Fedora repository.
+
+```
+sudo dnf install -y seadrive-gui
+
+```
+
+**Deprecated:** Since 7.0.9 version, we provide official repo for Fedora. Currently Fedora 31 and Fedora 32 is supported.(we no longer maintain)
 
 Add the repo
 
