@@ -157,6 +157,8 @@ Below options are provided. You can refer to sync client's documentation about t
 * PreconfigureKeepConfigWhenUninstall
 * PreconfigureSuppressLaunchAfterInstall
 
+In 2.0.13 version, a preconfigure option PreconfigureCacheDirectory is added. It can be used to preset the cache folder location.
+
 ## How to use run Seafile client as a service on Windows
 
 Seafile client can be configured to run as a daemon using tools like Firedaemon. First configure Seafile as the user it should run - in this example "Administator"：
