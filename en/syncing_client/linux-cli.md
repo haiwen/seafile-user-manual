@@ -144,7 +144,7 @@ seaf-cli create [-h] -n library-name -t description [-e library-password] -s ser
 List information about synced libraries. The information includes library name, library ID and local folder path for the library.
 
 ```
-seaf-cli list
+seaf-cli list [-c <config-dir>] [--json]
 
 ```
 
@@ -153,7 +153,7 @@ seaf-cli list
 List information about accessible libraries on the server. The information includes library names and ID.
 
 ```
-seaf-cli list-remote
+seaf-cli list-remote -s <seahub-server-url> -u <username> [-p <password>] [-c <config-dir>] [--json]
 
 ```
 
