@@ -17,7 +17,7 @@
 
 Seafile est disponible directement dans Ubuntu, en le cherchant dans Logiciels (catégorie Internet).
 
-Dans certains cas, la version disponible dans Ubuntu 18.04 ne fonctionne pas, vous pouvez suivre les instructions [du site officiel de Seafile](https://download.seafile.com/published/seafile-user-manual/syncing_client/install_linux_client.md).
+Dans certains cas, la version disponible dans Ubuntu 18.04 ne fonctionne pas, vous pouvez suivre les instructions [du site officiel de Seafile](https://help.seafile.com/syncing_client/install_linux_client/).
 
 ## <a id="wiki-debian"></a> Debian
 
