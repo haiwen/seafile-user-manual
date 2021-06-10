@@ -12,6 +12,5 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-material-extensions
-      - run: |
-          cd $GITHUB_WORKSPACE
+      - run: cd $GITHUB_WORKSPACE
       - run: mkdocs gh-deploy --force
