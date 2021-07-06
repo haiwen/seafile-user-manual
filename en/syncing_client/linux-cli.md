@@ -22,7 +22,7 @@ Download and sync a library from a server.
 * then
 
 ```sh
-seaf-cli download -l "the id of the library" -s  "the url + port of server" -d "the folder where the library folder will be downloaded" -u "username on server" [-p "password"]
+seaf-cli download -l "the id of the library" -s  "the url + port of server" -d "the folder where the library folder will be downloaded" -u "user e-mail adress on server" [-p "password"]
 seaf-cli status  # check status of ongoing downloads
 # Name  Status  Progress
 # Apps    downloading     9984/10367, 9216.1KB/s
@@ -38,7 +38,7 @@ The above command will create a **new folder** with the same name as the library
 You can also sync a library with an **existing folder** on the local computer. The existing files in the local folder will be merged with the files in the library.
 
 ```sh
-seaf-cli sync -l "the id of the library" -s  "the url + port of server" -d "the folder which the library will be synced with" -u "username on server" [-p "password"]
+seaf-cli sync -l "the id of the library" -s  "the url + port of server" -d "the folder which the library will be synced with" -u "user e-mail adress on server" [-p "password"]
 
 ```
 
@@ -108,7 +108,7 @@ seaf-cli stop [-c <config-dir>]
 Download and sync a library from seafile server. It will create a **new folder** with the same name as the library under the parent folder. The local folder will be automatically synced with the library. The `download-by-name` command works similarly, but can save you from finding the library ID. It only works when the library name is unique on the server.
 
 ```
-seaf-cli download -l <library-id> -s <seahub-server-url> -d <parent-directory> -u <username> [-p <password>]
+seaf-cli download -l <library-id> -s <seahub-server-url> -d <parent-directory> -u <user e-mail adress on server> [-p <password>]
 
 ```
 
@@ -117,7 +117,7 @@ seaf-cli download -l <library-id> -s <seahub-server-url> -d <parent-directory> -
 Synchronize a library with an existing folder. The existing files in the local folder will be merged with the files in the library.
 
 ```
-seaf-cli sync -l <library-id> -s <seahub-server-url> -d <existing-folder> -u <username> [-p <password>]
+seaf-cli sync -l <library-id> -s <seahub-server-url> -d <existing-folder> -u <user e-mail adress on server> [-p <password>]
 
 ```
 
@@ -135,7 +135,7 @@ seaf-cli desync -d <existing-folder>
 Create a new library on server
 
 ```
-seaf-cli create [-h] -n library-name -t description [-e library-password] -s server -u username -p password
+seaf-cli create [-h] -n library-name -t description [-e library-password] -s server -u user e-mail adress on server -p password
 
 ```
 
@@ -153,7 +153,7 @@ seaf-cli list [-c <config-dir>] [--json]
 List information about accessible libraries on the server. The information includes library names and ID.
 
 ```
-seaf-cli list-remote -s <seahub-server-url> -u <username> [-p <password>] [-c <config-dir>] [--json]
+seaf-cli list-remote -s <seahub-server-url> -u <user e-mail adress on server> [-p <password>] [-c <config-dir>] [--json]
 
 ```
 
