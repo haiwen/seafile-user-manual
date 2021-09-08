@@ -208,7 +208,9 @@ For example:
 seaf-cli download -l "4b11d9d4-e3b1-4394-be85-9d4a80f626fa" -s "https://demo.seafile.top" -d "testst" -u "abc@abc.com" -p "abc" --tfa 002755
 ```
 
-In order to prevent the password from leaking, we can use token to authenticate. If your server enable web api authentication token, you can get the user token from the profile page of the web ui.  The following commands can use "-T token" instead of "-p password" parameter.
+### Authenticate with Tokens
+
+If your server uses SSO (Single Sign-On) for login, you cannot use password to login from CLI. To enable using CLI in such cases, we provide an option to authenticate with an API token since seafile client version 8.0.4. You should be able to get your API token from personal settings page in the web interface. (You should run latest 8.0 server.) Use "-T token" option instead of "-p password" to authenticate in the following commands:
 ```sh
 seaf-cli create
 seaf-cli download
