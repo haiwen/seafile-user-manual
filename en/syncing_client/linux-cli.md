@@ -210,7 +210,7 @@ seaf-cli download -l "4b11d9d4-e3b1-4394-be85-9d4a80f626fa" -s "https://demo.sea
 
 ### Authenticate with Tokens
 
-If your server uses SSO (Single Sign-On) for login, you cannot use password to login from CLI. To enable using CLI in such cases, we provide an option to authenticate with an API token since seafile client version 8.0.4. You should be able to get your API token from profile page in the web interface. (You should run latest 8.0.6 server.) Use "-T token" option instead of "-p password" to authenticate in the following commands:
+If your server uses SSO (Single Sign-On) for login, you cannot use password to login from CLI. To enable using CLI in such cases, we provide an option to authenticate with an API token since seafile client version 8.0.4. You should be able to get your API token from profile page in the web interface. (You should run 8.0.6 server .) Use "-T token" option instead of "-p password" to authenticate in the following commands:
 ```sh
 seaf-cli create
 seaf-cli download
