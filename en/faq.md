@@ -152,6 +152,8 @@ Below options are provided. You can refer to sync client's documentation about t
 
 * PreconfigureServerAddr
 * PreconfigureServerAddrOnly
+* PreconfigureUserName
+* PreconfigureUserToken
 * PreconfigureShibbolethLoginUrl
 * HideConfigurationWizard
 * PreconfigureKeepConfigWhenUninstall
