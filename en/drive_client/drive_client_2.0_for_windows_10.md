@@ -10,7 +10,7 @@ You can download SeaDrive 2.0 from [official Seafile website](https://www.seafil
 
 To access the virtual drive, just open Windows file explorer. There is a "seadrive" node in the navigation pane of Windows file explorer.
 
-[seadrive-2.0](imgs/seadrive-2.0.png)
+![seadrive-2.0](imgs/seadrive-2.0.png)
 
 ## Accessing Files in the Virtual Drive
 
@@ -24,11 +24,11 @@ Files in the virtual are created as "placeholders" in the local file system. The
 * **Full file**: The file has been downloaded and saved locally. Download is automatic when a placeholder file is opened for the first time. These files are available whenever you open SeaDrive regardless to network connections. The operating system may decide to clear a full file when more disk space is needed.
 * **Pinned full file**: The file has been downloaded and saved locally. It is guaranteed to be available offline.
 
-[seadrive-file-icons](imgs/seadrive-file-icons.png)
+![seadrive-file-icons](imgs/seadrive-file-icons.png)
 
 You can control which files or folder are cached locally. This can be changed from the context menu when you right click on a file or folder. Choose "Always keep on this device" when you want to pin a file or folder locally; choose "Free up space" when you want to clean the cache for a file or folder.
 
-[seadrive-cache-control](imgs/seadrive-cache-control.png)
+![seadrive-cache-control](imgs/seadrive-cache-control.png)
 
 In SeaDrive 1.0, cached files are not automatically updated when they're updated on the server. In SeaDrive 2.0, full and pinned files are automatically kept in sync with the server.
 
