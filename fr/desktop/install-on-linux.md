@@ -21,9 +21,9 @@ Dans certains cas, la version disponible dans Ubuntu 18.04 ne fonctionne pas, vo
 
 ## <a id="wiki-debian"></a> Debian
 
-### Debian 10 (Buster)
+### Debian 10 (Buster) ou 11 Bullseye
 
-Si vous utilisez Debian 10 (Buster), Seafile est disponible dans les dépôts standards. Vous pouvez l'installer avec votre logiciel habituel, ou via la ligne de commande (en étant connecté en *root*) :
+Si vous utilisez Debian 10 (Buster) ou 11 (Bullseye), Seafile est disponible dans les dépôts standards. Vous pouvez l'installer avec votre logiciel habituel, ou via la ligne de commande (en étant connecté en *root*) :
 
 ```sh
 apt install seafile-gui
