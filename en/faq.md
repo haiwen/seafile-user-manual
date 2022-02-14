@@ -22,7 +22,8 @@ If the information is found in both places, the one under `HKEY_CURRENT_USER` wo
 
 **Special Note for 64bit Windows Deployment**
 
-> If you are using 64-bit windows and using HKLM instead of HKCU to deploy your seafile program. please note you need to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile` instead of `HKEY_LOCAL_MACHINE\\SOFTWARE\\Seafile`. This is because seafile client is compiled as a 32-bit application on windows.
+> For client version < 8.0, if you are using 64-bit windows and using HKLM instead of HKCU to deploy your seafile program. please note you need to correct the PrimaryKey to `HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Seafile` instead of `HKEY_LOCAL_MACHINE\\SOFTWARE\\Seafile`. This is because seafile client is compiled as a 32-bit application on windows.
+> This restriction no longer applies to version 8.0 or newer. The client has been compiled as a 64-bit application since 8.0.
 
 List of Available Preconfigure Options.
 
