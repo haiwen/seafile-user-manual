@@ -66,6 +66,6 @@ The "SeaDrive" shortcut in Windows Explorer won't disappear after you exit SeaDr
 
 In some corner cases, the "SeaDrvie" shortcut will be left-over in Windows Explorer and you want to remove it.
 
-You can usually remove those shortcuts by uninstalling SeaDrive program.
+You can usually remove those shortcuts by uninstalling SeaDrive program and choose "Remove account information" in the promt dialog.
 
 If uninstallation doesn't remove the shortcuts successfully, you can remove the SeaDrive shortcut in Windows Explorer by editing the registry. Open the path "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop\\NameSpace\\" in registry editor. Remove the sub-keys correspond to the shortcut you want to remove.
