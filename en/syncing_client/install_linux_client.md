@@ -7,7 +7,7 @@ You can find supported OS versions on <https://cloud.seatable.io/dtable/external
 To install the client, first add the signing key:
 
 ```
-sudo wget https://linux-clients.seafile.com/seafile.asc -O /usr/share/keyrings/seafile-keyring.asc
+sudo wget https://linux-clients.seafile.com/seafile.asc -O /etc/apt/trusted.gpg.d/seafile-keyring.asc
 
 ```
 
