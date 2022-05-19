@@ -26,6 +26,12 @@ sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyrin
 ```
 
 ```
+For Debian 11
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seadrive-deb/bullseye/ stable main' > /etc/apt/sources.list.d/seadrive.list"
+
+```
+
+```
 For Ubuntu 18.04
 sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seadrive-deb/bionic/ stable main' > /etc/apt/sources.list.d/seadrive.list"
 
@@ -92,29 +98,11 @@ sudo dnf install -y seadrive-gui
 
 ```
 
-**Deprecated:** Since 7.0.9 version, we provide official repo for Fedora. Currently Fedora 31 and Fedora 32 is supported.(we no longer maintain)
+The community maintained Seadrive package  for Fedora is:
 
-Add the repo
+<https://packages.fedoraproject.org/pkgs/seadrive-daemon/seadrive-daemon/> 
 
-```
-sudo cat > /etc/yum.repos.d/seadrive.repo <<EOF
-[seadrive]
-name=seadrive
-baseurl=https://linux-clients.seafile.com/seadrive-rpm/fedora32
-gpgcheck=0
-enabled=1
-EOF
-
-```
-
-For fedora 31, The `baseurl` above should be replaced with `https://linux-clients.seafile.com/seadrive-rpm/fedora31`
-
-Install Seadrive Client
-
-```
-sudo yum install -y seadrive
-
-```
+<https://packages.fedoraproject.org/pkgs/seadrive-gui/seadrive-gui/> 
 
 ## Running SeaDrive with GUI
 
@@ -174,3 +162,5 @@ fuse: bad mount point `/home/user/SeaDrive': Transport endpoint is not connected
 ```
 
 You can run `fusermount -u /home/user/SeaDrive` to fix the problem.
+
+
