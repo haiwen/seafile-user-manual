@@ -43,6 +43,12 @@ sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyrin
 
 ```
 
+```
+For Ubuntu 22.04
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seadrive-deb/jammy/ stable main' > /etc/apt/sources.list.d/seadrive.list"
+
+```
+
 Update your local apt cache :
 
 ```
@@ -91,18 +97,12 @@ sudo yum install -y seadrive --enablerepo=cr
 
 ## Fedora
 
-**Note:** For fedora33 or above, you can install directly from the official Fedora repository.
+**Note:** You can install directly from the official Fedora repository.
 
 ```
 sudo dnf install -y seadrive-gui
 
 ```
-
-The community maintained Seadrive package  for Fedora is:
-
-<https://packages.fedoraproject.org/pkgs/seadrive-daemon/seadrive-daemon/> 
-
-<https://packages.fedoraproject.org/pkgs/seadrive-gui/seadrive-gui/> 
 
 ## Running SeaDrive with GUI
 

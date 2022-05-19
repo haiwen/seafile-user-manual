@@ -102,9 +102,12 @@ sudo yum install -y seafile --enablerepo=cr
 
 ## Fedora
 
-We don't provide official repo for Fedora. There is a _community maintained_ Seafile Client package for Fedora:
+**Note:** You can install directly from the official Fedora repository.
 
-<https://src.fedoraproject.org/rpms/seafile-client >
+```
+sudo dnf install -y seafile-client
+
+```
 
 ## Arch Linux (Community Maintained)
 
