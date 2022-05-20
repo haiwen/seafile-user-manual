@@ -26,6 +26,12 @@ sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyrin
 ```
 
 ```
+For Debian 11
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seadrive-deb/bullseye/ stable main' > /etc/apt/sources.list.d/seadrive.list"
+
+```
+
+```
 For Ubuntu 18.04
 sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seadrive-deb/bionic/ stable main' > /etc/apt/sources.list.d/seadrive.list"
 
@@ -34,6 +40,12 @@ sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyrin
 ```
 For Ubuntu 20.04
 sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seadrive-deb/focal/ stable main' > /etc/apt/sources.list.d/seadrive.list"
+
+```
+
+```
+For Ubuntu 22.04
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seadrive-deb/jammy/ stable main' > /etc/apt/sources.list.d/seadrive.list"
 
 ```
 
@@ -85,34 +97,10 @@ sudo yum install -y seadrive --enablerepo=cr
 
 ## Fedora
 
-**Note:** For fedora33 or above, you can install directly from the official Fedora repository.
+**Note:** You can install directly from the official Fedora repository.
 
 ```
 sudo dnf install -y seadrive-gui
-
-```
-
-**Deprecated:** Since 7.0.9 version, we provide official repo for Fedora. Currently Fedora 31 and Fedora 32 is supported.(we no longer maintain)
-
-Add the repo
-
-```
-sudo cat > /etc/yum.repos.d/seadrive.repo <<EOF
-[seadrive]
-name=seadrive
-baseurl=https://linux-clients.seafile.com/seadrive-rpm/fedora32
-gpgcheck=0
-enabled=1
-EOF
-
-```
-
-For fedora 31, The `baseurl` above should be replaced with `https://linux-clients.seafile.com/seadrive-rpm/fedora31`
-
-Install Seadrive Client
-
-```
-sudo yum install -y seadrive
 
 ```
 
@@ -174,3 +162,5 @@ fuse: bad mount point `/home/user/SeaDrive': Transport endpoint is not connected
 ```
 
 You can run `fusermount -u /home/user/SeaDrive` to fix the problem.
+
+

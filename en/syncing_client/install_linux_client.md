@@ -26,6 +26,12 @@ sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyrin
 ```
 
 ```
+For Debian 11
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seafile-deb/bullseye/ stable main' > /etc/apt/sources.list.d/seafile.list"
+
+```
+
+```
 For Ubuntu 18.04
 sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seafile-deb/bionic/ stable main' > /etc/apt/sources.list.d/seafile.list"
 
@@ -34,6 +40,12 @@ sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyrin
 ```
 For Ubuntu 20.04
 sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seafile-deb/focal/ stable main' > /etc/apt/sources.list.d/seafile.list"
+
+```
+
+```
+For Ubuntu 22.04
+sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seafile-deb/jammy/ stable main' > /etc/apt/sources.list.d/seafile.list"
 
 ```
 
@@ -90,27 +102,10 @@ sudo yum install -y seafile --enablerepo=cr
 
 ## Fedora
 
-Since 7.0.9 version, we provide official repo for Fedora. Currently Fedora 31 and Fedora 32 is supported.
-
-Add the repo
+**Note:** You can install directly from the official Fedora repository.
 
 ```
-sudo cat > /etc/yum.repos.d/seafile.repo <<EOF
-[seafile]
-name=seafile
-baseurl=https://linux-clients.seafile.com/seafile-rpm/fedora32
-gpgcheck=0
-enabled=1
-EOF
-
-```
-
-For fedora 31, The `baseurl` above should be replaced with `https://linux-clients.seafile.com/seafile-rpm/fedora31`
-
-Install Seafile Client
-
-```
-sudo yum install -y seafile
+sudo dnf install -y seafile-client
 
 ```
 
@@ -123,3 +118,5 @@ There is a _community maintained_ Seafile Client package for Arch Linux:
 ## Linux CLI Usage
 
 Please refer to [this documentation](linux-cli.md) for how to use Linux client on a command line server.
+
+
