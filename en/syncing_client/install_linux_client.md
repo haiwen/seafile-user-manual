@@ -11,6 +11,8 @@ sudo wget https://linux-clients.seafile.com/seafile.asc -O /usr/share/keyrings/s
 
 ```
 
+If apt-get reports following error: "The following signatures couldn't be verified because the public key is not available", please update the key for seafile repository.
+
 Then add the repo to your apt source list, using the line corresponding to your Debian/Ubuntu version :
 
 ```
