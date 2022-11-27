@@ -17,7 +17,7 @@ Then add the repo to your apt source list, using the line corresponding to your 
 
 For Debian 9 / Debian 10 / Debian 11 / Ubuntu 18.04 / Ubuntu 20.04 / Ubuntu 22.04
 ```
-sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seadrive-deb/$(lsb_release -cs)/ stable main' > /etc/apt/sources.list.d/seadrive.list"
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/seafile-keyring.asc] https://linux-clients.seafile.com/seadrive-deb/$(lsb_release -cs)/ stable main" | sudo tee /etc/apt/sources.list.d/seadrive.list > /dev/null
 
 ```
 
