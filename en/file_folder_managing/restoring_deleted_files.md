@@ -1,6 +1,6 @@
 # Restoring Deleted Files and Folders
 
-Each library in Seafile tracks your file deletion operations automatically. Sometimes you find files are deleted mistakenly. You can find back your delete files in the trash bin of each library.
+Each library in Seafile tracks your file deletion operations automatically. Sometimes you find files are deleted mistakenly. You can find back your deleted files in the trash bin of each library.
 
 Here is how to use the trash bin feature:
 
@@ -9,4 +9,4 @@ Here is how to use the trash bin feature:
 * In the deleted files list, you can restore file and folders. If a file or folder's parent folder has been deleted, it will be restored to the library's root folder.
 * Note that the trash bin only contains files and sub-folders deleted under the current folder. Files deleted in the sub-folders of the current folder are also included in the list.
 
-You can configure the retention period of delete files: [setting history retention period](setting_library_history.md)
+You can configure the retention period of deleted files: [setting history retention period](setting_library_history.md)
