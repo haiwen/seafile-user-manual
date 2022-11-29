@@ -1,6 +1,6 @@
 # Deleting a Library
 
-You can delete a library owned by you. Unlike the files and folders in the library, a deleted library currently cannot be restored by the user. But the Seafile server's administrator can restore a deleted library for users. In the future, we may allow the end users to restore a deleted library.
+You can delete a library owned by you. A deleted library can be restored by you or Seafile server's administrator.
 
 After a library is deleted, it has following effects:
 
