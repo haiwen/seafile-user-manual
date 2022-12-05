@@ -2,8 +2,6 @@
 
 SeaDrive 2.0 (and future versions) is redesigned with deeper integration to Windows 10 operating system. It supports Windows 10 1709 version (2017 Fall Update for Windows 10) and later versions. We recommend Windows 10 users to upgrade to SeaDrive 2.0 for more native virtual drive experience.
 
-SeaDrive 2.0 is currently in Beta status. We'll mark it stable after we have more user feedbacks.
-
 ## Install and Access the Virtual Drive
 
 You can download SeaDrive 2.0 from [official Seafile website](https://www.seafile.com/en/download/). After installation and logging into your Seafile account, SeaDrive will start downloading library and file lists from the server (just as in SeaDrive 1.0.x). It may take some time, depending on the number of files available in your seafile account. The download is progressive, so in the mean time you can already access some files in the virtual drive.
@@ -18,7 +16,7 @@ Libraries are grouped into 4 categories in the virtual drive: My Libraries, Shar
 
 As you can see, the file status icons is more integrated into Windows file explorer. The icons are a bit different form version 1.0.
 
-Files in the virtual are created as "placeholders" in the local file system. They may be in 3 states:
+Files in the virtual drive are created as "placeholders" in the local file system. They may be in 3 states:
 
 * **Placeholder file**: An empty representation of the file and can only be opened when there is network connection.
 * **Full file**: The file has been downloaded and saved locally. Download is automatic when a placeholder file is opened for the first time. These files are available whenever you open SeaDrive regardless to network connections. The operating system may decide to clear a full file when more disk space is needed.
@@ -38,7 +36,7 @@ Whenever you open a placeholder file, the operating system will automatically st
 
 Sometimes a background application may try to download a file in the virtual drive (such as an Anti-Virus software). You will be notified by the operating system about this and you may choose to cancel the download or disallow the application from automatically downloading files in the future.
 
-## Frequently Asked Questions
+## FAQ
 
 ### Can I create, delete, rename libraries?
 
@@ -50,7 +48,7 @@ Yes. But files created outside of a library folder will be ignored and **NOT **s
 
 ### Can I access encrypted libraries?
 
-Yes. By default, encrypted libraries are not synced and shown in the virtual drive. You need to manually choose which encrypted libraries to sync and enter the password. Just right click on the SeaDrive icon in the system tray area and choose "Show encrypted libraries". A windows will show up and you can choose to sync or unsync an encrypted library.
+Yes. By default, encrypted libraries are not synced and shown in the virtual drive. You need to manually choose which encrypted libraries to sync and enter the password. Just right click on the SeaDrive icon in the system tray area and choose "Show encrypted libraries". A window will show up and you can choose to sync or unsync an encrypted library.
 
 ### Is it compatible to SeaDrive 1.0?
 
