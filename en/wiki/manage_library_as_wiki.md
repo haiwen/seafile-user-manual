@@ -22,7 +22,7 @@ The change history of a Markdown file can be easily accessed by clicking the "Fi
 
 ![File history](./imgs/file_history.png)
 
-You can open a hidden side bar on the right side of the Markdown editor. Table of contents, file information, formatting suggestions, and collaborative commenting are provided in this side bar.
+You can open a hidden side bar on the right side of the Markdown editor. Table of contents, file information, and collaborative commenting are provided in this side bar.
 
 ![Markdown Editor Side Bar](./imgs/editor_side_bar.png)
 
@@ -37,7 +37,3 @@ File tagging is an important feature for knowledge management. Seafile allows us
 The file browser interface provides a summary of all file tags in the current library.
 
 ![Tags summary](./imgs/tags_summary.png)
-
-You can also add related files to a Markdown document from the "File Information" tab in the side bar.
-
-![Related files](./imgs/related_files.png)
