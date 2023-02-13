@@ -56,6 +56,7 @@ You can also set permission on the share:
 * Admin: besides the write permission, users can also share the library.
 * Online Read-Write: users can view and edit files online via a web browser. The files cannot be downloaded.
 * Online Read-only: users can only view files online via a web browser. The files cannot be downloaded.
+* Custom sharing permissions: user needs to create a custom sharing permission first, then he/she can choose the custom sharing permission when sharing.
 
 To share a library or folder to a user or group:
 
