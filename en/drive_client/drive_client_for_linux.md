@@ -52,7 +52,7 @@ Add the repo (The same repo is used for seadrive.)
 sudo cat > /etc/yum.repos.d/seadrive.repo <<EOF
 [seadrive]
 name=seadrive
-baseurl=https://linux-clients.seafile.com/seadrive-rpm
+baseurl=https://linux-clients.seafile.com/seadrive-rpm/centos7
 gpgcheck=0
 enabled=1
 EOF
