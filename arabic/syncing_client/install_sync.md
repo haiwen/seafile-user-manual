@@ -1,33 +1,33 @@
-# Installing Seafile Client Program
+##  لتثبيت برنامج عميل Seafile، اتبع هذه الخطوات:
 
-After downloading Seafile client program, you have 3 steps left to get it up and running.
+بعد تنزيل برنامج العميل Zaindrive، لديك 3 خطوات متبقية لتشغيله:
 
-## 1\. Select a disk partition to store local Seafile data
+## 1. اختر قسمًا من القرص لتخزين بيانات Zaindrive المحلية
 
-![Selecting a folder to store Seafile data](./imgs/seafile-init-choose-folder.png)
+![اختيار مجلد لتخزين بيانات Seafile](./imgs/seafile-init-choose-folder.png)
 
-## 2\. Add an account
+## 2. إضافة حساب
 
-Add an account on your private Seafile server or our public server.
+أضف حسابًا في خادم Zaindrive الخاص بك أو في الخادم العام.
 
 ![](./imgs/seafile-add-account.png)
 
-## 3\. Sync a library
+## 3. مزامنة مكتبة
 
-* Click the "Sync this library" button to sync it with a local folder.
-* Then you add some files into the library. They will be automatically synced with cloud platform.
+* انقر على زر "مزامنة هذه المكتبة" لمزامنتها مع مجلد محلي.
+* ثم قم بإضافة بعض الملفات إلى المكتبة. ستتم مزامنتها تلقائيًا مع منصة السحابة.
 
 ![](./imgs/seafile-sync-library.png)
 
-## 4\. (Optional) Create a library
+## 4. (اختياري) إنشاء مكتبة
 
-You can also create a library from a local folder.
+يمكنك أيضًا إنشاء مكتبة من مجلد محلي.
 
 ![](./imgs/seafile-create-library.png)
 ![](./imgs/seafile-create-library-02.png)
 
-## 5\. Browse files on the cloud
+## 5. تصفح الملفات على السحابة
 
-In some occasions, you want to modify files on the cloud directly without syncing them. Seafile client comes with a "cloud file browser" to meet this need. Click an unsynced library will open the cloud file browser.
+في بعض الحالات، قد ترغب في تعديل الملفات على السحابة مباشرة بدون مزامنتها. يأتي برنامج Zaindrive مع "مستعرض ملفات السحابة" لتلبية هذا الاحتياج. انقر فوق المكتبة غير المتزامنة لفتح مستعرض ملفات السحابة.
 
 ![](./imgs/seafile-cloud-file-browser.png)
