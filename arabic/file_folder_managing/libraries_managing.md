@@ -1,16 +1,16 @@
-# Managing Files with Libraries
+# إدارة الملفات باستخدام المكتبات
 
-Seafile uses "libraries" to organize your files. A library is a top level container for a set of files and folders. You can create a library for each project you work on, or each document type you want to save in Seafile. A library works mostly like a top level folder. But it also has some special properties:
+يستخدم Zaindrive "المكتبات" لتنظيم الملفات الخاصة بك. المكتبة هي عبارة عن حاوية علوية لمجموعة من الملفات والمجلدات. يمكنك إنشاء مكتبة لكل مشروع تعمل عليه أو لكل نوع من المستندات التي ترغب في حفظها في Zaindrive. تعمل المكتبة في الغالب على أنها مجلد علوي. ولكن لها أيضًا بعض الخصائص الخاصة:
 
-* Each library keeps its own file modification history. There is no global file modification history across all libraries.
-* Each library can be synced to desktop clients separately. You can choose which libraries to be synced.
+* تحتفظ كل مكتبة بسجل تاريخ تعديل الملفات الخاص بها. لا يوجد سجل عالمي لتاريخ تعديل الملفات عبر جميع المكتبات.
+* يمكن مزامنة كل مكتبة بشكل منفصل مع تطبيقات سطح المكتب. يمكنك اختيار المكتبات التي ترغب في مزامنتها.
 
-When you log into Seafile's web app for the first time, Seafile automatically creates a default library named "My Library" for you. You can also create more libraries. Here is what it looks like when you've created a few libraries.
+عند تسجيل الدخول إلى تطبيق الويب لـ Zaindrive لأول مرة، يقوم Zaindrive تلقائيًا بإنشاء مكتبة افتراضية تسمى "مكتبتي" بالنسبة لك. يمكنك أيضًا إنشاء المزيد من المكتبات. هنا ما يبدو عليه الأمر عندما تقوم بإنشاء بعض المكتبات.
 
 ![](./imgs/libraries_view.png)
 
-You can navigate into a library and manage your files and folders. You can upload, download, rename, move, copy and delete files.
+يمكنك التنقل داخل مكتبة وإدارة ملفاتك ومجلداتك. يمكنك تحميل الملفات، وتنزيلها، وإعادة تسميتها، ونقلها، ونسخها، وحذفها.
 
 ![](./imgs/library_browse.png)
 
-After [syncing a library with desktop client](../syncing_client/install_sync.md), you can do any file operations inside the local library folder. The operations will be uploaded to the server.
+بعد [مزامنة المكتبة مع تطبيق سطح المكتب](../syncing_client/install_sync.md)، يمكنك القيام بأي عمليات على الملفات داخل مجلد المكتبة المحلي. ستتم رفع هذه العمليات إلى الخادم.
