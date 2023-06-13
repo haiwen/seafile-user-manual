@@ -1,12 +1,12 @@
-# Restoring Deleted Files and Folders
+# استعادة الملفات والمجلدات المحذوفة
 
-Each library in Seafile tracks your file deletion operations automatically. Sometimes you find files are deleted mistakenly. You can find back your deleted files in the trash bin of each library.
+تقوم كل مكتبة في Seafile بتتبع عمليات حذف الملفات تلقائيًا. في بعض الأحيان، قد تجد أن الملفات تم حذفها بالخطأ. يمكنك استعادة الملفات المحذوفة في سلة المهملات لكل مكتبة.
 
-Here is how to use the trash bin feature:
+إليك كيفية استخدام ميزة سلة المهملات:
 
-* In Seafile Web App, navigate into the parent folder containing the deleted file or folder.
-* Click the "trash" icon in the library operation bar. The deleted files and folders will be listed in deletion time order. In the bottom of the list, you can click the "more" button to load more deleted files.
-* In the deleted files list, you can restore file and folders. If a file or folder's parent folder has been deleted, it will be restored to the library's root folder.
-* Note that the trash bin only contains files and sub-folders deleted under the current folder. Files deleted in the sub-folders of the current folder are also included in the list.
+* في تطبيق Seafile على الويب، انتقل إلى المجلد الأصلي الذي يحتوي على الملف أو المجلد المحذوف.
+* انقر فوق أيقونة "سلة المهملات" في شريط عمليات المكتبة. سيتم عرض الملفات والمجلدات المحذوفة وفقًا لتاريخ الحذف. في أسفل القائمة، يمكنك النقر على زر "المزيد" لتحميل المزيد من الملفات المحذوفة.
+* في قائمة الملفات المحذوفة، يمكنك استعادة الملفات والمجلدات. إذا تم حذف مجلد الأصل للملف أو المجلد، سيتم استعادته إلى المجلد الجذر للمكتبة.
+* يرجى ملاحظة أن سلة المهملات تحتوي فقط على الملفات والمجلدات التي تم حذفها تحت المجلد الحالي. وتشمل أيضًا الملفات المحذوفة في المجلدات الفرعية للمجلد الحالي.
 
-You can configure the retention period of deleted files: [setting history retention period](setting_library_history.md)
+يمكنك تكوين فترة الاحتفاظ بالملفات المحذوفة: [إعداد فترة الاحتفاظ بسجل المكتبة](setting_library_history.md)
