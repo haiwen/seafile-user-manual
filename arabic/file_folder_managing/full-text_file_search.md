@@ -1,14 +1,14 @@
-# Full-text File Search
+# البحث الكامل عن الملفات
 
-If you're using a Pro Edition Server, you can search file and folder names, as well as the content of certain files, in the Seafile web app. Currently Seafile can search the contents of the following types of files:
+إذا كنت تستخدم خادم Pro Edition ، يمكنك البحث عن أسماء الملفات والمجلدات، بالإضافة إلى محتوى بعض الملفات، في تطبيق Zaindrive على الويب. حاليًا، يمكن لـ Zaindrive البحث في محتوى الأنواع التالية من الملفات:
 
-* Microsoft Office Doc: .doc, .docx (Pro Edition Server only)
-* Microsoft Office PowerPoint: .ppt, .pptx (Pro Edition Server only)
-* Microsoft Office Excel: .xls, .xlsx (Pro Edition Server only)
-* LibreOffice files
-* PDF files
-* Markdown files: .md
-* Various source code files
-* Text files: .txt, .log
+* ملفات Microsoft Office Doc: .doc ، .docx (خادم Pro Edition فقط)
+* ملفات Microsoft Office PowerPoint: .ppt ، .pptx (خادم Pro Edition فقط)
+* ملفات Microsoft Office Excel: .xls ، .xlsx (خادم Pro Edition فقط)
+* ملفات LibreOffice
+* ملفات PDF
+* ملفات Markdown: .md
+* ملفات شفرة المصدر المختلفة
+* ملفات نصية: .txt ، .log
 
-Note that your Seafile system administrator may not have enabled the full-text search feature. In that case, you can only search file and folder names.
+يرجى ملاحظة أن مسؤول نظام Zaindrive الخاص بك قد لا يكون قد قام بتمكين ميزة البحث الكامل عن المحتوى. في هذه الحالة، يمكنك فقط البحث عن أسماء الملفات والمجلدات.
