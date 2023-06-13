@@ -1,69 +1,61 @@
-# SeaDrive 2.0 for Windows 10
+#  نظاام Zain Drive 2.0 لنظام Windows 10
 
-SeaDrive 2.0 (and future versions) is redesigned with deeper integration to Windows 10 operating system. It supports Windows 10 1709 version (2017 Fall Update for Windows 10) and later versions. We recommend Windows 10 users to upgrade to SeaDrive 2.0 for more native virtual drive experience.
+تم إعادة تصميم ZainDrive 2.0 (والإصدارات المستقبلية) بتكامل أعمق مع نظام التشغيل Windows 10. يدعم إصدار 1709 من Windows 10 (تحديث الخريف لعام 2017) والإصدارات الأحدث. نوصي بترقية مستخدمي Windows 10 إلى ZainDrive 2.0 لتجربة أكثر سلاسة وتكاملًا مع القرص الافتراضي المحلي.
 
-## Install and Access the Virtual Drive
+## تثبيت والوصول إلى القرص الافتراضي
 
-You can download SeaDrive 2.0 from [official Seafile website](https://www.seafile.com/en/download/). After installation and logging into your Seafile account, SeaDrive will start downloading library and file lists from the server (just as in SeaDrive 1.0.x). It may take some time, depending on the number of files available in your seafile account. The download is progressive, so in the mean time you can already access some files in the virtual drive.
+يمكنك تنزيل Zaindrive 2.0 من [موقع Seafile الرسمي](https://www.seafile.com/en/download/). بعد التثبيت وتسجيل الدخول إلى حساب Seafile الخاص بك، ستبدأ Zaindrive في تنزيل قائمة المكتبة وقائمة الملفات من الخادم (تمامًا مثل Zaindrive 1.0.x). قد يستغرق ذلك بعض الوقت، اعتمادًا على عدد الملفات المتاحة في حساب Seafile الخاص بك. التنزيل يكون تدريجيًا، لذا في الوقت الحالي يمكنك الوصول إلى بعض الملفات في القرص الافتراضي.
 
-To access the virtual drive, just open Windows file explorer. There is a "seadrive" node in the navigation pane of Windows file explorer.
+للوصول إلى القرص الافتراضي، قم بفتح مستكشف الملفات في Windows. هناك عنصر "Zaindrive" في اللوحة التنقلية لمستكشف الملفات في Windows.
 
 ![seadrive-2.0](imgs/seadrive-2.0.png)
 
-## Accessing Files in the Virtual Drive
+## الوصول إلى الملفات في القرص الافتراضي
 
-Libraries are grouped into 4 categories in the virtual drive: My Libraries, Shared with me, Shared with groups and Shared with all.
+تم تجميع المكتبات في 4 فئات في القرص الافتراضي: مكتباتي، المشاركة معي، المشاركة مع المجموعات، والمشاركة مع الجميع.
 
-As you can see, the file status icons is more integrated into Windows file explorer. The icons are a bit different form version 1.0.
+كما يمكن ملاحظة أن رموز حالة الملفات متكاملة أكثر مع مستكشف الملفات في Windows. تختلف الرموز قليلاً عن الإصدار 1.0.
 
-Files in the virtual drive are created as "placeholders" in the local file system. They may be in 3 states:
+تُنشئ الملفات في القرص الافتراضي كـ "عناصر إشارية" في نظام الملفات المحل
 
-* **Placeholder file**: An empty representation of the file and can only be opened when there is network connection.
-* **Full file**: The file has been downloaded and saved locally. Download is automatic when a placeholder file is opened for the first time. These files are available whenever you open SeaDrive regardless to network connections. The operating system may decide to clear a full file when more disk space is needed.
-* **Pinned full file**: The file has been downloaded and saved locally. It is guaranteed to be available offline.
+ي. يمكن فهمها بالحالات التالية:
+
+* **ملف إشاري**: تمثيل فارغ للملف ويمكن فتحه فقط عند وجود اتصال بالشبكة.
+* **ملف كامل**: تم تنزيل الملف وحفظه محليًا. يتم التنزيل تلقائيًا عند فتح ملف إشاري لأول مرة. هذه الملفات متاحة في أي وقت تفتح فيه Zaindrive بغض النظر عن اتصال الشبكة. قد تقرر نظام التشغيل مسح ملف كامل عندما يحتاج إلى مزيد من مساحة القرص.
+* **ملف كامل مع تثبيت**: تم تنزيل الملف وحفظه محليًا. يتم ضمان توفره دون اتصال بالشبكة.
 
 ![seadrive-file-icons](imgs/seadrive-file-icons.png)
 
-You can control which files or folder are cached locally. This can be changed from the context menu when you right click on a file or folder. Choose "Always keep on this device" when you want to pin a file or folder locally; choose "Free up space" when you want to clean the cache for a file or folder.
+يمكنك التحكم في الملفات والمجلدات التي تم تخزينها محليًا. يمكن تغيير ذلك من القائمة المنسدلة عند النقر بزر الماوس الأيمن على ملف أو مجلد. اختر "Always keep on this device" عندما ترغب في تثبيت ملف أو مجلد محليًا؛ اختر "Free up space" عندما ترغب في تنظيف ذاكرة التخزين المؤقت لملف أو مجلد.
 
 ![seadrive-cache-control](imgs/seadrive-cache-control.png)
 
-In SeaDrive 1.0, cached files are not automatically updated when they're updated on the server. In SeaDrive 2.0, full and pinned files are automatically kept in sync with the server.
+في Zaindrive 1.0، لم يتم تحديث الملفات المخزنة محليًا تلقائيًا عند تحديثها على الخادم. في Zaindrive 2.0، يتم تحديث الملفات الكاملة والمثبتة تلقائيًا ومزامنتها مع الخادم.
 
-## File Download and Control
+## تنزيل الملفات والتحكم فيها
 
-Whenever you open a placeholder file, the operating system will automatically start to download it. If the file may take some time to download, there will be a progress bar shown up in file explorer and you may cancel the download.
+عندما تفتح ملفًا إشاريًا، سيبدأ نظام التشغيل تنزيله تلقائيًا. إذا استغرق التنزيل وقتًا قد يتسبب في انتظار طويل، ستظهر شريط التقدم في مستكشف الملفات ويمكنك إلغاء
 
-Sometimes a background application may try to download a file in the virtual drive (such as an Anti-Virus software). You will be notified by the operating system about this and you may choose to cancel the download or disallow the application from automatically downloading files in the future.
+ التنزيل.
 
-## FAQ
+في بعض الأحيان، قد يحاول تطبيق خلفي تنزيل ملف في القرص الافتراضي (مثل برنامج مكافحة الفيروسات). ستتلقى إشعارًا من نظام التشغيل بشأن ذلك، ويمكنك اختيار إلغاء التنزيل أو منع التطبيق من تنزيل الملفات تلقائيًا في المستقبل.
 
-### Can I create, delete, rename libraries?
+## الأسئلة المتكررة
 
-Yes. When you create, delete or rename library folders in the virtual drive, the operation will be reflected on the server. You can only create, delete, rename libraries under the "My Libraries" category. Creating, deleting or renaming libraries in other categories will be ignored.
+### هل يمكنني إنشاء وحذف وإعادة تسمية المكتبات؟
 
-### Can I create files or folders outside of a library folder?
+نعم. عند إنشاء وحذف أو إعادة تسمية مجلدات المكتبة في القرص الافتراضي، سيتم تنفيذ العملية على الخادم. يمكنك فقط إنشاء وحذف وإعادة تسمية المكتبات في فئة "مكتباتي". إنشاء وحذف وإعادة تسمية المكتبات في فئات أخرى سيتم تجاهلها.
 
-Yes. But files created outside of a library folder will be ignored and **NOT **synced to the server. A new folder under the "My Libraries" folder will be handled as a new library.
+### هل يمكنني إنشاء ملفات أو مجلدات خارج مجلد المكتبة؟
 
-### Can I access encrypted libraries?
+نعم. ولكن سيتم تجاهل الملفات التي تم إنشاؤها خارج مجلد المكتبة ولن تتم مزامنتها مع الخادم. سيتم التعامل مع المجلد الجديد تحت مجلد "مكتباتي" كمكتبة جديدة.
 
-Yes. By default, encrypted libraries are not synced and shown in the virtual drive. You need to manually choose which encrypted libraries to sync and enter the password. Just right click on the SeaDrive icon in the system tray area and choose "Show encrypted libraries". A window will show up and you can choose to sync or unsync an encrypted library.
+### هل يمكنني الوصول إلى المكتبات المشفرة؟
 
-### Is it compatible to SeaDrive 1.0?
+نعم. افتراضيًا، لا يتم مزامنة المكتبات المشفرة وعرضها في القرص الافتراضي. يجب عليك اختيار المكتبات المشفرة التي ترغب في مزامنتها يدويًا وإدخال كلمة المرور. ما عليك سوى النقر بزر الماوس الأيمن على رمز Zaindrive في منطقة علبة النظام واختيار "Show encrypted libraries". ستظهر نافذة ويمكنك اختيار مزامنة المكتبة المشفرة أو عدم مزامنتها.
 
-SeaDrive 2.0 will use any existing accounts and their metadata (stored under C:\\users\\username\\seadrive\\ folder). But it will not use the cached files from SeaDrive 1.0. So any locally cached files in 1.0 version will not be accessible in 2.0 version. You can start SeaDrive 1.0 again to upload the files to server or copy them out.
+### هل هو متوافق مع Zaindrive 1.0؟
 
-### How do I clean the cache?
 
-You can manually choose which folders or files to be cached locally. If you find a folder consumes too much space, just choose to "Free up space" on that folder and all cached files in that folder will be cleaned. There is no need to set cache cleaning time and cache size limit as in SeaDrive 1.0. Because placeholders are just normal files created on your local disk, your cache size is only limited by the available disk space on your computer.
 
-### How to remove left-over SeaDrive shortcuts in Windows Explorer?
-
-The "SeaDrive" shortcut in Windows Explorer won't disappear after you exit SeaDrive program or switch Seafile accounts in SeaDrive. This is an intended behavior. You don't need to remove them if you still need to access the account later.
-
-In some corner cases, the "SeaDrvie" shortcut will be left-over in Windows Explorer and you want to remove it.
-
-You can usually remove those shortcuts by uninstalling SeaDrive program and choose "Remove account information" in the prompt dialog.
-
-If uninstallation doesn't remove the shortcuts successfully, you can remove the SeaDrive shortcut in Windows Explorer by editing the registry. Open the path "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop\\NameSpace\\" in registry editor. Remove the sub-keys correspond to the shortcut you want to remove.
+نعم. يمكنك استخدام Zaindrive 2.0 و Zaindrive 1.0 في نفس الوقت، ولكنها ستعمل بشكل مستقل. ستظهر مكتباتك وملفاتك في الإصدارين بشكل منفصل. يمكنك نسخ ولصق الملفات بين الإصدارين.
