@@ -1,11 +1,11 @@
-# Finding Older Version of Files
+# العثور على إصدارات سابقة للملفات
 
-Seafile tracks the modification history of all files. Whenever a file is modified, a new version is created, while the old version is still kept for a configurable period. When you want to access an older version of a file, the file history feature becomes very handy.
+تقوم ZainDrive بتتبع تاريخ التعديل لجميع الملفات. في كل مرة يتم فيها تعديل ملف، يتم إنشاء إصدار جديد، في حين يتم الاحتفاظ بالإصدار القديم لفترة يمكن تكوينها. عندما ترغب في الوصول إلى إصدار سابق من ملف، تصبح ميزة تاريخ الملف مفيدة للغاية.
 
-To list all the versions of a file:
+لعرض جميع الإصدارات الخاصة بملف ما:
 
-* In Seafile Web App, navigate into the folder containing the file. Move the cursor onto the row of that file. An operation menu will appear. You can click the "History" button in that menu.
-* A list of all versions of that file will be displayed in time order, from newer to older. The list also contains the file's rename history.
-* You can download, restore, view any version of the file.
+* في تطبيق Zaindrive على الويب، انتقل إلى المجلد الذي يحتوي على الملف. ضع المؤشر على صف الملف المطلوب. ستظهر قائمة عمليات. يمكنك النقر على زر "التاريخ" في تلك القائمة.
+* ستظهر قائمة بجميع الإصدارات لهذا الملف بترتيب زمني، من الأحدث إلى الأقدم. تحتوي القائمة أيضًا على تاريخ تغيير اسم الملف.
+* يمكنك تنزيل أو استعادة أو عرض أي إصدار من الملف.
 
-You can configure the retention period of file versions: [setting history retention period](setting_library_history.md).
+يمكنك تكوين فترة الاحتفاظ بإصدارات الملف: [إعداد فترة الاحتفاظ بسجل المكتبة](setting_library_history.md).
