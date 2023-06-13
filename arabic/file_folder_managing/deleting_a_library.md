@@ -1,8 +1,8 @@
-# Deleting a Library
+# حذف مكتبة
 
-You can delete a library owned by you. A deleted library can be restored by you or Seafile server's administrator.
+يمكنك حذف مكتبة تملكها. يمكن استعادة المكتبة المحذوفة بواسطتك أو مسؤول خادم Seafile.
 
-After a library is deleted, it has following effects:
+بعد حذف مكتبة، تحدث التأثيرات التالية:
 
-* Share of the files and folders within this library are all canceled.
-* Desktop clients synced with this library cannot sync with it any more. But the local files on the client won't be deleted.
+* يتم إلغاء المشاركة في الملفات والمجلدات التي تنتمي إلى هذه المكتبة.
+* لا يمكن للعملاء السطحية المتزامنة مع هذه المكتبة مزامنتها بعد الآن. ولكن لن يتم حذف الملفات المحلية على العميل.
