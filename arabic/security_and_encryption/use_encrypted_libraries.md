@@ -1,18 +1,20 @@
-# How to Use Encrypted Libraries
+# كيفية استخدام المكتبات المشفرة
 
-Seafile provides client-side end-to-end data encryption. You can create encrypted libraries to use this feature. File contents in encrypted libraries are encrypted on client side. The encryption password is not stored on the server. So even the server administrator can't access your file contents.
+يوفر Seafile تشفير البيانات من الجانب العميل إلى الجانب العميل. يمكنك إنشاء مكتبات مشفرة لاستخدام هذه الميزة. محتويات الملفات في المكتبات المشفرة تكون مشفرة على جانب العميل. كلمة المرور للتشفير لا تخزن على الخادم. لذلك، حتى مسؤول الخادم لا يمكنه الوصول إلى محتويات الملفات الخاصة بك.
 
-When creating an encrypted library:
+عند إنشاء مكتبة مشفرة:
 
-* If you create an encrypted library in the web app, the password is sent to the server. The server uses this password to create the library. But it doesn't store the plain text password.
-* If you create an encrypted library from a local folder with the desktop client (see [file syncing](../syncing_client/install_sync.md)), the password is not sent to the server.
+* إذا قمت بإنشاء مكتبة مشفرة في تطبيق الويب، يتم إرسال كلمة المرور إلى الخادم. يستخدم الخادم هذه الكلمة لإنشاء المكتبة. ولكنه لا يخزن كلمة المرور النصية العادية.
+* إذا قمت بإنشاء مكتبة مشفرة من مجلد محلي باستخدام تطبيق العميل على سطح المكتب (انظر [مزامنة الملفات](../syncing_client/install_sync.md))، فإن كلمة المرور لا ترسل إلى الخادم.
 
-When you access the encrypted library:
+عند الوصول إلى المكتبة المشفرة:
 
-* If you use web app, you have to input the password to the server. The server will cache the password in encrypted format for 1 hour. It won't store the password on disk.
-* If you use desktop client to sync the library, the password is not sent to the server. The client decrypts and encrypts file contents locally. The plain text password is not stored on the client disk either.
-* iOS client supports client side encryption since version 2.1.6. Android client supports it since version 2.1.0.
+* إذا كنت تستخدم تطبيق الويب، يجب عليك إدخال كلمة المرور إلى الخادم. سيقوم الخادم بتخزين كلمة المرور المخففة بتشفير لمدة ساعة واحدة. لن يتم تخزين كلمة المرور على القرص.
+* إذا كنت تستخدم تطبيق العميل على سطح المكتب لمزامنة المكتبة، لا يتم إرسال كلمة المرور إلى الخادم. يقوم العميل بفك تشفير محتويات الملفات محليًا وإعادة تشفيرها. لا يتم تخزين كلمة المرور النصية العادية على قرص العميل أيضًا.
+* تدعم نسخة iOS من التطبيق تشفير الجانب العميل ابتداءً من الإصدار 2.1.6. وت
 
-Note that encrypted library only encrypts the contents of the files, but not the folder and file names.
+دعم نسخة Android من التطبيق تشفير الجانب العميل ابتداءً من الإصدار 2.1.0.
 
-More technical details of encrypted library can be found at [Seafile Manual](https://manual.seafile.com/security/security_features/).
+يرجى ملاحظة أن المكتبة المشفرة تقوم بتشفير محتويات الملفات فقط وليس أسماء المجلدات والملفات.
+
+يمكن العثور على المزيد من التفاصيل الفنية حول المكتبة المشفرة في [كتيب Seafile](https://manual.seafile.com/security/security_features/).
