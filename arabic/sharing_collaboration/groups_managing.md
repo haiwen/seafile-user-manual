@@ -1,15 +1,15 @@
-# Managing Groups
+#إدارة المجموعات
 
-Creating a group is a convenient way to share files to many people. In Seafile, you can create and manage a group easily.
+إن إنشاء مجموعة هو وسيلة مريحة لمشاركة الملفات مع العديد من الأشخاص. في Zaindrive ، يمكنك إنشاء وإدارة المجموعات بسهولة.
 
-Here is how groups work in Seafile:
+إليك كيفية عمل المجموعات في Zaindrive:
 
-* Each group has a owner. The owner is the creator of the group by default. He/she can transfer the ownership of the group to another member.
-* Each group can have multiple admins. The group owner and group admins can add more group admins.
-* The group admin can add/delete members in the group. And he/she can also unshare a library in the group.
+- تمتلك كل مجموعة مالكًا. المالك هو منشئ المجموعة بشكل افتراضي. يمكن للمالك نقل ملكية المجموعة إلى عضو آخر.
+- يمكن أن يحتوي كل مجموعة على مشرفين متعددين. يمكن للمالك ومشرفي المجموعة إضافة المزيد من مشرفي المجموعة.
+- يمكن لمشرف المجموعة إضافة / حذف الأعضاء في المجموعة. ويمكنه أيضًا إلغاء مشاركة مكتبة في المجموعة.
 
-Click on the "Shared with groups" tab on the left panel, and you'll see all the groups you're in. Clicking into any group, you'll see the libraries shared into this group.
+انقر فوق علامة التبويب "مشاركة مع المجموعات" في اللوحة الجانبية اليسرى ، وسترى جميع المجموعات التي تتبعها. بالنقر فوق أي مجموعة ، سترى المكتبات المشتركة في هذه المجموعة.
 
-To create a new group, click on the "Shared with groups" tab on the left panel. Then click on "All Groups". In the page, you can click the "New Group" button to create a group.
+لإنشاء مجموعة جديدة ، انقر فوق علامة التبويب "مشاركة مع المجموعات" في اللوحة الجانبية اليسرى. ثم انقر فوق "جميع المجموعات". في الصفحة ، يمكنك النقر فوق زر "مجموعة جديدة" لإنشاء مجموعة.
 
-See [sharing files and folders](sharing_files_and_folders.md) about how to share libraries or folders to a group.
+انظر [مشاركة الملفات والمجلدات](sharing_files_and_folders.md) لمعرفة كيفية مشاركة المكتبات أو المجلدات مع مجموعة.
