@@ -1,71 +1,83 @@
-# Managing and Using Departments
+# إدارة واستخدام الأقسام
 
-Some organizations consist of complex department hierarchy. There are usually two common use cases for file management in these organizations:
+تعتبر بعض المؤسسات من التسلسلات التنظيمية المعقدة. وهناك عادة حالتي استخدام شائعتين لإدارة الملفات في هذه المؤسسات:
 
-* There should be a common file sharing space for the organization. The folder hierarchy should map the department hierarchy. There will be separate folder or space assigned to each department.
-* The sharing space should be owned and managed by the organization, but not individual employees. So that the ownership of files doesn't have to be changed when an employee leaves the organization.
+1. يجب أن يكون هناك مساحة مشتركة لمشاركة الملفات في المؤسسة. يجب أن يعكس تسلسل المجلدات التسلسل التنظيمي للأقسام. ويتم تعيين مجلد أو مساحة منفصلة لكل قسم.
+2. يجب أن يكون الفضاء المشترك مملوكًا ومُدارًا من قبل المؤسسة، وليس من قبل الموظفين الفرديين. بحيث لا يكون عليه تغيير ملكية الملفات عندما يغادر موظف المؤسسة.
 
-The "Departments" feature is designed to meet the above two use cases. We'll introduce this feature from 3 different perspectives:
+تم تصميم ميزة "الأقسام" لتلبية هاتين الحالتين. سنقدم هذه الميزة من ثلاث وجهات نظر مختلفة:
 
-* [System admin](#wiki-sys-admin)
-* [Department admin](#wiki-dept-admin)
-* [Department members](#wiki-user)
+* [مدير النظام](#wiki-sys-admin)
+* [مدير القسم](#wiki-dept-admin)
+* [أعضاء القسم](#wiki-user)
 
-## System Admin
+## مدير النظام
 
-The system admin can:
+يستطيع مدير النظام:
 
-* Manage department hierarchy and members
-* Assign storage quota for departments
-* Create and manage shared libraries in departments
+* إدارة تسلسل الأقسام وأعضائها
+* تعيين حصة التخزين للأقسام
+* إنشاء وإدارة المكتبات المشتركة في الأقسام
 
-### Manage department hierarchy and members
+### إدارة تسلسل الأقسام وأعضائها
 
-The system admin can set up the department hierarchy in two ways: manual setup or import from Active Directory.
+يمكن لمدير النظام إعداد تسلسل الأقسام بطريقتين: الإعداد اليدوي أو استيرادها من Active Directory.
 
-The system admin can create any number of top level departments and create any levels of sub-departments under each department. And each level of department can be populated with members. The system admin can set the role of each member to 'member' or 'admin'. We'll introduce how a department admin can manage department later.
+يمكن لمدير النظام إنشاء أي عدد من الأقسام على مستوى القمة وإنشاء أي عدد من الأقسام الفرعية تحت كل قسم. ويمكن ملء كل مستوى من الأقسام بالأعضاء. يمكن لمدير النظام تعيين دور كل عضو كـ "عضو" أو "مسؤول". سنشرح لاحقًا كيف يمكن لمدير ال
 
-The system admin can also import the hierarchy from OUs (Organizational Units) in AD. Please refer to "Sync OU to departments" section in [LDAP Group Sync documentation](https://manual.seafile.com/deploy_pro/ldap_group_sync/). Each OU will be imported as a department. And the sub-OUs under an OU will be imported as sub-departments. Department libraries can be automatically created in the import process.
+قسم إدارة القسم.
 
-System admin can also delete a department after all the sub-departments and libraries are deleted.
+يمكن أيضًا لمدير النظام استيراد التسلسل من وحدات التنظيم (OUs) في Active Directory. يرجى الاطلاع على قسم "مزامنة OU مع الأقسام" في [وثائق مزامنة مجموعة LDAP](https://manual.seafile.com/deploy_pro/ldap_group_sync/)، حيث ستتم استيراد كل OU كقسم، وسيتم استيراد الوحدات الفرعية تحت OU كأقسام فرعية. يمكن إنشاء مكتبات الأقسام تلقائيًا أثناء عملية الاستيراد.
 
-### Assign Storage quota for departments
+يمكن أيضًا لمدير النظام حذف قسم بعد حذف جميع الأقسام الفرعية والمكتبات.
 
-The libraries created inside a department are owned by the department itself, not by any individual user. So the system admin can assign storage quota to a department. The total size of all the libraries in a department cannot exceed the storage quota. **Please note that the quota of sub-department doesn't depend on the quota of its parent department.**
+### تعيين حصة التخزين للأقسام
 
-### Create and Manage shared libraries in departments
+المكتبات التي تم إنشاؤها داخل قسم هي مملوكة من قبل القسم نفسه، وليس أي مستخدم فردي. لذلك يمكن لمدير النظام تعيين حصة التخزين للقسم. لا يمكن أن يتجاوز حجم المكتبات الإجمالي في قسم حصة التخزين. **يرجى ملاحظة أن حصة التخزين للقسم الفرعي لا تعتمد على حصة التخزين للقسم الأم.**
 
-Department libraries can be created by the system admin or department admin. There is also an option to control whether individual users can share libraries to a department.
+### إنشاء وإدارة المكتبات المشتركة في الأقسام
 
-All the above operations can be done in the system admin interface. See the below screenshot for information.
+يمكن لمدير النظام أو مدير القسم إنشاء المكتبات في الأقسام. كما يوجد خيار للتحكم في إمكانية مشاركة المكتبات الفردية للمستخدمين مع الأقسام.
+
+يمكن القيام بجميع العمليات المذكورة أعلاه في واجهة مدير النظام. راجع الصورة أدناه للحصول على مزيد من المعلومات.
 
 ![](./imgs/sys_admin_departments.png)
 
 
 
-## Department Admin
+## مدير القسم
 
-As noted above, department admin is a special role assigned by the system admin to some members of a department. Department admins can perform the following operations in a department after login to his/her own account.
+كما هو مذكور أعلاه، يعتبر مدير القسم دورًا خاصًا يُسند من قبل مدير النظام لبعض أعضاء القسم. يمكن لمدير القسم الق
 
-* Access to the libraries of the department
-* Manage members in his/her department
-* Manage libraries in his/her department
+يام بالعمليات التالية في قسمه بعد تسجيل الدخول إلى حسابه الشخصي.
 
-If a user is the admin of a department, he/she can add or delete members in the department. Any users registered in the system can be added as member of the department. But if the departments are imported from AD, the changes to membership will be overwritten on the next sync with AD.
+* الوصول إلى مكتبات القسم
+* إدارة الأعضاء في قسمه
+* إدارة المكتبات في قسمه
+
+إذا كان المستخدم هو مدير قسم، فيمكنه إضافة أعضاء جدد إلى القسم أو حذف أعضاء منه. يمكن إضافة أي مستخدم مسجل في النظام كعضو في القسم. ولكن إذا تم استيراد الأقسام من Active Directory، فسيتم تجاوز التغييرات في العضوية في المزامنة التالية مع Active Directory.
 
 ![](<https://download.seafile.com/lib/a1d455d4-fbdb-4066-adb4-f8bbeee3743b/file/images/auto-upload/dept_admin_manage_members (1).png?raw=1>)
 
 
 
-Department admin can manage the libraries in the department. The supported operations are:
+يمكن لمدير القسم إدارة المكتبات في القسم. وتشمل العمليات المدعومة:
 
-* Create or delete library
-* Change library name
-* Share a library to users or groups outside of this department. This is very useful for cross-department collaboration.
-* Set fine-grained permission to folders in the libraries for users or sub-departments in this department. This works like the [folder permission feature](./folder_permission.md).
+* إنشاء أو حذف المكتبة
+* تغيير اسم المكتبة
+* مشاركة مكتبة مع مستخدمين أو مجموعات خارج هذا القسم. وهذا مفيد جدًا للتعاون بين الأقسام.
+* تعيين أذونات متقدمة للمجلدات في المكتبات للمستخدمين أو الأقسام الفرعية في هذا القسم. يعمل هذا على غرار [ميزة أذونات المجلدات](./folder_permission.md).
 
 ![](https://download.seafile.com/lib/a1d455d4-fbdb-4066-adb4-f8bbeee3743b/file/images/auto-upload/dept_admin_manage_libs.png?raw=1)
 
-## Department Members
+## أعضاء القسم
 
-A normal member of the department can use the department just like a group. Each department is presented to its members as a group. A user can not only access to the libraries in the department he/she belongs to, but also the libraries in the parent departments of his/her department. For example, if John is in the "EMEA" sub-department under the "Sales" department, and "Sales" is a sub-department under the company "ACME", John can then access to the groups "EMEA", "Sales" and "ACME". The groups for departments are marked with a "building" icon next to its name.
+يمكن لعضو عادي في القسم استخدام القسم تمامًا كمجموعة. يتم تقديم كل قسم لأعضائه كمجموعة. يمكن للمستخدم ليس فقط الوصول إلى المكتبات في القسم الذي ينتمي إليه، ولكن أيضًا الوصول إلى المكتبات في الأقسام الأم لقسمه. على سبيل المثال، إذا كان جون في القسم "EMEA" تحت القسم "المبيعات"، وال
+
+قسم "المبيعات" يحتوي على مكتبات A و B والقسم "EMEA" يحتوي على مكتبة C، فجون يمكنه الوصول إلى المكتبات A و B و C.
+
+عندما يتم مشاركة مكتبة مع مجموعة الأقسام، فإن جميع الأعضاء في الأقسام المشتركة يمكنهم الوصول إلى هذه المكتبة. يمكن أيضًا تعيين أذونات لمجموعة الأقسام على المكتبة والمجلدات الداخلية فيها.
+
+![](https://download.seafile.com/lib/a1d455d4-fbdb-4066-adb4-f8bbeee3743b/file/images/auto-upload/user_departments.png?raw=1)
+
+هذه هي الأدوار الرئيسية في إدارة واستخدام الأقسام في Zaindrive. تسمح هذه الميزة للمؤسسات بتنظيم الملفات والمعلومات بشكل منهجي وفقًا لهيكل المؤسسة وتحسين التعاون داخل وبين الأقسام.
