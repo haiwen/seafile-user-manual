@@ -1,16 +1,16 @@
-# Excluding files/folders from syncing
+# استبعاد الملفات/المجلدات من التزامن
 
-Sometimes you don't want to sync some files or folders inside a library. To achieve this, create a seafile-ignore.txt file in the root folder of a library. This special file specifies the files and folders that Seafile should not sync. Each line in a ignore.txt file specifies a pattern. The following pattern format are supported.
+في بعض الأحيان قد لا ترغب في مزامنة بعض الملفات أو المجلدات داخل مكتبة. لتحقيق ذلك، قم بإنشاء ملف ب اسم "Zaindrive-ignore.txt" في المجلد الجذر للمكتبة. يحدد هذا الملف الخاص الملفات والمجلدات التي لا يجب على Zaindrive مزامنتها. كل سطر في ملف ignore.txt يحدد نمطًا. يتم دعم تنسيق النمط التالي.
 
-1. A blank line matches no files.
-1. A line starting with \# serves as a comment.
-1. Seafile supports wildcards in the pattern. For example, "foo/\*" matches "foo/1" and "foo/hello". "foo/?" matches "foo/1" but not "foo/hello". Note that the wildcard character \* recursively matches all the paths under a folder. For instance, "foo/\*.html" matches "foo/a.html" and "foo/templates/b.html".
-1. If the pattern ends with a slash, it would only match a folder. In other words, "foo/" will match a folder "foo" and paths underneath it, but will not match a regular file or a symbolic link "foo".
-1. If a pattern doesn't end with a slash or a wildcard, it would not match a folder. For example, "foo" can only match regular file "foo" or a symbolic link; while "foo/" and "foo\*" match a folder and paths under it.
+1. السطر الفارغ لا يتطابق مع أي ملفات.
+2. السطر الذي يبدأ بـ # يستخدم كتعليق.
+3. يدعم Zaindrive الرموز البدلية في النمط. على سبيل المثال، "foo/*" يتطابق مع "foo/1" و "foo/hello". "foo/?" يتطابق مع "foo/1" ولكن لا يتطابق مع "foo/hello". يرجى ملاحظة أن الحرف البدلي * يتطابق تلقائيًا مع جميع المسارات تحت المجلد. على سبيل المثال، "foo/*.html" يتطابق مع "foo/a.html" و "foo/templates/b.html".
+4. إذا انتهى النمط بشرطة مائلة، فسيتم تطابقه فقط مع المجلد. وبعبارة أخرى، "foo/" سيتطابق مع المجلد "foo" والمسارات الفرعية له، ولكنه لن يتطابق مع ملف عادي أو ارتباط رمزي "foo".
+5. إذا لم ينتهي النمط بشرطة مائلة أو رمز بدلية، فلن يتطابق مع المجلد. على سبيل المثال، "foo" يمكن أن يتطابق فقط مع الملف العادي "foo" أو الرابط الرمزي، في حين يتطابق "foo/" و "foo*" مع المجلد والمسارات التابعة له.
 
-## Example
 
-```
+
+```## مثال
 # a regular file
 test-file
 
@@ -26,11 +26,12 @@ test-qu1/?.html
 test-qu2/?/
 ```
 
-## Notes
+## ملاحظات
 
-The seafile-ignore.txt file only controls which files to exclude on the client side. You can still create a file from seahub web interface that's excluded on the client. In this case,
 
-* The created file will still be synced back to clients. But any later local changes to those files will be ignored.
-* If the file is modified on seahub, the new version will also be synced back to clients; If the file on the client is also modified, a conflict file will be generated on the client.
+ملف "Zaindrive-ignore.txt" يتحكم فقط في الملفات التي يتم استبعادها على الجانب العميل. ما زلت يمكنك إنشاء ملف من واجهة الويب seahub يتم استبعاده على الجانب العميل. في هذه الحالة:
 
-seafile-ignore.txt only ignores files that are not synced yet. If a file is already synced, and some time later you add it to the ignore list, its existing versions won't be removed.
+* سيتم مزامنة الملف الذي تم إنشاؤه مع العملاء. ولكن سيتم تجاهل أي تغييرات محلية لهذه الملفات لاحقًا.
+* إذا تم تعديل الملف على seahub، سيتم مزامنة النسخة الجديدة أيضًا مع العملاء. إذا تم تعديل الملف على العميل أيضًا، سيتم إنشاء ملف تعارض على العميل.
+
+"Zaindrive-ignore.txt" يتجاهل فقط الملفات التي لم يتم مزامنتها بعد. إذا تم بالفعل مزامنة ملف، وبعد وقت ما قمت بإضافته إلى قائمة الاستثناء، لن يتم إزالة الإصدارات الحالية منه.
