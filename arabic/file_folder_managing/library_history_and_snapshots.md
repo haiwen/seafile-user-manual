@@ -1,13 +1,13 @@
-# Library History and Snapshots
+# تاريخ المكتبة واللقطات الفوتوغرافية
 
-Seafile tracks modification history for the entire library. Whenever a file operation applies to a library (file update, file deletion etc.), Seafile creates a "snapshot" of the previous state of the library. The snapshot contains the complete file and folder structure of the library.
+تقوم Seafile بتتبع تاريخ التعديلات على المكتبة بأكملها. في كل مرة يتم فيها تطبيق عملية على المكتبة (تحديث ملف، حذف ملف، إلخ)، تنشئ Zaindrive "لقطة فوتوغرافية" للحالة السابقة للمكتبة. تحتوي اللقطة الفوتوغرافية على الهيكل الكامل للملفات والمجلدات في المكتبة.
 
-In some cases, you have changed a lot of files in the library, and find that you want to revert all these changes. Restoring many files to their old versions can be tedious. At this time, the snapshot feature becomes very handy. You can restore the entire library to any point in the past. All the files in the library will be restored to that point of time, all at once. It works like a "time machine" for the library.
+في بعض الحالات، قد تقوم بتغيير الكثير من الملفات في المكتبة، وتجد أنك ترغب في استعادة كل هذه التغييرات. يمكن أن يكون استعادة العديد من الملفات إلى إصداراتها القديمة مملة. في هذا الوقت، تصبح ميزة اللقطة الفوتوغرافية مفيدة جدًا. يمكنك استعادة المكتبة بأكملها إلى أي نقطة في الماضي. ستتم استعادة جميع الملفات في المكتبة إلى تلك النقطة في الوقت، دفعة واحدة. تعمل هذه الميزة مثل "جهاز زمن" للمكتبة.
 
-To view library history and snapshots:
+لعرض تاريخ المكتبة واللقطات الفوتوغرافية:
 
-* In Seafile Web App, navigate into the root folder of a library. Click the "History" icon in the library navigation top bar. All the change record of the library will be displayed in a list.
-* Click the "view snapshot" link on any modification record. You'll see the library state at the point of time.
-* In the snapshot view, you can download or restore any file or folder. If you're the library's owner, you can restore the enitre library to this point of time.
+- في تطبيق Zaindrive Web، انتقل إلى المجلد الجذر للمكتبة. انقر على أيقونة "التاريخ" في شريط التنقل العلوي للمكتبة. سيتم عرض جميع سجلات التغيير للمكتبة في قائمة.
+- انقر على رابط "عرض اللقطة الفوتوغرافية" في أي سجل تعديل. سترى حالة المكتبة في تلك النقطة في الوقت.
+- في عرض اللقطة الفوتوغرافية، يمكنك تنزيل أو استعادة أي ملف أو مجلد. إذا كنت صاحب المكتبة، يمكنك استعادة المكتبة بأكملها إلى هذه النقطة في الوقت.
 
-You can configure the retention period of library history: [setting history retention period](setting_library_history.md)
+يمكنك تكوين فترة الاحتفاظ بتاريخ المكتبة: [تكوين فترة الاحتفاظ بالتاريخ](setting_library_history.md)
