@@ -1,35 +1,39 @@
-# Use Folder Permission for Fine-grained Access Control
+# استخدام أذونات المجلد لمراقبة الوصول بدقة
 
-For shared libraries or folders, you can set permission to its sub-folders for a person or a group. Available permissions are the same as the ones described in [sharing libraries](./sharing_files_and_folders.md). Here are some use cases:
+بالنسبة للمكتبات المشتركة أو المجلدات، يمكنك تعيين أذونات للمجلدات الفرعية لشخص أو مجموعة. تتوفر الأذونات نفسها الموضحة في [مشاركة المكتبات](./sharing_files_and_folders.md). هنا بعض الحالات الاستخدامية:
 
-* You shared a library to a group with "read only" permission. You also want to allow a specific member of the group to modify files in one sub-folder. You can grant write permission of this sub-folder to this person.
-* You shared a library to 3 groups. There are 3 sub-folders under that library, one for each group to upload files. However you don't want users to change files not belong to his/her group. You can grant write permission of a sub-folder only to its group.
+* لقد قمت بمشاركة مكتبة مع مجموعة بأذونة "للقراءة فقط". كما ترغب في السماح لعضو محدد في المجموعة بتعديل الملفات في مجلد فرعي واحد. يمكنك منح أذونات الكتابة على هذا المجلد الفرعي لهذا الشخص.
+* لقد قمت بمشاركة مكتبة مع 3 مجموعات. هناك 3 مجلدات فرعية تحت تلك المكتبة، مجلد واحد لكل مجموعة لتحميل الملفات. ومع ذلك، لا ترغب في أن يتمكن المستخدمون من تغيير الملفات التي لا تنتمي إلى مجموعتهم. يمكنك منح أذونات الكتابة لمجلد فرعي فقط للمجموعة المناسبة.
 
-Folder permissions are only effective for libraries and folders you share to others. To effectively set folder permissions to its sub-folders, you should first share the parent library or folder; otherwise the folder permission won't take effect.
+أذونات المجلد سارية فقط على المكتبات والمجلدات التي تقوم بمشاركتها مع الآخرين. لتعيين أذونات المجلد للمجلدات الفرعية، يجب عليك أولاً مشاركة المكتبة الأصل أو المجلد. وإلا فإن أذونات المجلد لن تكون سارية.
 
-One important design goal of folder permission is to support hierarchical permissions:
+هدف تصميم أذونات المجلد الأساسي هو دعم الأذونات الهرمية:
 
-* Sub-folders automatically inherit folder permissions from its parent folder.
-* Permissions set on sub-folders overwrites permissions set on its parent folder. For example, you set "read write" permission on folder "meeting files" for user A, and you set "read only" permission on sub-folder "meeting files/today" for user A. Then user A's permission to "meeting files/today" is "read only".
+* ترث المجلدات الفرعية تلقائيًا أذونات المجلد الأصل.
+* تكون الأذونات المُعينة للمجلدات الفرعية مفضلة على الأذونات المُعينة للمجلد الأصل. على سبيل المثال، إذا قمت بتعي
 
-## Basic Usage
+ين أذونة "للقراءة والكتابة" على المجلد "ملفات الاجتماع" للمستخدم A، وتعيين أذونة "للقراءة فقط" على المجلد الفرعي "ملفات الاجتماع/اليوم" للمستخدم A، فإن أذونة المستخدم A لـ "ملفات الاجتماع/اليوم" تكون "للقراءة فقط".
 
-Only library's owner can set folder permissions for its sub-folders. In the file browsing interface, click "more operations" button, choose "permission" in the drop-down menu. In the pop-up window, you can see and set folder permissions on this folder.
+## الاستخدام الأساسي
 
-If you want to see all folder permissions set in a library, hover the mouse on the library. Click "more operations" button, choose "Folder Permission" in the drop-down menu. In the pop-up window, you can see and set folder permissions in this library.
+يمكن لمالك المكتبة فقط تعيين أذونات المجلد للمجلدات الفرعية. في واجهة تصفح الملفات، انقر على زر "المزيد من العمليات"، واختر "الأذونات" من القائمة المنسدلة. في النافذة المنبثقة، يمكنك رؤية وتعيين أذونات المجلد على هذا المجلد.
 
-When other users navigate into a folder, there will be a small "eye" icon next to "read only" sub-folders. When the user navigate into that sub-folder, he/she won't be able to add/modify/delete files.
+إذا كنت ترغب في رؤية جميع أذونات المجلدات المعينة في مكتبة ما، قم بتحويم الماوس فوق المكتبة. انقر على زر "المزيد من العمليات"، واختر "أذونات المجلد" من القائمة المنسدلة. في النافذة المنبثقة، يمكنك رؤية وتعيين أذونات المجلدات في هذه المكتبة.
+
+عندما يقوم المستخدمون الآخرون بالتنقل داخل مجلد، سيظهر رمز "عين" صغير بجوار المجلدات الفرعية "للقراءة فقط". عندما ينتقل المستخدم إلى ذلك المجلد الفرعي، لن يكون قادرًا على إضافة/تعديل/حذف الملفات.
 
 ![](./imgs/web_folder_perm_ro.png)
 
-If a "read only" folder is synced to PC with the Seafile desktop App, changes under a "read only" folder won't be uploaded to the cloud.
+إذا تم مزامنة مجلد "للقراءة فقط" إلى جهاز الكمبيوتر باستخدام تطبيق Zaindrive لسطح المكتب، فلن يتم تحميل التغييرات في مجلد "للقراءة فقط" إلى السحابة.
 
-## Advanced: Priority between Different Permissions
+## متقدم: أفضلية بين الأذونات المختلفة
 
-* Folder permissions have higher priority than the permission set in share. For example, if you share a library to user A with "read write" permission, and also set "read only" permission to a sub-folder of that library. Then user A only has "read only" access to the sub-folder, while he/she has "read write" access to all other sub-folders and files.
-* Folder permissions set to a specific user have higher priority than permissions set to a group. That is, when checking permission for a folder, if the system matches a permission specific to the user, it'll ignore all permissions set for the groups the user belongs to.
-* Permissions on sub-folders have higher priority than those on parent folders.
+* تتمتع أذونات المجلد بأفضلية أعلى من الأذونات المُعينة في المشاركة. على سبيل المثال، إذا قمت بمشاركة مكتبة مع المستخدم A بأذونة "للقراءة والكتابة"، وقمت أيضًا بتعيين أذونة "للقراءة فقط" لمجلد فرعي في تلك المكتبة، فإن المستخدم A سيكون لديه فقط حق الوصول "للقراءة فقط" إلى المجلد الفرعي، بينما سيكون لديه حق الوصول "للقراءة والكتابة" لجميع المجلدات الفرعية الأخرى والملفات.
+* تتمتع أذونات المجلد المُعينة لمستخدم محدد بأفضلية أعلى من الأذونات المُعينة للمجموعة. أي أنه عند التحقق من الأذونات لمجلد، إذا تطابق النظام أذونة محددة للمستخدم، فسيتجاهل جميع الأذونات المُعينة للمجموعات التي ينتمي إليها المستخدم.
+* تتمتع أذونات المجلدات الفرعية بأفضلية أعلى على الأذونات في المجلدات الأصلية.
 
-Here is a more complex example:
+هنا مثال معقد أكثر:
 
-Supposed the folder structure looks like "A/B", user "John" is in group "Staff". If you set "read only" permission on folder A for John, and, you also set "read write" permission on folder "A/B" for group "Staff". Then John's permission to folder "A/B" is still only "read only". That's because, according to rule 2, "read only" permission is first matched for folder "A/B" and user "John", which is inherited from its parent "A".
+نفترض أن بنية المجلدات تبدو على النحو التالي "A/B"، المستخدم "جون" في المجموعة "الموظفين". إذا قمت بتعيين أذونة "للقراءة فقط" على المجلد A لـ جون، وقمت أيضًا بتعيين أذونة "للقراءة والكتابة" على المجلد "A/B" لمجموعة "الموظفين"، فإن أذونة جون للمجلد "A/B" ستظل "للقراءة فقط". هذا يعود إلى أنه وفقًا للقاعدة رقم 2، تم مطابقة أذونة "للقراءة فقط" أولاً للمجلد "A/B" والمستخدم
+
+ جون، والتي تمت الإرث من المجلد الأصل "A".
