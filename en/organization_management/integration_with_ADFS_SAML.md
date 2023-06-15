@@ -1,6 +1,6 @@
 # Integration with ADFS/SAML single sign-on
 
-The _organization admin_ has to complete the following works. The detailed steps depends on which ADFS service you use. We provide integration steps for Azure SAML SSO and on-premise ADFS.
+The following operations need to be completed by _organization admin_. The detailed steps depends on which ADFS service you use. We provide integration steps for Azure SAML SSO and on-premise ADFS.
 
 ## Integration with Microsoft Azure SAML single sign-on app
 
