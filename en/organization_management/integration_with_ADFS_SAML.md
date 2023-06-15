@@ -139,3 +139,11 @@ __Note__: When creating claims rule, you can also select other LDAP Attributes, 
 **Next**, configure the logout page, e.g.:
 
 ![](../images/auto-upload/0beb35c6-89ef-4e8c-8956-9b3c74f50aa8.png)
+
+![](../images/auto-upload/3a3281c6-eb25-41c3-b2bb-94d7f9d22eec.png)
+
+The format of the logout URL is: `https://example.com/org/custom/{custom-part}/saml2/ls/`, e.g.:
+
+![](../images/auto-upload/1e6326f5-60eb-4720-8e55-c92f6c2f5f68.png)
+
+**Finally**, open the browser and enter the Seafile login page, click `Single Sign-On`. In the new page, enter your email address ending with the company domain name, click the `Log In` button will jump to the ADFS login page.
