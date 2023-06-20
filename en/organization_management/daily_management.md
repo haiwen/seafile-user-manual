@@ -8,43 +8,55 @@ After you login to Seafile, you can go to organization admin page by click **Org
 
 ## View System Info
 
-In organization admin page, you can view the system usage, graphical statistics of this organization.
+In the Info page, you can view the system usage info, such as used space and active users.
 
 ![](../images/auto-upload/WX20230616-102525@2x.png)
+
+## View Statistics
+
+In the Statistic page, you can view statistics on file operation, storage usage, active users, traffic. You can also export traffic and storage reports.
+
 ![](../images/auto-upload/WX20230616-102743@2x.png)
 
-## View Libraries and Operation Logs
+## View Libraries
 
-You can not only view all libraries in this organization, but also can view some operation logs, such as file access/update and permission log.
+In the Libraries page, you can view all the libraries in this organizations and delete/transfer them.
 
 ![](../images/auto-upload/WX20230616-105147@2x.png)
+
+## View Operation Logs
+
+In the Logs page, you can view user's operation logs, such as file access/update log and permission log.
+
 ![](../images/auto-upload/WX20230616-115301@2x.png)
 
 ## Manage Devices
 
-Devices in organization admin page can list all the devices connected to this organization, you can unlink a certain device and view the detailed device connection error message.
+All connected devices from the users in the organization can be managed in this page. You can view access information of the devices, unlink devices. You can also check sync errors for desktop clients.
 
 ![](../images/auto-upload/WX20230616-102935@2x.png)
 ![](../images/auto-upload/WX20230616-110201@2x.png)
 
-## Manage Users and Groups
+## Manage Users
 
-You can import/create/delete new users, activate/deactivate users, reset users' login passwords, and set/unset normal users as administrators.
+You can import/create/delete users, activate/deactivate users, reset users' login passwords, and set/unset normal users as administrators.
 
 ![](../images/auto-upload/WX20230616-110340@2x.png)
 
-Click the user name, you will enter the management interface of a single user, where you can view and update some information of this user.
+When you click the name of a user, you can manage this user's information. You can update user's profile, manage their libraries and shares.
 
 ![](../images/auto-upload/WX20230616-111042@2x.png)
+
+## Manage Groups
 
 Like the user management interface, you can also view and manage groups.
 
 ![](../images/auto-upload/WX20230616-111308@2x.png)
 ![](../images/auto-upload/WX20230616-111327@2x.png)
 
-## Create Organizational Structure
+## Manage Organizational Hierarchy
 
-In **Departments** page, you can customize the organizational structure for this organization.
+In **Departments** page, you can manage the organizational structure for this organization. You can create departments and sub-departments. Each department can own some libraries. You can also edit member list for the departments.
 
 First create a top department.
 
