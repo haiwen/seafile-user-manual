@@ -32,6 +32,9 @@
   * [Drive Client for Linux](drive_client/drive_client_for_linux.md)
 * Security and Encryption
   * [How to use encrypted libraries](security_and_encryption/use_encrypted_libraries.md)
+* Organization Management:
+  * [Daily Management](organization_management/daily_management.md)
+  * [Integration with ADFS/SAML](organization_management/integration_with_ADFS_SAML.md)
 * [FAQ](faq.md)
 
 
