@@ -1,6 +1,6 @@
 # Daily Management
 
-**NOTE**: The following operations can only be performed by organization administrators.
+**NOTE**: The following operations can only be performed by organization administrators. This is only applicable to a hosted, multi-tenant service.
 
 After you login to Seafile, you can go to organization admin page by click **Organization Admin**
 
