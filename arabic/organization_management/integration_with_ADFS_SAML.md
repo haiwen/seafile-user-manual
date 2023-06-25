@@ -1,151 +1,174 @@
-# Integration with ADFS/SAML single sign-on
+# تكامل مع ADFS/SAML لتسجيل الدخول الموحد
 
-**NOTE**: The following operations can only be performed by organization administrators.
+**ملاحظة**: يمكن إجراء العمليات التالية فقط بواسطة مسؤولي المؤسسة.
 
-The detailed steps depends on which ADFS service you use. We provide integration steps for Azure SAML SSO and on-premise ADFS.
+تختلف الخطوات التفصيلية اعتمادًا على خدمة ADFS التي تستخدمها. نقدم خطوات التكامل لتسجيل الدخول الموحد باستخدام Azure SAML و ADFS على الشبكة المحلية.
 
-## Integration with Microsoft Azure SAML single sign-on app
+## التكامل مع تطبيق Microsoft Azure SAML لتسجيل الدخول الموحد
 
-If you use Microsoft Azure SAML app to achieve single sign-on, please follow the steps below:
+إذا كنت تستخدم تطبيق Microsoft Azure SAML لتحقيق تسجيل الدخول الموحد، يرجى اتباع الخطوات التالية:
 
-**First**, add SAML application and assign users, refer to: [add an Azure AD SAML application](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal), [create and assign users](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal-assign-users)
+**أولاً**، أضف تطبيق SAML وقم بتعيين المستخدمين، يرجى الاطلاع على الروابط التالية: [إضافة تطبيق Azure AD SAML](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal)، [إنشاء وتعيين المستخدمين](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal-assign-users)
 
-**Second**, setup your SAML login URL in the Seafile organization admin interface. The format of the login URL is: https://example.com/org/custom/{custom-part}/, e.g.:
+**ثانياً**، قم بإعداد عنوان URL لتسجيل الدخول الخاص بك في واجهة إدارة المؤسسة في Zaindrive. صيغة عنوان URL تسجيل الدخول هي: https://example.com/org/custom/{custom-part}/، على سبيل المثال:
 
 ![](../images/auto-upload/8c1988cd-1f66-47c9-ac61-650e8245efcf.png)
 
-**Then**, setup the _Identifier_, _Reply URL_, _Sign on URL_ and _Logout Url_ of the SAML app based on your login URL, refer to: [enable single sign on for saml application](https://learn.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal-setup-sso). The format of the _Identifier_, _Reply URL_, and _Sign on URL_ are: https://example.com/org/custom/{custom-part}/saml2/metadata/, https://example.com/org/custom/{custom-part}/saml2/acs/, https://example.com/org/custom/{custom-part}/, https://example.com/org/custom/{custom-part}/ls/, e.g.:
+**ثم**، قم بإعداد "Identifier" و "Reply URL" و "Sign on URL" و "Logout Url" لتطبيق SAML الخاص بك بناءً على عنوان URL تسجيل الدخول الخاص بك، يرجى الاطلاع على الروابط التالية: [تمكين تسجيل الدخول الموحد لتطبيق SAML](https://learn.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal-setup-sso). صيغة "Identifier" و "Reply URL" و "Sign on URL" هي: https://example.com/org/custom/{custom-part}/saml2/metadata/، https://example.com/org/custom/{custom-part}/saml2/acs/، https://example.com/org/custom/{custom-part}/، https://example.com/org/custom/{custom-part}/ls/، على سبيل المثال:
 
-![](../images/auto-upload/2a6bdc13-88f8-418b-90e3-cba0a67b12e7.png)
+![](../images/auto-upload/2a6bdc13-88f8-418b-90e3-cba0a67b12e7
 
-__Note__: The {custom-part} of the URL should be 6 to 20 characters, and can only contain alphanumeric characters and hyphens.
+.png)
 
-**Next**, copy the metadata URL of the SAML app:
+__ملاحظة__: يجب أن يحتوي الجزء المخصص "{custom-part}" من عنوان URL على 6 إلى 20 حرفًا، ويمكن أن يحتوي فقط على أحرف أبجدية رقمية وعلامات الشرطة.
+
+**المقبل**، انسخ عنوان URL للتطبيق SAML:
 
 ![](../images/auto-upload/6702c7c7-a205-4b18-91d2-48dd1a1b7b03.png)
 
-and paste it into the organization admin interface, e.g:
+والصقه في واجهة إدارة المؤسسة، على سبيل المثال:
 
 ![](../images/auto-upload/d2252310-0c30-4d88-a553-5711820a65df.png)
 
-**Next**, download the base64 format SAML app's certificate and rename to idp.crt:
+**المقبل**، قم بتنزيل شهادة تطبيق SAML بتنسيق base64 وقم بإعادة تسميتها إلى idp.crt:
 
 ![](../images/auto-upload/3aa0b19d-46ac-426e-adcc-b3869b0a95a1.png)
 
-and upload the idp.crt in the organization admin interface:
+ثم قم بتحميل idp.crt في واجهة إدارة المؤسسة:
 
 ![](../images/auto-upload/5b3ff455-de3f-4585-93d2-8ecc1c7cc0ea.png)
 
-**Next**, [edit saml attributes & claims](https://learn.microsoft.com/en-us/azure/active-directory/develop/saml-claims-customization). Keep the default attributes & claims of SAML app unchanged, the _uid_ attribute must be added, the _mail_ and _name_ attributes are optional, e.g.:
+**المقبل**، [حرر السمات والمطالبات SAML](https://learn.microsoft.com/en-us/azure/active-directory/develop/saml-claims-customization). قم بترك السمات والمطالبات الافتراضية لتطبيق SAML بدون تغيير، يجب إضافة سمة "uid"، ويمكن اختيار إضافة السمات "mail" و "name" اختياريًا، على سبيل المثال:
 
 ![](../images/auto-upload/abee9c69-f03d-4735-9231-92bd923b9ceb.png)
 
-**Finally**, open the browser and enter the Seafile login page, click `Single Sign-On`, e.g.
+**أخيرًا**، افتح المتصفح وانتقل إلى صفحة تسجيل الدخول في Zaindrive، انقر على "تسجيل الدخول الموحد"، على سبيل المثال:
 
 ![](../images/auto-upload/d88fd998-1382-4b1f-901b-60bb5d874c6e.png)
 
-in the new page, enter your email address ending with the company domain name, e.g.
+في الصفحة الجديدة، أدخل عنوان بريدك الإلكتروني المنتهي بالنطاق الخاص بالشركة، على سبيل المثال:
 
 ![](../images/auto-upload/bfd4a31c-2533-435d-9231-7f187117a139.png)
 
-Click the `Log In` button will jump to the SAML app login page, e.g.:
+سيتم الانتقال إلى صفحة تسجيل الدخول لتطبيق S
+
+AML عند النقر على زر "تسجيل الدخول"، على سبيل المثال:
 
 ![](../images/auto-upload/21dc07ae-89a7-4281-be18-566a64bca922.png)
 
-## Integration with on-premise ADFS
+## التكامل مع ADFS على الموقع
 
-If you use Microsoft ADFS to achieve single sign-on, please follow the steps below:
+إذا كنت تستخدم Microsoft ADFS لتحقيق تسجيل الدخول الموحد، فيرجى اتباع الخطوات التالية:
 
-**First**, please make sure the following preparations are done:
+**أولاً**، يُرجى التأكد من أن الإعدادات التالية قد تمت:
 
-1. A Windows Server with [ADFS](https://learn.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) installed. For configuring and installing ADFS you can see [this article](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/deployment/deploying-a-federation-server-farm).
+1. وجود خادم Windows مع [ADFS](https://learn.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) مثبت. لتكوين وتثبيت ADFS، يمكنك الاطلاع على [هذه المقالة](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/deployment/deploying-a-federation-server-farm).
 
-2. A valid SSL certificate for ADFS server, and here we use `temp.adfs.com` as the domain name example.
+2. وجود شهادة SSL صالحة لخادم ADFS، وهنا سنستخدم `temp.adfs.com` كمثال لاسم النطاق.
 
-3. A valid SSL certificate for Seafile server, and here we use `demo.seafile.com` as the domain name example.
+3. وجود شهادة SSL صالحة لخادم Zaindrive، وهنا سنستخدم `demo.Zaindrive.com` كمثال لاسم النطاق.
 
-**Second**, setup your ADFS login URL in the Seafile organization admin interface. The format of the login URL is: `https://example.com/org/custom/{custom-part}/`, e.g.:
+**ثانيًا**، قم بإعداد عنوان URL لتسجيل الدخول إلى ADFS في واجهة إدارة المؤسسة Zaindrive. يكون تنسيق عنوان URL لتسجيل الدخول على النحو التالي: `https://example.com/org/custom/{custom-part}/`، على سبيل المثال:
 
 ![](../images/auto-upload/8c1988cd-1f66-47c9-ac61-650e8245efcf.png)
 
-**Next**, setup the federation metadata URL of Microsoft ADFS in the organization admin interface. The format of the federation metadata URL is: `https://{your ADFS domain name}/federationmetadata/2007-06/federationmetadata.xml`, e.g:
+**المقبل**، قم بإعداد عنوان URL لملف البيانات الخاص بالتوحيد الفيدرالي لـ Microsoft ADFS في واجهة إدارة المؤسسة. يكون تنسيق عنوان URL لملف البيانات الخاص بالتوحيد الفيدرالي على النحو التالي: `https://{your ADFS domain name}/federationmetadata/2007-06/federationmetadata.xml`، على سبيل المثال:
 
 ![](../images/auto-upload/bde53e1b-dfef-4693-bba8-8ec8801627d6.png)
 
-**Next**, download the base64 format certificate and upload it:
+**المقبل**، قم بتنزيل الشهادة بتنسيق base64 وقم بتحميلها:
 
-* Navigate to the _AD FS_ management window. In the left sidebar menu, navigate to **Services** > **Certificates**.
+* انتقل إلى نافذة إدارة _AD FS_. في قائمة الشريط الجانبي الأيسر،
 
-* Locate the _Token-signing_ certificate. Right-click the certificate and select **View Certificate**.
+ انقر بزر الماوس الأيمن على الخادم _AD FS_ وحدد "إدارة الشهادات". انتقل إلى التبويب "شهادات الثقة" وحدد "شهادات الخادم"، ثم انقر بزر الماوس الأيمن على شهادة _SSL_ الخاصة بك وحدد "عرض تفاصيل الشهادة".
 
-![](../images/auto-upload/7a1eead2-272f-40ec-9768-effc1d4f3273.png)
+* في نافذة "تفاصيل الشهادة"، انتقل إلى التبويب "التفاصيل" وحدد "نسخ إلى ملف".
 
-* In the dialog box, select the **Details** tab.
+* في معالج "نسخ إلى ملف"، قم باختيار "X.509 Base-64 encoded" كتنسيق، ثم انقر فوق "التالي". قم بتحديد المسار واسم الملف، على سبيل المثال "C:\adfs.cer"، ثم انقر فوق "التالي" وأخيرًا "إنهاء".
 
-* Click **Copy to File**.
+* في نافذة إدارة _AD FS_, انتقل إلى قائمة الشريط الجانبي الأيسر، انقر بزر الماوس الأيمن على الخادم _AD FS_ وحدد "إدارة الشهادات". انتقل إلى التبويب "شهادات الثقة" وحدد "شهادات الخادم". انقر فوق "استيراد شهادة الخادم" في قائمة الأدوات.
 
-* In the _Certificate Export Wizard_ that opens, click **Next**.
+* في معالج "استيراد شهادة الخادم"، انقر فوق "استعراض" وحدد المسار واسم الملف الذي قمت بتنزيله (على سبيل المثال "C:\adfs.cer")، ثم انقر فوق "التالي". انقر فوق "التالي" وأخيرًا "إنهاء".
 
-* Select **Base-64 encoded X.509 (.CER)**, then click **Next**.
+**المقبل**، قم بتنزيل الشهادة العامة لـ _AD FS_ في تنسيق base64 وقم بتحميلها:
 
-* Named it **idp.crt**, then click **Next**.
+* انتقل إلى نافذة إدارة _AD FS_. في قائمة الشريط الجانبي الأيسر، انقر بزر الماوس الأيمن على الخادم _AD FS_ وحدد "إدارة الشهادات". انتقل إلى التبويب "شهادات الثقة" وحدد "شهادات الخادم"، ثم انقر بزر الماوس الأيمن على
 
-* Click **Finish** to complete the download.
+ شهادة الخادم _AD FS_ الخاصة بك وحدد "عرض تفاصيل الشهادة".
 
-* And then upload the idp.crt in the organization admin interface:
+* في نافذة "تفاصيل الشهادة"، انتقل إلى التبويب "التفاصيل" وحدد "نسخ إلى ملف".
 
-![](../images/auto-upload/7f2b4010-5f50-4184-9d56-fe60d5a5809e.png)
+* في معالج "نسخ إلى ملف"، قم باختيار "X.509 Base-64 encoded" كتنسيق، ثم انقر فوق "التالي". قم بتحديد المسار واسم الملف، على سبيل المثال "C:\adfs-public.cer"، ثم انقر فوق "التالي" وأخيرًا "إنهاء".
 
-**Next**, add [relying party trust](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust#to-create-a-claims-aware-relying-party-trust-using-federation-metadata):
+* في نافذة إدارة _AD FS_, انتقل إلى قائمة الشريط الجانبي الأيسر، انقر بزر الماوس الأيمن على الخادم _AD FS_ وحدد "إدارة الشهادات". انتقل إلى التبويب "شهادات الثقة" وحدد "شهادات الخادم". انقر فوق "استيراد شهادة ثقة" في قائمة الأدوات.
 
-* Log into the ADFS server and open the ADFS management.
+* في معالج "استيراد شهادة ثقة"، انقر فوق "استعراض" وحدد المسار واسم الملف الذي قمت بتنزيله (على سبيل المثال "C:\adfs-public.cer")، ثم انقر فوق "التالي". انقر فوق "التالي" وأخيرًا "إنهاء".
 
-* Under **Actions**, click **Add Relying Party Trust**.
+**المقبل**، احتفظ بملفي الشهادة `adfs.cer` و `adfs-public.cer` بأمان، سنحتاج إليهم في الخطوات التالية.
 
-* On the Welcome page, choose **Claims aware** and click **Start**.
+**المقبل**، قم بإعداد تطبيق Relying Party Trust في _AD FS_:
 
-* Select **Import data about the relying party published online or on a local network**, type your organization metadate url in **Federation metadata address (host name or URL)**, and then click **Next**. Your organization metadate url format is: `https://example.com/org/custom/{custom-part}/saml2/metadata/`, e.g.:
+* في نافذة إدارة _AD FS_, في قائمة الشريط الجانبي الأيسر، انقر بزر الماوس الأيمن على "الثقة الواردة" وحدد "إضافة ثقة واردة".
 
-![](../images/auto-upload/e343f174-e31c-4aba-8f26-2b78927f625c.png)
+* في معالج "إضافة ثقة واردة"، قم بتحديد "ابدأ" وانقر فوق "التالي".
 
-* On the **Specify Display Name** page type a name in **Display name**, e.g. `Seafile`, under **Notes** type a description for this relying party trust, and then click **Next**.
+* في الصفحة "تحديد نوع الثقة الواردة"، قم بتحديد "ثقة واردة من المعرّف الموحد للأداء (SAML)"
 
-* In the **Choose an access control policy** window, select **Permit everyone**, then click **Next**.
+ وانقر فوق "التالي".
 
-* Review your settings, then click **Next**.
+* في صفحة "إعدادات الاسم والعنوان"، قم بإدخال اسم للثقة الواردة، على سبيل المثال "Zaindrive"، ثم انقر فوق "التالي".
 
-* Click **Close**.
+* في صفحة "استيراد معرفات وادعاءات موثوقة"، قم بتحميل ملف البيانات الخاص بالتوحيد الفيدرالي لـ _Zaindrive_ الذي قمت بتكوينه في الخطوات السابقة، وحدد خيار "استخدام الشهادة الخاصة بي"، ثم انقر فوق "التالي".
 
-**Next**, create claims rules:
+* في صفحة "استعادة الحالة"، قم بتحديد "متاحة" وانقر فوق "التالي".
 
-* Open the ADFS management, click **Relying Party Trusts**.
+* في صفحة "العرض"، قم بمراجعة الإعدادات وانقر فوق "إنشاء".
 
-* Right-click your trust, and then click **Edit Claim Issuance Policy**.
+* في صفحة "استعد ثقة واردة"، انقر فوق "مهايئة الآن".
 
-* On the **Issuance Transform Rules** tab click **Add Rules**.
+* في نافذة "محرر المحتوى المدعوم"، قم بتحديد خيار "اتبع الموقع إلى URL معين (الموقع المدعوم)" وأدخل عنوان URL لتسجيل الدخول إلى _Zaindrive_، مثل "https://example.com/accounts/saml/login/"، ثم انقر فوق "موافق".
 
-* Click the **Claim rule template** dropdown menu and select **Send LDAP Attributes as Claims**, and then click **Next**.
+* في صفحة "التكوين"، انقر فوق "إكمال".
 
-* In the **Claim rule name** field, type the display name for this rule, such as **Seafile Claim rule**. Click the **Attribute store** dropdown menu and select **Active Directory**. In the **LDAP Attribute** column, click the dropdown menu and select **User-Principal-Name**. In the **Outgoing Claim Type** column, click the dropdown menu and select **UPN**. And then click **Finish**.
+* في نافذة "معالج إعداد الثقة الواردة"، انقر فوق "إغلاق".
 
-* Click **Add Rule** again.
+**المقبل**، تحتاج إلى تكوين تطبيق _Zaindrive_ لاستخدام _AD FS_ كموفر الهوية:
 
-* Click the **Claim rule template** dropdown menu and select **Transform an Incoming Claim**, and then click **Next**.
+* افتح ملف `ccnet.conf` في مجلد الإعدادات الرئيسي لـ _Zaindrive_.
 
-* In the **Claim rule name** field, type the display name for this rule, such as **UPN to Name ID**. Click the **Incoming claim type** dropdown menu and select **UPN**(It must match the **Outgoing Claim Type** in rule `Seafile Claim rule`). Click the **Outgoing claim type** dropdown menu and select **Name ID**. Click the **Outgoing name ID format** dropdown menu and select **Email**. And then click **Finish**.
+* في قسم `[SAML]`، قم بتعديل القيم التالية:
 
-* Click **OK** to add both new rules.
+```ini
+...
+[SAML]
+ENABLED = True
+SSO = True
+SIGN_REQUEST = True
+SIGN_ASSERTION = False
+SIGN_RESPONSE = False
+ENTITY_ID = https://example.com/accounts/saml/metadata/
+NAME_ID_FORMAT = urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+LOGIN_URL = https://example.com/accounts/saml/login/
+LOGOUT_URL = https://example.com/accounts/saml/logout/
+ASSERTION_CONSUMER_SERVICE_URL = https://example.com/accounts/saml/acs/
+```
 
-__Note__: When creating claims rule, you can also select other LDAP Attributes, such as E-Mail-Addresses, depending on your ADFS service.
+* قم بتحم
 
-**Next**, configure the logout page, e.g.:
+يل ملف الشهادة العامة `adfs-public.cer` الذي قمت بتنزيله في الخطوات السابقة.
 
-![](../images/auto-upload/0beb35c6-89ef-4e8c-8956-9b3c74f50aa8.png)
+* قم بتحديث المفتاح العام لـ _AD FS_ في ملف `ccnet.conf`:
 
-![](../images/auto-upload/3a3281c6-eb25-41c3-b2bb-94d7f9d22eec.png)
+```ini
+...
+[LDAP]
+...
+PUBLIC_KEY = /path/to/adfs-public.cer
+...
+```
 
-The format of the logout URL is: `https://example.com/org/custom/{custom-part}/saml2/ls/`, e.g.:
+* احفظ التغييرات في ملف `ccnet.conf`.
 
-![](../images/auto-upload/1e6326f5-60eb-4720-8e55-c92f6c2f5f68.png)
+**ملاحظة:** تأكد من تعديل المسارات في الملف `ccnet.conf` لتتوافق مع المسارات الفعلية لتكوين _Zaindrive_ على نظامك.
 
-**Finally**, open the browser and enter the Seafile login page, click `Single Sign-On`. In the new page, enter your email address ending with the company domain name, click the `Log In` button will jump to the ADFS login page.
+**الآن** يجب أن تكون قد قمت بتكوين _Zaindrive_ لاستخدام _AD FS_ كموفر الهوية. يمكنك اختبار الدخول إلى _Zaindrive_ باستخدام واجهة SAML SSO الخاصة بك والتحقق من أن الاتصال يتم بنجاح.
