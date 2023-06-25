@@ -1,73 +1,75 @@
-# Daily Management
+# الادارة اليومية
 
-**NOTE**: The following operations can only be performed by organization administrators. This is only applicable to a hosted, multi-tenant service.
+**ملاحظة**: يمكن تنفيذ العمليات التالية فقط من قبل مسؤولي المؤسسة. هذا ينطبق فقط على خدمة مستضافة متعددة المستأجرين.
 
-After you login to Seafile, you can go to organization admin page by click **Organization Admin**
+بعد تسجيل الدخول إلى Zaindrive، يمكنك الانتقال إلى صفحة إدارة المؤسسة عن طريق النقر على **إدارة المؤسسة**.
 
 ![](../images/auto-upload/WX20230615-180101@2x.png)
 
-## View System Info
+## عرض معلومات النظام
 
-In the Info page, you can view the system usage info, such as used space and active users.
+في صفحة المعلومات، يمكنك عرض معلومات استخدام النظام، مثل المساحة المستخدمة وعدد المستخدمين النشطين.
 
 ![](../images/auto-upload/WX20230616-102525@2x.png)
 
-## View Statistics
+## عرض الإحصائيات
 
-In the Statistic page, you can view statistics on file operation, storage usage, active users, traffic. You can also export traffic and storage reports.
+في صفحة الإحصائيات، يمكنك عرض إحصاءات عن عمليات الملفات، واستخدام التخزين، والمستخدمين النشطين، وحركة المرور. يمكنك أيضًا تصدير تقارير المرور والتخزين.
 
 ![](../images/auto-upload/WX20230616-102743@2x.png)
 
-## View Libraries
+## عرض المكتبات
 
-In the Libraries page, you can view all the libraries in this organizations and delete/transfer them.
+في صفحة المكتبات، يمكنك عرض جميع المكتبات في هذه المؤسسة وحذفها/نقلها.
 
 ![](../images/auto-upload/WX20230616-105147@2x.png)
 
-## View Operation Logs
+## عرض سجلات العمليات
 
-In the Logs page, you can view user's operation logs, such as file access/update log and permission log.
+في صفحة السجلات، يمكنك عرض سجلات عمليات المستخدم، مثل سجل الوصول/التحديث للملفات وسجل الإذن.
 
 ![](../images/auto-upload/WX20230616-115301@2x.png)
 
-## Manage Devices
+## إدارة الأجهزة
 
-All connected devices from the users in the organization can be managed in this page. You can view access information of the devices, unlink devices. You can also check sync errors for desktop clients.
+يمكن إدارة جميع الأجهزة المتصلة من قبل المستخدمين في المؤسسة في هذه الصفحة. يمكنك عرض معلومات الوصول إلى الأجهزة، وفصل الأجهزة. يمكنك أيضًا التحقق من أخطاء المزامنة في عملاء سطح المكتب.
 
 ![](../images/auto-upload/WX20230616-102935@2x.png)
-![](../images/auto-upload/WX20230616-110201@2x.png)
+![](../images/auto-upload/WX
 
-## Manage Users
+20230616-110201@2x.png)
 
-You can import/create/delete users, activate/deactivate users, reset users' login passwords, and set/unset normal users as administrators.
+## إدارة المستخدمين
+
+يمكنك استيراد/إنشاء/حذف المستخدمين، تفعيل/إلغاء تفعيل حسابات المستخدمين، إعادة تعيين كلمات مرور تسجيل الدخول للمستخدمين، وتعيين/إلغاء تعيين مسؤولين للمستخدمين العاديين.
 
 ![](../images/auto-upload/WX20230616-110340@2x.png)
 
-When you click the name of a user, you can manage this user's information. You can update user's profile, manage their libraries and shares.
+عند النقر على اسم المستخدم، يمكنك إدارة معلومات هذا المستخدم. يمكنك تحديث ملف المستخدم، وإدارة مكتباتهم ومشاركاتهم.
 
 ![](../images/auto-upload/WX20230616-111042@2x.png)
 
-## Manage Groups
+## إدارة المجموعات
 
-Like the user management interface, you can also view and manage groups.
+مثل واجهة إدارة المستخدمين، يمكنك أيضًا عرض وإدارة المجموعات.
 
 ![](../images/auto-upload/WX20230616-111308@2x.png)
 ![](../images/auto-upload/WX20230616-111327@2x.png)
 
-## Manage Organizational Hierarchy
+## إدارة التسلسل الهرمي للمؤسسة
 
-In **Departments** page, you can manage the organizational structure for this organization. You can create departments and sub-departments. Each department can own some libraries. You can also edit member list for the departments.
+في صفحة **الإدارات**، يمكنك إدارة الهيكل التنظيمي لهذه المؤسسة. يمكنك إنشاء الأقسام والأقسام الفرعية. يمكن لكل قسم امتلاك بعض المكتبات. يمكنك أيضًا تحرير قائمة الأعضاء للأقسام.
 
-First create a top department.
+أولاً، قم بإنشاء قسم رئيسي.
 
 ![](../images/auto-upload/WX20230616-141739@2x.png)
 
-Then, enter the top department, you can create sub department, manage department members and libraries on demand.
+ثم، ادخل إلى القسم الرئيسي، يمكنك إنشاء قسم فرعي، وإدارة أعضاء القسم والمكتبات حسب الحاجة.
 
 ![](../images/auto-upload/WX20230616-142040@2x.png)
 
-## Manage Share links
+## إدارة روابط المشاركة
 
-You can view/delete share links created by users in this organization.
+يمكنك عرض/حذف روابط المشاركة التي تم إنشاؤها بواسطة المستخدمين في هذه المؤسسة.
 
 ![](../images/auto-upload/WX20230616-111814@2x.png)
