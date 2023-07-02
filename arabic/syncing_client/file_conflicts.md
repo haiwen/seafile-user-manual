@@ -1,5 +1,5 @@
-# File conflicts
+تعارض الملفات #
 
-Once you and your friends sync a shared file library onto your computers, you may add, delete or edit files in the library together. Every change you make to the library would be automatically synced to others' computers.
+عندما تقوم أنت وأصدقائك بمزامنة مكتبة ملفات مشتركة على أجهزة الكمبيوتر الخاصة بكم، يمكنكم إضافة وحذف وتحرير الملفات في المكتبة معًا. يتم مزامنة كل تغيير تقومون به في المكتبة تلقائيًا إلى أجهزة الكمبيوتر الأخرى.
 
-Sometimes you and your friends may edit the same file at the same time. Your changes may conflict with each other's. In this case, Seafile would keep the first version synced to the cloud unchanged, while rename the other version to a "conflict file". A conflict file's name ends with it's author's email address, plus the current time, e.g. test.txt (SFConflict name@example.com 2015-03-07-11-30-28).
+في بعض الأحيان، قد تقوم أنت وأصدقائك بتحرير نفس الملف في نفس الوقت. قد تحدث تعارضات بين التغييرات التي تقومون بها. في هذه الحالة، سيحتفظ Seafile بالنسخة الأولى المتزامنة في السحابة بدون تغيير، في حين يتم إعادة تسمية النسخة الأخرى إلى "ملف تعارض". وينتهي اسم ملف التعارض بعنوان البريد الإلكتروني للمؤلف، بالإضافة إلى الوقت الحالي، على سبيل المثال: test.txt (SFConflict name@example.com 2015-03-07-11-30-28).
