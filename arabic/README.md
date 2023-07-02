@@ -1,9 +1,9 @@
-# Introduction
+# المقدمة
 
-Seafile is an enterprise file hosting platform with high reliability and performance.
+Seafile هي منصة استضافة الملفات المؤسسية ذات الموثوقية العالية والأداء الممتاز.
 
-Seafile contains a web interface for you to manage and share files. It has two kinds of desktop clients, [the file syncing client](syncing_client/install_sync.md) and [the drive client](drive_client/using_drive_client.md). It also has mobile clients for Android and iOS.
+يحتوي Seafile على واجهة ويب تمكنك من إدارة ومشاركة الملفات. يحتوي على نوعين من عملاء سطح المكتب، [عميل مزامنة الملفات](syncing_client/install_sync.md) و [عميل القرص](drive_client/using_drive_client.md). كما يتوفر عملاء للهواتف المحمولة لنظامي Android و iOS.
 
-You can download the clients in [Seafile web site](https://www.seafile.com/en/download/).
+يمكنك تنزيل العملاء من [موقع Seafile الرسمي](https://www.seafile.com/en/download/).
 
-If this manual does not contain the information you needed, you can seek help in our forum: https://forum.seafile.com .
+إذا لم يحتوي هذا الدليل على المعلومات التي تحتاجها، يمكنك الحصول على المساعدة من خلال منتدانا: https://forum.seafile.com .
