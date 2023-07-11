@@ -78,7 +78,7 @@ sudo dnf install -y seadrive-gui
 
 ## Running SeaDrive with GUI
 
-To use SeaDrive, just run "SeaDrive" from your desktop environment, or type "seadirve-gui" in command line. After logging into your server, the virtual drive will be mounted in `~/SeaDrive.`
+To use SeaDrive, just run "SeaDrive" from your desktop environment, or type "seadrive-gui" in command line. After logging into your server, the virtual drive will be mounted in `~/SeaDrive.`
 
 ## Running SeaDrive without GUI
 
