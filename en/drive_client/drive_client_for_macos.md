@@ -1,14 +1,14 @@
 # SeaDrive for macOS and later versions
 
-If you are using macOS 12.1 or later versions, then you can download SeaDrive 3.0.
+If you are using macOS 12.1 or later versions, it's recommended to use SeaDrive 3.0.
 
 Please download SeaDrive 2.0 if your macOS is below 12.1. All SeaDrive clients require macOS 10.14 or higher to install and run.
 
-SeaDrive 3.0 use File Provider API to implement SeaDrive File Provider extension, which is redesigned with deeper integration to macOS. We recommend macOS users to upgrade to SeaDrive 3.0 for more native virtual drive experience.
+SeaDrive 3.0 is implemented as a Finder extension, which is redesigned with deeper integration to macOS. We recommend macOS users to upgrade to SeaDrive 3.0 for more native virtual drive experience.
 
 ## Install and Access the Virtual Drive
 
-You can download SeaDrive 3.0 from [official Seafile website](https://www.seafile.com/en/download/). After installation and logging into your Seafile account, SeaDrive creates a SeaDrive entry in the Finder. Upon clicking the entry, SeaDrive promptly presents the categorized folder, making it ready for use.
+You can download SeaDrive 3.0 from [official Seafile website](https://www.seafile.com/en/download/). After installation and logging into your Seafile account, SeaDrive creates a SeaDrive entry in the Finder. Upon clicking the entry, SeaDrive extension will be activated. After that you should see category folders such as "My Libraries" in the SeaDrive folder.
 
 ![seadrive-3.0](imgs/seadrive-3.0.png)
 
@@ -37,7 +37,7 @@ Whenever you open a placeholder file or click on the cloud icon on the file, the
 
 You can set the cache size limit and clean interval in the settings.
 
-When the cache size surpasses the limit, SeaDrive will automatically remove downlod by prioritizing files based on their last modification time. This process continues until the cache size is reduced to below 70% of the specified limit.
+When the cache size exceeds the limit, SeaDrive will automatically free up space based on files' last modification time. Older files will be cleaned up first. This process continues until the cache size is reduced to below 70% of the specified limit.
 
 ![seadrive-mac-cache-management](imgs/seadrive-mac-cache-management.png)
 
@@ -53,6 +53,10 @@ You can log out of the account by selecting 'Delete' in the account management, 
 
 ## FAQ
 
+### Why is SeaDrive extension not started?
+
+When the tray icon keeps showing a red x, this is due to the SeaDrive extension not being started, you need to start the SeaDrive extension by clicking on the SeaDrive entry in the Finder.
+
 ### Can I create, delete, rename libraries?
 
 Yes. When you create, delete or rename library folders in the virtual drive, the operation will be reflected on the server. You can only create, delete, rename libraries under the "My Libraries" category. Creating, deleting or renaming libraries in other categories will be ignored.
@@ -67,8 +71,8 @@ Yes. By default, encrypted libraries are not synced, but shown in the virtual dr
 
 ### Is it compatible to SeaDrive 1.0 and SeaDrive 2.0?
 
-SeaDrive 3.0 will use any existing accounts and their metadata (stored under ~/Library/Containers/com.seafile.seadrive.fprovider). But it will not use the cached files from SeaDrive 1.0 and SeaDrive 2.0. So any locally cached files in 1.0 version or 2.0 version will not be accessible in 3.0 version. You can start SeaDrive 1.0 or SeaDrive 2.0 again to upload the files to server or copy them out.
+No. SeaDrive 3.0 does not require a system extension to be installed, SeaDrive 1.0 and SeaDrive 2.0 do.
 
 ### How do I clean the cache?
 
-You can manually choose which folders or files to be cached locally. If you find a folder consumes too much space, just choose to "Remove Download" on that folder and all cached files in that folder will be cleaned.
+Since seadrive will automatically free up space when the cache size exceeds the limit, you don't need to clean the cache.

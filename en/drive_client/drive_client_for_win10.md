@@ -1,6 +1,6 @@
 # SeaDrive for Windows 10 and later versions
 
-If you are using windows 10 or later versions, then you can download SeaDrive 3.0.
+If you are using windows 10 or later versions, it's recommended to use SeaDrive 3.0.
 
 SeaDrive 3.0 (and future versions) is redesigned with deeper integration to Windows 10 operating system. It supports Windows 10 1709 version (2017 Fall Update for Windows 10) and later versions. We recommend Windows 10 users to upgrade to SeaDrive 3.0 for more native virtual drive experience.
 
@@ -42,7 +42,7 @@ Sometimes a background application may try to download a file in the virtual dri
 
 You can customize the cache directory and set the cache size limit and clean interval in the settings.
 
-When the cache size surpasses the limit, SeaDrive will automatically free up space by prioritizing files based on their last modification time. This process continues until the cache size is reduced to below 70% of the specified limit.
+When the cache size exceeds the limit, SeaDrive will automatically free up space based on files' last modification time. Older files will be cleaned up first. This process continues until the cache size is reduced to below 70% of the specified limit.
 
 ![seadrive-cache-management](imgs/seadrive-cache-management.png)
 
@@ -54,7 +54,7 @@ In SeaDrive 3.0, you can log into multiple accounts across different servers, pr
 
 You can log out of the account by selecting 'Delete' in the account management, at this time it will log out of the account and keep the local files that have been cached. 
 
-When the library contains invalid placeholders, you can use the function of resync account to fix this issue. SeaDrive retains the old cache directory while generating new placeholders in a fresh cache directory.
+Some special sync errors, such as invalid placeholders, local metadata corruption, can be fixed by re-syncing the account.
 
 ![seadrive-account-resync](imgs/seadrive-account-resync.png)
 
@@ -82,11 +82,11 @@ Yes. SeaDrive 3.0 is fully compatible to SeaDrive 2.0.
 
 ### How do I clean the cache?
 
-You can manually choose which folders or files to be cached locally. If you find a folder consumes too much space, just choose to "Free up space" on that folder and all cached files in that folder will be cleaned. There is no need to set cache cleaning time and cache size limit as in SeaDrive 1.0. Because placeholders are just normal files created on your local disk, your cache size is only limited by the available disk space on your computer.
+Since seadrive will automatically free up space when the cache size exceeds the limit, you don't need to clean the cache. You can also choose to "Free up space" on a folder or a flie and the cached files will be cleaned.
 
 ### How to remove left-over SeaDrive shortcuts in Windows Explorer?
 
-The "SeaDrive" shortcut in Windows Explorer won't disappear after you exit SeaDrive program or switch Seafile accounts in SeaDrive. This is an intended behavior. You don't need to remove them if you still need to access the account later.
+In general, when an account is deleted, the left-over SeaDrive shortcut associated with the account is also deleted.
 
 In some corner cases, the "SeaDrvie" shortcut will be left-over in Windows Explorer and you want to remove it.
 
