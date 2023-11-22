@@ -1,4 +1,6 @@
-# Using Seafile Drive Client
+# SeaDrive for Windows 7/8
+
+If you are using windows 7 or windows 8 then you need to download SeaDrive 1.0.
 
 After installing a drive client with the instructions on the [download page](https://www.seafile.com/en/download/), you can start it by double clicking the "SeaDrive" app icon on your desktop.
 
