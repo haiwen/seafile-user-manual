@@ -59,4 +59,4 @@ Folder permissions have the below effects to file syncing:
 
 * If you set read-write or read-only folder permissions for a sub-folder in a shared library or shared folder, the files in the library/folder can be synced with Seafile client and SeaDrive client.
 * If you set online-read-write or online-read-only folder permissions for a sub-folder in a shared library or shared folder, the files in the library/folder can **NOT** be synced with Seafile client and SeaDrive client.
-* If you set online-read-write or online-read-only folder permissions for a sub-folder in a shared library or shared folder, the library/folder can be synced with Seafile client and SeaDrive client. **But the invisible sub-folder will not be synced.**
+* If you set online-read-write or online-read-only folder permissions for a sub-folder in a shared library or shared folder, the library/folder can be synced with SeaDrive client. **But the invisible sub-folder will not be synced. Seafile client cannot sync a shared library/folder with invisible sub-folders.**
