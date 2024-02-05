@@ -14,9 +14,9 @@ Share links are public links to files or folders. They can be accessed by anyone
 
 You can also set access permission to share links. There are three types of permissions:
 
-* Preview and Download: the file or files in the folder can be downloaded. If the type of files can be previewd in web browser, they can also be viewed online (e.g. Office files).
-* Preview only: the file or files in the folder can only be viewed in web browser, but cannot be downloaded. This is useful for sharing confidential data.
-* Edit on cloud and download: Similar to "Preview and Download", but if the file can be edited in web browser (e.g. an Office file), any user who has access to the link is allowed to edit it.
+* Preview and Download: the file or files in the folder can be downloaded. If the type of files can be previewed in a web browser, they can also be viewed online (e.g. Office files).
+* Preview only: the file or files in the folder can only be viewed in a web browser, but cannot be downloaded. This is useful for sharing confidential data.
+* Edit on cloud and download: Similar to "Preview and Download", but if the file can be edited in a web browser (e.g. an Office file), any user who has access to the link is allowed to edit it.
 
 To create a share link in Seafile web app:
 
