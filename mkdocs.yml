@@ -78,7 +78,6 @@ nav:
     - Install On Linux: syncing_client/install_linux_client.md
     - Seafile Client for a Cli server: syncing_client/linux-cli.md
   - Drive Client:
-    - Drive Client for Windows 7/8: drive_client/drive_client_for_win7.md
     - Drive Client for Windows 10 or later: drive_client/drive_client_for_win10.md
     - Drive Client for macOS: drive_client/drive_client_for_macos.md
     - Drive Client for Linux: drive_client/drive_client_for_linux.md
