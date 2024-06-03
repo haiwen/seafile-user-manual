@@ -41,7 +41,7 @@ Next, download the base64 format SAML app's certificate and rename to idp.crt:
 
 ![](./images/auto-upload/5b3ff455-de3f-4585-93d2-8ecc1c7cc0ea.png)
 
-Next, it is necessary for domain verifying to help reduce risk while empowering IT admins to manage their organization's domain and domain numbers. Please input the name of your company's domain and click the "check" button, and a DNS TXT value will be  automatically generated. Then,  you will need to create a new TXT record in your DNS host by copying and pasting the generated value. And from there, it may take up to seventy two hours for your domain to become verified.
+Next, you have to verify your ownership of the domain name you use to login. Please input the name of your company's domain and click the "check" button, and a DNS TXT value will be automatically generated. Then, you need to create a new TXT record in your DNS host by copying and pasting the generated value. It may take up to 72 hours for your domain to be verified.
 
 ![](./images/auto-upload/d88fd998-1382-4b1f-901b-60bb5d874c5a.png)
 
@@ -109,7 +109,7 @@ If you use Microsoft ADFS to achieve single sign-on, please follow the steps bel
 
 ![](./images/auto-upload/7f2b4010-5f50-4184-9d56-fe60d5a5809e.png)
 
-Next, it is necessary for domain verifying to help reduce risk while empowering IT admins to manage their organization's domain and domain numbers. Please input the name of your company's domain and click the "check" button, and a DNS TXT value will be  automatically generated. Then,  you will need to create a new TXT record in your DNS host by copying and pasting the generated value. And from there, it may take up to seventy two hours for your domain to become verified.
+Next, you have to verify your ownership of the domain name you use to login. Please input the name of your company's domain and click the "check" button, and a DNS TXT value will be automatically generated. Then, you need to create a new TXT record in your DNS host by copying and pasting the generated value. It may take up to 72 hours for your domain to be verified.
 
 ![](./images/auto-upload/d88fd998-1382-4b1f-901b-60bb5d874c5a.png)
 
