@@ -19,7 +19,7 @@ And then enter the team admin interface and find the SAML config panel.  There a
 
 ![](./images/auto-upload/8c1988cd-1f66-47c9-ac61-650e8245efcf.png)
 
-Then, setup these URLs of the SAML app based by coping the specific URL to the SAML Configuration of your Idp in ADFS.
+Then, setup these URLs of the SAML app by copying the specific URL to the SAML Configuration of your Idp in ADFS.
 
 ![](./images/auto-upload/2a6bdc13-88f8-418b-90e3-cba0a67b12e7.png)
 
