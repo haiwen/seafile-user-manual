@@ -8,21 +8,24 @@ The detailed steps depends on which ADFS service you use. We provide integration
 
 If you use Microsoft Azure SAML app to achieve single sign-on, please follow the steps below:
 
-**First**, add SAML application and assign users, refer to: [add an Azure AD SAML application](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal), [create and assign users](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal-assign-users)
+First of all, please add SAML application and assign users, refer to: [add an Azure AD SAML application](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal), [create and assign users](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal-assign-users)
 
-**Second**, setup your SAML infomations in the Seafile organization admin interface. 
+And then enter the team admin interface and find the SAML config panel.  There are some values prepared for you to use to configure your identity Provider. The format of URL are including:
 
-
+* Identifier:  https://example.com/org/custom/{org_id}/saml2/metadata/
+* Reply URL: https://example.com/org/custom/{org_id}/saml2/acs/
+* Sign on URL:   https://example.com
+* Logout URL:  https://example.com/org/custom/{org_id}/ls/,
 
 ![](./images/auto-upload/8c1988cd-1f66-47c9-ac61-650e8245efcf.png)
 
-**Then**, setup the _Identifier_, _Reply URL_, _Sign on URL_ and _Logout Url_ of the SAML app based by coping the specific URL to the SAML Configuration of your Idp in ADFS, refer to: [enable single sign on for saml application](https://learn.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal-setup-sso). The format of the _Identifier_, _Reply URL_, and _Sign on URL_ are: https://example.com/org/custom/{org_id}/saml2/metadata/, https://example.com/org/custom/{org_id}/saml2/acs/, https://example.com/org/custom/{org_id}/, https://example.com/org/custom/{org_id}/ls/, e.g.:
+Then, setup these URLs of the SAML app by copying the specific URL to the SAML Configuration of your Idp in ADFS.
 
 ![](./images/auto-upload/2a6bdc13-88f8-418b-90e3-cba0a67b12e7.png)
 
 __Note__: The {org_id} of the URL should be the ID of organization, and can only contain integer characters.
 
-**Next**, copy the metadata URL of the SAML app:
+Next, copy the metadata URL of the SAML app:
 
 ![](./images/auto-upload/6702c7c7-a205-4b18-91d2-48dd1a1b7b03.png)
 
@@ -30,7 +33,7 @@ and paste it into the organization admin interface, e.g:
 
 ![](./images/auto-upload/d2252310-0c30-4d88-a553-5711820a65df.png)
 
-**Next**, download the base64 format SAML app's certificate and rename to idp.crt:
+Next, download the base64 format SAML app's certificate and rename to idp.crt:
 
 ![](./images/auto-upload/3aa0b19d-46ac-426e-adcc-b3869b0a95a1.png)
 
@@ -38,7 +41,7 @@ and paste it into the organization admin interface, e.g:
 
 ![](./images/auto-upload/5b3ff455-de3f-4585-93d2-8ecc1c7cc0ea.png)
 
-**Next**, you can verify your domain by create a DNS TXT, and copy it to your domain's DNS records.
+Next, you have to verify your ownership of the domain name you use to login. Please input the name of your company's domain and click the "check" button, and a DNS TXT value will be automatically generated. Then, you need to create a new TXT record in your DNS host by copying and pasting the generated value. It may take up to 72 hours for your domain to be verified.
 
 ![](./images/auto-upload/d88fd998-1382-4b1f-901b-60bb5d874c5a.png)
 
@@ -74,7 +77,7 @@ If you use Microsoft ADFS to achieve single sign-on, please follow the steps bel
 
 3. A valid SSL certificate for Seafile server, and here we use `demo.seafile.com` as the domain name example.
 
-**Second**, setup your SAML infomations in the Seafile organization admin interface, and use these values to configure your identity Provider.
+**Second**, And then enter the team admin interface and find the SAML config panel. There are some values prepared for you to choose to configure your identity Provider in the relying party trust. Such as identifier, Reply URL,  Logout URL and so on.
 
 ![](./images/auto-upload/8c1988cd-1f66-47c9-ac61-650e8245efcf.png)
 
@@ -84,7 +87,7 @@ If you use Microsoft ADFS to achieve single sign-on, please follow the steps bel
 
 **Next**, download the base64 format certificate and copy the content to the certificate field:
 
-* Navigate to the _AD FS_ management window. In the left sidebar menu, navigate to **Services** > **Certificates**.
+* Navigate to the _ADFS_ management window. In the left sidebar menu, navigate to **Services** > **Certificates**.
 
 * Locate the _Token-signing_ certificate. Right-click the certificate and select **View Certificate**.
 
@@ -106,7 +109,17 @@ If you use Microsoft ADFS to achieve single sign-on, please follow the steps bel
 
 ![](./images/auto-upload/7f2b4010-5f50-4184-9d56-fe60d5a5809e.png)
 
-**Next**, add [relying party trust](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust#to-create-a-claims-aware-relying-party-trust-using-federation-metadata):
+Next, you have to verify your ownership of the domain name you use to login. Please input the name of your company's domain and click the "check" button, and a DNS TXT value will be automatically generated. Then, you need to create a new TXT record in your DNS host by copying and pasting the generated value. It may take up to 72 hours for your domain to be verified.
+
+![](./images/auto-upload/d88fd998-1382-4b1f-901b-60bb5d874c5a.png)
+
+
+
+
+
+
+
+Next, add [relying party trust](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust#to-create-a-claims-aware-relying-party-trust-using-federation-metadata):
 
 * Log into the ADFS server and open the ADFS management.
 
