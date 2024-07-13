@@ -91,4 +91,26 @@ There is a _community maintained_ Seafile Client package for Arch Linux:
 
 Please refer to [this documentation](linux-cli.md) for how to use Linux client on a command line server.
 
+## Linux AppImage Usage
 
+Since 9.0.6 version, we provide official AppImage packages for linux distributions.
+
+You can download `Seafile-x86_64.AppImage` from our official website and give it executable permissionns from the teiminal. 
+
+```
+sudo chmod +x Seafile-x86_64.AppImage
+```
+You can then double-click `Seafile-x86_64.AppImage` to run it, or run it directly from the terminal.
+
+```
+./Seafile-x86_64.AppImage
+```
+
+`Seafile-x86_64.AppImage` require FUSE version 2 to run. If your system does not have FUSE installed, please refer to <https://github.com/AppImage/AppImageKit/wiki/FUSE> to install it.
+
+We also provide the command-line client `Seafile-cli-x86_64.AppImage`, which is used in the same way as seaf-cli. When you download `Seafile-cli-x86_64.AppImage`, you can rename `Seafile-cli-x86_64.AppImage` to `seaf-cli` and then copy `seaf-cli` to the system path.
+
+```
+sudo mv Seafile-cli-x86_64.AppImage seaf-cli
+sudo cp seaf-cli /usr/local/bin
+```
