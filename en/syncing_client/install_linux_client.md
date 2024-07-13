@@ -114,3 +114,5 @@ We also provide the command-line client `Seafile-cli-x86_64.AppImage`, which is 
 sudo mv Seafile-cli-x86_64.AppImage seaf-cli
 sudo cp seaf-cli /usr/local/bin
 ```
+AppImages are standalone bundles, and do not need to be installed. However, some users may want their AppImages to be available like distribution provided applications. Please refer to <https://docs.appimage.org/user-guide/run-appimages.html#ref-desktop-integration> for desktop integration to display AppImage's application icons.
+
