@@ -2,7 +2,7 @@
 
 ## Use AppImage
 
-Since 9.0.6 version, we only provide official packages in AppImage format. It can be run on most recent Linux distributions. You can find supported OS versions on <https://cloud.seatable.io/dtable/external-links/a85d4221e41344c19566/?tid=YzYy&vid=pO5i>
+Since 9.0.7 version, we only provide official packages in AppImage format. It can be run on most recent Linux distributions. You can find supported OS versions on <https://cloud.seatable.io/dtable/external-links/a85d4221e41344c19566/?tid=YzYy&vid=pO5i>
 
 You can download `Seafile-x86_64.AppImage` from our official website and give it executable permissionns from the teiminal. 
 
