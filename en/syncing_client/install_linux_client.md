@@ -1,8 +1,27 @@
 # Install Seafile Client on Linux
 
-You can find supported OS versions on <https://cloud.seatable.io/dtable/external-links/a85d4221e41344c19566/?tid=YzYy&vid=pO5i>
+## Use AppImage
 
-## Debian/Ubuntu
+Since 9.0.7 version, we only provide official packages in AppImage format. It can be run on most recent Linux distributions. You can find supported OS versions on <https://cloud.seatable.io/dtable/external-links/a85d4221e41344c19566/?tid=YzYy&vid=pO5i>
+
+You can download `Seafile-x86_64.AppImage` from our official website and give it executable permissionns from the teiminal. 
+
+```
+sudo chmod +x Seafile-x86_64.AppImage
+```
+You can then double-click `Seafile-x86_64.AppImage` to run it, or run it directly from the terminal.
+
+```
+./Seafile-x86_64.AppImage
+```
+
+`Seafile-x86_64.AppImage` require FUSE version 2 to run. If your system does not have FUSE installed, please refer to <https://github.com/AppImage/AppImageKit/wiki/FUSE> to install it.
+
+AppImages are standalone bundles, and do not need to be installed. However, some users may want their AppImages to be available like distribution provided applications. Please refer to <https://docs.appimage.org/user-guide/run-appimages.html#ref-desktop-integration> for desktop integration to display AppImage's application icons.
+
+## Installing with package managers (deprecated)
+
+### Debian/Ubuntu
 
 To install the client, first add the signing key:
 
@@ -46,33 +65,7 @@ sudo apt-get install libsearpc-dbg ccnet-dbg libccnet-dbg seafile-daemon-dbg lib
 
 **note:** from seafile version 7.0.8, seaf-cli only support python3.5 or above on Debian/Ubuntu.
 
-## Centos 7
-
-Since 7.0.3 version, we provide official repo for CentOS or RHEL. Currently only CentOS/RHEL 7 is supported.
-
-Add the repo
-
-```
-sudo cat > /etc/yum.repos.d/seafile.repo <<EOF
-[seafile]
-name=seafile
-baseurl=https://linux-clients.seafile.com/seafile-rpm/centos7
-gpgcheck=0
-enabled=1
-EOF
-
-```
-
-Install Seafile Client
-
-```
-sudo yum install -y epel-release
-
-sudo yum install -y seafile --enablerepo=cr
-
-```
-
-## Fedora
+### Fedora
 
 **Note:** You can install directly from the official Fedora repository.
 
@@ -81,7 +74,7 @@ sudo dnf install -y seafile-client
 
 ```
 
-## Arch Linux (Community Maintained)
+### Arch Linux (Community Maintained)
 
 There is a _community maintained_ Seafile Client package for Arch Linux:
 
@@ -90,5 +83,4 @@ There is a _community maintained_ Seafile Client package for Arch Linux:
 ## Linux CLI Usage
 
 Please refer to [this documentation](linux-cli.md) for how to use Linux client on a command line server.
-
 
