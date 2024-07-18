@@ -17,13 +17,6 @@ You can then double-click `Seafile-x86_64.AppImage` to run it, or run it directl
 
 `Seafile-x86_64.AppImage` require FUSE version 2 to run. If your system does not have FUSE installed, please refer to <https://github.com/AppImage/AppImageKit/wiki/FUSE> to install it.
 
-We also provide the command-line client `Seafile-cli-x86_64.AppImage`, which is used in the same way as seaf-cli. When you download `Seafile-cli-x86_64.AppImage`, you can rename `Seafile-cli-x86_64.AppImage` to `seaf-cli` and then copy `seaf-cli` to the system path.
-
-```
-sudo mv Seafile-cli-x86_64.AppImage seaf-cli
-sudo cp seaf-cli /usr/local/bin
-```
-
 AppImages are standalone bundles, and do not need to be installed. However, some users may want their AppImages to be available like distribution provided applications. Please refer to <https://docs.appimage.org/user-guide/run-appimages.html#ref-desktop-integration> for desktop integration to display AppImage's application icons.
 
 ## Installing with package managers (deprecated)
