@@ -58,6 +58,6 @@ In the second case, you don't want James to see folder B. The solution is simple
 Folder permissions have the below effects to file syncing:
 
 * If you set read-write or read-only folder permissions for a sub-folder in a shared library or shared folder, the files in the library/folder can be synced with Seafile client and SeaDrive client.
-* If you set online-read-write or online-read-only folder permissions for a sub-folder in a shared library or shared folder, the files in the library/folder can **NOT** be synced with Seafile client and SeaDrive client.
-* If you set invisible folder permissions for a sub-folder in a shared library or shared folder, the library/folder can be synced with SeaDrive client. **But the invisible sub-folder will not be synced.**
-* **Seafile client cannot sync a shared library/folder with invisible sub-folders.**
+* If you set online-read-write or online-read-only folder permissions for a sub-folder in a shared library or shared folder, the files in the library/folder can **NOT** be synced with Seafile client. SeaDrive client support syncing libraries with online-only sub-folders since version 3.0.10. The online-only sub-folders will not be created locally.
+* If you set invisible folder permissions for a sub-folder in a shared library or shared folder, the library/folder can be synced with SeaDrive client. The invisible sub-folder will not be created locally.
+* Seafile client cannot sync a shared library/folder with invisible sub-folders.
