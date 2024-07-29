@@ -181,9 +181,15 @@ You call also use tools like NSSM (the Non-Sucking Service Manager). For more in
 Windows uses only the first 15 of the entries in the registry 
 (HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ShellIconOverlayIdentifiers). If there are other programs, like Dropbox and OneDrive, use up the overlay icons, Seafile shell icon overlay will not shown. To solve the problem, just delete the registration entries of other programs.
 
-## Meaning of various client-side errors
+## Meaning file syncing errors
 
-Client-side errors can include some errors that are difficult for users to understand, and the meaning of the various reported errors is now explained.
+File syncing errors are displayed in various places in Seafile desktop clients, including:
+
+- Main window of the Sync client
+- File sync error dialog in both Sync client and SeaDrive
+- Notification messages
+
+The detailed meaning of these error messages are explained below.
 
 | Error Message                                                                              | Error Meaning                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
