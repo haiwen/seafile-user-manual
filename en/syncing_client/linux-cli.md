@@ -2,11 +2,11 @@
 
 ## Installation
 
-Since 9.0.7 version, we provide the command-line client in AppImage format, which is used in the same way as seaf-cli. After you download `Seafile-cli-x86_64.AppImage` from our website, you can rename `Seafile-cli-x86_64.AppImage` to `seaf-cli` and then copy `seaf-cli` to the system path.
+Since 9.0.7 version, we provide the command-line client in AppImage format, which is used in the same way as seaf-cli. After you download `Seafile-cli-x86_64-x.y.z.AppImage` (e.g. `Seafile-cli-x86_64-9.0.7.AppImage`) from [our website](https://www.seafile.com/en/download/), you can rename `Seafile-cli-x86_64-x.y.z.AppImage` to `seaf-cli` and then copy `seaf-cli` to the system path.
 
 ```
-sudo chmod +x Seafile-cli-x86_64.AppImage
-sudo mv Seafile-cli-x86_64.AppImage seaf-cli
+chmod +x Seafile-cli-x86_64-9.0.7.AppImage
+mv Seafile-cli-x86_64-9.0.7.AppImage seaf-cli
 sudo cp seaf-cli /usr/local/bin
 ```
 
