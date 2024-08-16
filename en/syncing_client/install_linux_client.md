@@ -4,13 +4,13 @@
 
 Since 9.0.7 version, we only provide official packages in AppImage format. It can be run on most recent Linux distributions. You can find supported OS versions on <https://cloud.seatable.io/dtable/external-links/a85d4221e41344c19566/?tid=YzYy&vid=pO5i>
 
-You can download `Seafile-x86_64-x.y.z.AppImage` (e.g. `Seafile-x86_64-9.0.7.AppImage`) from [our official website](https://www.seafile.com/en/download/) and give it executable permissionns from the teiminal. 
+You can download `Seafile-x86_64-x.y.z.AppImage` (e.g. `Seafile-x86_64-9.0.7.AppImage`) from [our official website](https://www.seafile.com/en/download/) and give it executable permissionn from the terminal. 
 
 ```
 chmod +x Seafile-x86_64-9.0.7.AppImage
 ```
 
-You can also set executable permissions for the AppImage file from the GUI. Right click on the AppImage file and choose the "Property" entry. From there you can set executable permission for the file. More details on: <https://discourse.appimage.org/t/how-to-run-an-appimage/80>
+You can also set executable permission for the AppImage file from the GUI. Right click on the AppImage file and choose the "Property" entry. From there you can set executable permission for the file. More details on: <https://discourse.appimage.org/t/how-to-run-an-appimage/80>
 
 You can then double-click `Seafile-x86_64-x.y.z.AppImage` to run it, or run it directly from the terminal.
 
