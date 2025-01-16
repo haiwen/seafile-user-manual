@@ -20,7 +20,12 @@ You can then double-click `Seafile-x86_64-x.y.z.AppImage` to run it, or run it d
 
 `Seafile-x86_64-x.y.z.AppImage` require FUSE version 2 to run. If your system does not have FUSE installed, please refer to <https://github.com/AppImage/AppImageKit/wiki/FUSE> to install it.
 
+### Desktop Integration
+
 AppImages are standalone bundles, and do not need to be installed. However, some users may want their AppImages to be available like distribution provided applications. Please refer to <https://docs.appimage.org/user-guide/run-appimages.html#ref-desktop-integration> for desktop integration to display AppImage's application icons.
+
+### Auto Update
+You can check and update the client using AppImageUpdate. After running AppImageUpdate, select your local Seafile-x86_64-x.y.z.AppImage for the update. AppImageUpdate can be downloaded [here](https://github.com/AppImageCommunity/AppImageUpdate/releases/continuous).
 
 ## Installing with package managers (deprecated)
 
