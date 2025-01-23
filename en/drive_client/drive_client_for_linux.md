@@ -1,8 +1,35 @@
 # Using Seafile Drive Client on Linux
 
-You can find supported OS versions on <https://cloud.seatable.io/dtable/external-links/a85d4221e41344c19566/?tid=YzYy&vid=pO5i>
+## Use AppImage
 
-## Installing on Debian/Ubuntu
+Since 3.0.12 version, we only provide official packages in AppImage format. It can be run on most recent Linux distributions. You can find supported OS versions on <https://cloud.seatable.io/dtable/external-links/a85d4221e41344c19566/?tid=YzYy&vid=pO5i>
+
+You can download `SeaDrive-x86_64-x.y.z.AppImage` (e.g. `SeaDrive-x86_64-3.0.12.AppImage`) from [our official website](https://www.seafile.com/en/download/) and give it executable permissionn from the terminal. 
+
+```
+chmod +x SeaDrive-x86_64-3.0.12.AppImage
+```
+
+You can also set executable permission for the AppImage file from the GUI. Right click on the AppImage file and choose the "Property" entry. From there you can set executable permission for the file. More details on: <https://discourse.appimage.org/t/how-to-run-an-appimage/80>
+
+You can then double-click `SeaDrive-x86_64-x.y.z.AppImage` to run it, or run it directly from the terminal.
+
+```
+./SeaDrive-x86_64-3.0.12.AppImage
+```
+
+`SeaDrive-x86_64-x.y.z.AppImage` require FUSE version 2 to run. If your system does not have FUSE installed, please refer to <https://github.com/AppImage/AppImageKit/wiki/FUSE> to install it.
+
+### Desktop Integration
+
+AppImages are standalone bundles, and do not need to be installed. However, some users may want their AppImages to be available like distribution provided applications. Please refer to <https://docs.appimage.org/user-guide/run-appimages.html#ref-desktop-integration> for desktop integration to display AppImage's application icons.
+
+### Auto Update
+You can check and update the client using AppImageUpdate. After running AppImageUpdate, select your local `SeaDrive-x86_64-x.y.z.AppImage` for the update. AppImageUpdate can be downloaded [here](https://github.com/AppImageCommunity/AppImageUpdate/releases/continuous).
+
+## Installing with package managers (deprecated)
+
+### Installing on Debian/Ubuntu
 
 To install the client, first add the signing key:
 
@@ -42,7 +69,7 @@ sudo apt-get install seadrive-daemon
 
 ```
 
-## Centos 7
+### Centos 7
 
 Since 7.0.3 version, we provide official repo for CentOS or RHEL. Currently only CentOS/RHEL 7 is supported.
 
@@ -67,7 +94,7 @@ sudo yum install -y seadrive --enablerepo=cr
 
 ```
 
-## Fedora
+### Fedora
 
 **Note:** You can install directly from the official Fedora repository.
 
@@ -78,11 +105,19 @@ sudo dnf install -y seadrive-gui
 
 ## Running SeaDrive with GUI
 
-To use SeaDrive, just run "SeaDrive" from your desktop environment, or type "seadrive-gui" in command line. After logging into your server, the virtual drive will be mounted in `~/SeaDrive.`
+To use SeaDrive, just run `SeaDrive-x86_64-x.y.z.AppImage` from your desktop environment, or type `SeaDrive-x86_64-x.y.z.AppImage` in command line. After logging into your server, the virtual drive will be mounted in `~/SeaDrive.`
 
 ## Running SeaDrive without GUI
 
-In some use cases, it is useful to run SeaDrive in a server environment. To use SeaDrive without GUI, you can directly run seadrive-daemon (the background daemon) from command line.
+In some use cases, it is useful to run SeaDrive in a server environment.
+
+Since 3.0.12 version, we provide the command-line client in AppImage format, which is used in the same way as seadrive daemon. After you download `SeaDrive-cli-x86_64-x.y.z.AppImage` (e.g. `SeaDrive-cli-x86_64-3.0.12.AppImage`) from our website, you can rename `SeaDrive-cli-x86_64-x.y.z.AppImage` to `seadrive` and then copy seadrive to the system path.
+
+```
+chmod +x SeaDrive-cli-x86_64-3.0.12.AppImage
+mv SeaDrive-cli-x86_64-3.0.12.AppImage seadrive
+sudo cp seadrive /usr/local/bin
+```
 
 First, you have to obtain an access token from your server.
 
