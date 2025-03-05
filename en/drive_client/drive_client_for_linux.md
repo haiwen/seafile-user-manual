@@ -35,6 +35,8 @@ export SEAFILE_SSL_CA_PATH=/etc/ssl/certs/ca-certificates.crt
 ./SeaDrive-x86_64-3.0.13.AppImage
 ```
 
+SeaDrive will try to find common paths for CA certificates on various distributions. If it doesn't work, you can set it by this environment variable.
+
 ## Installing with package managers (deprecated)
 
 ### Installing on Debian/Ubuntu
