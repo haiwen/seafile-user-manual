@@ -27,6 +27,14 @@ AppImages are standalone bundles, and do not need to be installed. However, some
 ### Auto Update
 You can check and update the client using AppImageUpdate. After running AppImageUpdate, select your local `SeaDrive-x86_64-x.y.z.AppImage` for the update. AppImageUpdate can be downloaded [here](https://github.com/AppImageCommunity/AppImageUpdate/releases/continuous).
 
+### SSL CA Configuration
+Since 3.0.13 version, you can specify the CA path using the environment variable `SEAFILE_SSL_CA_PATH`. When this environment variable is set, Seadrive will prioritize reading the CA from the specified path. For example:
+
+```
+export SEAFILE_SSL_CA_PATH=/etc/ssl/certs/ca-certificates.crt
+./SeaDrive-x86_64-3.0.13.AppImage
+```
+
 ## Installing with package managers (deprecated)
 
 ### Installing on Debian/Ubuntu
