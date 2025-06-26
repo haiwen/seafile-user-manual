@@ -37,6 +37,23 @@ export SEAFILE_SSL_CA_PATH=/etc/ssl/certs/ca-certificates.crt
 
 SeaDrive will try to find common paths for CA certificates on various distributions. If it doesn't work, you can set it by this environment variable.
 
+### Nautilus Extension
+Since 3.0.15 version, if your desktop environment is GNOME and you are using Nautilus as your default file manager, you can install the Nautilus extension for SeaDrive to enable right-click menu options and root directory context menus.
+
+#### Installation
+You can download the Nautilus extension from [here](https://s3.eu-central-1.amazonaws.com/download.seadrive.org/seadrive_ext-0.0.1.tar.gz), and install it using the following commands:
+
+```
+mkdir ext
+tar -zxvf seadrive_ext-0.0.1.tar.gz -C ext
+cd ext
+chmod +x install.sh
+sudo ./install.sh
+nautilus -q
+```
+
+After installation, you will then be able to access background context menus by right-clicking inside the `~/SeaDrive` directory, and access SeaDrive extension by right-clicking on files and folders.
+
 ## Installing with package managers (deprecated)
 
 ### Installing on Debian/Ubuntu
