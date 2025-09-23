@@ -7,7 +7,7 @@ Normally, when the user installs a fresh seafile client, a login dialog would pr
 There are two ways to preconfigure seafile client:
 
 * On windows, the admin can store the details it in the windows registry.
-* On all desktop platforms (win/linux/mac), the admin can also store the details in a file `seafile.ini` in the HOME folder of the user.
+* On all desktop platforms (win/linux/mac), the admin can also store the details in a file (`seafile.ini`/`.seafilerc`) in the HOME folder of the user.
 
 ### Preconfigure options for sync clients
 
