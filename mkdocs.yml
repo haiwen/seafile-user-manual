@@ -65,6 +65,13 @@ nav:
     - Departments Sharing: sharing_collaboration/departments.md
   - Wiki and Knowledge Management:
     - Manage Library as Wiki: wiki/manage_library_as_wiki.md
+  - Metadata:
+    - metadata/overview.md
+    - metadata/enable_the_metadata_function.md
+    - metadata/table_view.md
+    - metadata/kanban_view.md
+    - metadata/gallery_view.md
+    - metadata/map_view.md
   - Desktop Client and Syncing:
     - Install and sync Files: syncing_client/install_sync.md
     - Syncing existing folders: syncing_client/syncing_existing_folders.md
