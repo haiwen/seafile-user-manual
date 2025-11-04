@@ -1,8 +1,8 @@
 # Using Seafile Drive Client on Linux
 
-## Download and run with GUI
-
 Since 3.0.12 version, we only provide official packages in AppImage format. It can be run on most recent Linux distributions. You can find supported OS versions on <https://cloud.seatable.io/dtable/external-links/a85d4221e41344c19566/?tid=YzYy&vid=pO5i>
+
+## Download and run with GUI
 
 You can download `SeaDrive-x86_64-x.y.z.AppImage` (e.g. `SeaDrive-x86_64-3.0.12.AppImage`) from [our official website](https://www.seafile.com/en/download/) and give it executable permissionn from the terminal.
 
@@ -77,6 +77,8 @@ Then you can start seadrive:
 seadrive -c ~/seadrive.conf -f -d data-directory [-l logfile] virtual-drive-dir
 
 ```
+
+`SeaDrive-cli-x86_64-x.y.z.AppImage` require FUSE version 2 to run. If your system does not have FUSE installed, please refer to <https://github.com/AppImage/AppImageKit/wiki/FUSE> to install it.
 
 Note that you must give `-f` option in the command line, to make sure seadrive runs in foregound, instead of forking as a daemon. By default, the data directory used by the SeaDrive GUI client will be `~/.seadrive/data`. It's recommended to use this path for data directory to be consistent with the GUI client. The log file path is `~/.seadrive/logs/seadrive.log`.
 
