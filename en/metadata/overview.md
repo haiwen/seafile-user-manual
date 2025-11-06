@@ -27,33 +27,21 @@ The System - Predefined file properties can be divided into two categories:
 Inherent file properties, which cannot be deleted by users, including:
 
 * File name
-
 * Parent folder
-
 * Creator，Last modifier
-
 * Created time，Last modified time
-
 * File type
-
 * Size
-
 * Tags
-
 * Location (for photos and videos)
 
 User - Adjustable properties that can be added or deleted as needed, including:
 
 * File collaborators, File reviewer, File owner
-
 * File expire time
-
 * File status
-
 * Capture time
-
 * File rate
-
 * Description
 
 ### Custom Properties
@@ -63,19 +51,11 @@ In addition to the System - Predefined properties mentioned above, Seafile suppo
 The supported property types include:
 
 * Text
-
 * Long Text
-
 * Number
-
 * Collaborator
-
 * Checkbox
-
 * Date
-
 * Single select
-
 * Multiple select
-
 * Rate

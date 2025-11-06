@@ -19,9 +19,7 @@ Once you enable the “Extended properties”, the Table View will become visibl
 Users can filter the displayed files based on various criteria:
 
 * Choose to display only files or folders.
-
 * Select specific file types, including picture, document, videos, audio, code, compressed, and diagram.
-
 * Filter files based on specific tags.
 
 ![](./imgs/image-UJiAR5zxSrOLA8t15CRgCw.png)
@@ -69,19 +67,12 @@ Options include, but are not limited to, file name, parent folder, creator,  las
 In the Table View, users can perform quick operations on files via the right - click menu:
 
 * Open file in a new tab
-
 * Open parent folder
-
 * Rename file
-
 * Move file
-
 * Delete file
-
 * Extract file detail
-
 * Generate description
-
 * Generate file tags
 
 ![](./imgs/image-Qf26VkDST6Skhb25_whg9g.png)
