@@ -58,7 +58,6 @@ You can also set permission on the share:
 * Online Read-only: users can only view files online via a web browser. The files cannot be downloaded.
 * Custom sharing permissions: user needs to create a custom sharing permission first, then he/she can choose the custom sharing permission when sharing.
 
-
 To share a library or folder to a user or group:
 
 1. Hover your mouse over the library or folder and click on the "Share" icon that appears.
