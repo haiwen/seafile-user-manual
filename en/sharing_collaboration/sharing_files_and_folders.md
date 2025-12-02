@@ -58,6 +58,7 @@ You can also set permission on the share:
 * Online Read-only: users can only view files online via a web browser. The files cannot be downloaded.
 * Custom sharing permissions: user needs to create a custom sharing permission first, then he/she can choose the custom sharing permission when sharing.
 
+
 To share a library or folder to a user or group:
 
 1. Hover your mouse over the library or folder and click on the "Share" icon that appears.
@@ -70,3 +71,6 @@ After you share a library or folder to a user, the user can see it by clicking t
 ## Internal Links
 
 Only logged in users who have read permission to the file or folder can access this link. It is used for internal file sharing. It's a convenient way for sharing files among team members who have access to a common library. You may just copy the link and paste it into an email or IM software.
+
+## Notes
+Permission such as Read-only, Read-Write, Preview Only etc. is primarily a UI effect, as the download button has been removed from the web interface. To view or edit a file, the original file must be loaded in the browser. However, advanced users can still access the original file.
