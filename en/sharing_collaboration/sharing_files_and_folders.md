@@ -70,3 +70,7 @@ After you share a library or folder to a user, the user can see it by clicking t
 ## Internal Links
 
 Only logged in users who have read permission to the file or folder can access this link. It is used for internal file sharing. It's a convenient way for sharing files among team members who have access to a common library. You may just copy the link and paste it into an email or IM software.
+
+## Notes
+
+Permissions such as Online read-only, Online read-write are primarily a UI effect, as the download button has been removed from the web interface. To view or edit a file, the original file must be loaded in the browser. However, advanced users can still access the original file.
