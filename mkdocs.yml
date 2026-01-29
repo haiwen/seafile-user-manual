@@ -64,7 +64,13 @@ nav:
     - Folder permission: sharing_collaboration/folder_permission.md
     - Departments Sharing: sharing_collaboration/departments.md
   - Wiki and Knowledge Management:
-    - Manage Library as Wiki: wiki/manage_library_as_wiki.md
+    - Core Functions Overview: wiki/core_functions_overview.md
+    - Page Editing and Content Insertion: wiki/page_editing_and_content_insertion.md
+    - Version History and Page Search: wiki/version_history_and_page_search.md
+    - Page Customization and User Experience Optimization: wiki/page_customization_and_user_experience_optimization.md
+    - Content Management and Security Mechanisms: wiki/content_management_and_security_mechanisms.md
+    - Polish and Share Wiki: wiki/polish_and_share_wiki.md
+    #- Manage Library as Wiki: wiki/manage_library_as_wiki.md
   - Metadata:
     - metadata/overview.md
     - metadata/enable_the_metadata_function.md
