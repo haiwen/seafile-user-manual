@@ -163,9 +163,11 @@ seaf-cli list-remote -s <seahub-server-url> -u <username> [-p <password>] [-c <c
 List syncing status of libraries. This will return the name, syncing status and progress information about all local libraries.
 
 ```
-seaf-cli status
+seaf-cli status [--json]
 
 ```
+
+Use `--json` to return the status in JSON format instead of the default table output. This is useful for scripts that need to parse the result reliably, especially because each entry includes the library ID.
 
 The returned status and their meaning:
 
